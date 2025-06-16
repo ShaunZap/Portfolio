@@ -11,13 +11,21 @@ import jsIcon from "../assets/images/techIcons/js.svg";
 import typeIcon from "../assets/images/techIcons/typescript.svg";
 import nextIcon from "../assets/images/techIcons/next.svg";
 import nodeJsIcon from "../assets/images/techIcons/nodejs.svg";
-import expressIcon from "../assets/images/techIcons/exp.svg";
+import expressIcon from "../assets/images/techIcons/express-js.svg";
 import mongodbIcon from "../assets/images/techIcons/mongoDb.svg";
 import muiIcon from "../assets/images/techIcons/material-ui.svg";
 import tailwindIcon from "../assets/images/techIcons/tailwindcss.svg";
 import bootstrapIcon from "../assets/images/techIcons/bootstrap.svg";
 import reactIcon from "../assets/images/techIcons/react.svg";
 import gitIcon from "../assets/images/techIcons/git.svg";
+import firebaseIcon from "../assets/images/techIcons/firebase.svg";
+import mySqlIcon from "../assets/images/techIcons/mysql.svg";
+import supabaseIcon from "../assets/images/techIcons/supabase.svg";
+import vsIcon from "../assets/images/techIcons/visual-studio-code.svg";
+import githubIcon from "../assets/images/techIcons/github.svg";
+import figmaIcon from "../assets/images/techIcons/figma.svg";
+import dockerIcon from "../assets/images/techIcons/docker.svg";
+import postmanIcon from "../assets/images/techIcons/postman-api.svg";
 import {
   SkillsData,
   AboutDatas,
@@ -415,6 +423,18 @@ export const skillsData: SkillsData = {
       highlights: ["Express.js", "RESTful APIs", "Middleware"],
       moreInfoLink: "https://nodejs.org/",
     },
+    {
+      title: "Express.js",
+      icon: expressIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 70,
+      },
+      description:
+        "Express.js is a minimal and flexible Node.js web framework that provides a robust set of features for building RESTful APIs and web applications.",
+      highlights: ["Routing", "Middleware", "API Design"],
+      moreInfoLink: "https://expressjs.com/",
+    },
   ],
   databaseData: [
     {
@@ -429,6 +449,42 @@ export const skillsData: SkillsData = {
       highlights: ["Data Modeling", "Aggregation Framework", "Indexing"],
       moreInfoLink: "https://www.mongodb.com/",
     },
+    {
+      title: "Firebase",
+      icon: firebaseIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 65,
+      },
+      description:
+        "Firebase is a backend-as-a-service platform by Google offering tools like authentication, databases, hosting, and analytics for building web and mobile apps.",
+      highlights: ["Authentication", "Firestore", "Hosting"],
+      moreInfoLink: "https://firebase.google.com/",
+    },
+    {
+      title: "MySQL",
+      icon: mySqlIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 70,
+      },
+      description:
+        "MySQL is a widely used open-source relational database system. It stores structured data and supports SQL for querying and managing databases efficiently.",
+      highlights: ["SQL Queries", "Joins", "Stored Procedures"],
+      moreInfoLink: "https://www.mysql.com/",
+    },
+    {
+      title: "Supabase",
+      icon: supabaseIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 65,
+      },
+      description:
+        "Supabase is an open-source Firebase alternative that provides authentication, PostgreSQL database, real-time updates, and edge functions for building full-stack apps.",
+      highlights: ["PostgreSQL", "Auth", "Realtime DB"],
+      moreInfoLink: "https://supabase.com/",
+    },
   ],
   otherToolsData: [
     {
@@ -442,6 +498,66 @@ export const skillsData: SkillsData = {
         "Git is a distributed version control system that allows developers to track changes in their codebase, collaborate with others, and manage different versions of their projects.",
       highlights: ["Version Control", "Branching", "Merging"],
       moreInfoLink: "https://git-scm.com/",
+    },
+    {
+      title: "GitHub",
+      icon: githubIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 80,
+      },
+      description:
+        "GitHub is a web-based platform for version control using Git. It allows for code hosting, collaboration, issue tracking, and CI/CD workflows.",
+      highlights: ["Repositories", "Pull Requests", "Actions"],
+      moreInfoLink: "https://github.com/",
+    },
+    {
+      title: "Postman",
+      icon: postmanIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 75,
+      },
+      description:
+        "Postman is an API client that simplifies building, testing, and debugging RESTful APIs through a powerful and user-friendly interface.",
+      highlights: ["API Testing", "Collections", "Environment Variables"],
+      moreInfoLink: "https://www.postman.com/",
+    },
+    {
+      title: "VS Code",
+      icon: vsIcon,
+      proficiency: {
+        level: "Advanced",
+        percentage: 90,
+      },
+      description:
+        "Visual Studio Code is a lightweight and powerful code editor with features like IntelliSense, debugging, and Git integration.",
+      highlights: ["Extensions", "Integrated Terminal", "Snippets"],
+      moreInfoLink: "https://code.visualstudio.com/",
+    },
+    {
+      title: "Docker",
+      icon: dockerIcon,
+      proficiency: {
+        level: "Beginner",
+        percentage: 60,
+      },
+      description:
+        "Docker is a platform that enables developers to build, deploy, and run applications using containers for consistency across environments.",
+      highlights: ["Containers", "Images", "Dockerfile"],
+      moreInfoLink: "https://www.docker.com/",
+    },
+    {
+      title: "Figma",
+      icon: figmaIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 70,
+      },
+      description:
+        "Figma is a cloud-based design tool used for UI/UX design and collaboration. It enables real-time teamwork and prototyping.",
+      highlights: ["UI Design", "Prototyping", "Team Collaboration"],
+      moreInfoLink: "https://figma.com/",
     },
   ],
 };

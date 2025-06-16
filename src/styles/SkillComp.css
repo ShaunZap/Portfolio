@@ -21,10 +21,8 @@
 }
 
 .outer-container {
-  background-color: var(--color-brand-1000);
-  width: 98%;
+  width: 99%;
   margin: 0 auto;
-  padding: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
