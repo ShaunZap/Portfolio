@@ -1,0 +1,23 @@
+:root {
+  --color-brand-500: rgb(165, 169, 180); /*Metallic Silver*/
+  --color-brand-700: rgb(120, 130, 145); /* Dark Silver Gray */
+  --color-brand-800: rgb(54, 69, 79); /* Charcoal*/
+  --color-brand-900: rgb(44, 53, 57); /* Gunmetal*/
+  --color-brand-1000: rgb(53, 57, 53); /* Onyx*/
+  --color-brand-1100: rgb(52, 52, 52); /* Jet*/
+  --color-brand-1200: rgb(40, 40, 43); /* Matt*/
+  --color-brand-1250: rgb(33, 33, 35); /* Shadow */
+  --color-brand-1300: rgb(27, 27, 27); /* Eerie */
+  --color-brand-1400: rgb(27, 18, 18); /* Licorice*/
+  --color-primary-black: #1c2526; /* Primary Black */
+  --color-primary-peach: #ffefd5;
+  --color-light-peach: #fff5e6;
+  --font-size-large: 100px;
+  --font-size-medium: 35px;
+  --font-size-small: 25px;
+  --font-size-xsmall: 20px;
+  --letter-spacing-large: 8px;
+  --letter-spacing-medium: 4px;
+  --letter-spacing-small: 2px;
+  --letter-spacing-xsmall: 1px;
+}

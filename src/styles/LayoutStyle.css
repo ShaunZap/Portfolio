@@ -1,0 +1,24 @@
+@import "../GlobalStyles.css";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.notification-panel {
+  width: 100%;
+  height: 5vh;
+  background-color: var(--color-brand-1200);
+}
+.main-content {
+  height: 88vh;
+  background-color: var(--color-light-peach);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.footer {
+  width: 100%;
+  height: 7vh;
+  background-color: var(--color-brand-1200);
+}

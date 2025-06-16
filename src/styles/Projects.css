@@ -1,0 +1,131 @@
+@import "../GlobalStyles.css";
+
+.project-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.project-card {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(20, 15px);
+  background-color: var(--color-primary-black);
+  padding: 4px;
+}
+.project-title {
+  background-color: var(--color-brand-1000);
+  grid-area: 1/16/4/31;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  hr {
+    width: 100%;
+    border: 2px solid var(--color-light-peach);
+    height: 6px;
+  }
+  h2 {
+    padding: 0 6px;
+    color: var(--color-light-peach);
+    font-size: var(--font-size-medium);
+    letter-spacing: var(--letter-spacing-medium);
+  }
+}
+.project-image {
+  grid-area: 1/1/21/16;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.project-description {
+  background-color: var(--color-primary-peach);
+  grid-area: 4/16/17/31;
+  color: var(--color-brand-1000);
+  padding: 10px;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-small);
+  /* overflow-y: scroll;
+  scrollbar-width: none; */
+}
+.project-stack {
+  background-color: var(--color-brand-1000);
+  grid-area: 17/16/21/25;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+
+  .stack-item {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--color-brand-900);
+    padding: 2px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary-peach);
+    }
+  }
+}
+.project-links {
+  grid-area: 17/25/21/31;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 5px;
+  font-size: 25px;
+  cursor: pointer;
+
+  .live {
+    background-color: var(--color-brand-1000);
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .github {
+    background-color: var(--color-brand-1000);
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        font-size: var(--font-size-small);
+        font-weight: 500;
+        color: var(--color-light-peach);
+        letter-spacing: var(--letter-spacing-small);
+      }
+    }
+  }
+}
