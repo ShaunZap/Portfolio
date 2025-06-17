@@ -2,13 +2,20 @@ import "../styles/Projects.css";
 import { div as MDiv } from "motion/react-client";
 import ReusableTitle from "./sub-components/ReusableTitle";
 import { projectData } from "../Data/Data";
+import { defaultSpring, fadeIn } from "../animations/animation";
 
 const ProjectsComp = () => (
   <div>
     <ReusableTitle title="Projects" />
     <div className="project-container">
       {Object.entries(projectData).map(([key, project]) => (
-        <div className="project-card" key={key}>
+        <MDiv
+          initial={fadeIn.initialy}
+          whileInView={fadeIn.whileInViewy}
+          transition={defaultSpring}
+          className="project-card"
+          key={key}
+        >
           <div className="project-image">
             <img src={project.projectImage} alt="" />
           </div>
@@ -51,7 +58,7 @@ const ProjectsComp = () => (
               </a>
             </MDiv>
           </div>
-        </div>
+        </MDiv>
       ))}
     </div>
   </div>

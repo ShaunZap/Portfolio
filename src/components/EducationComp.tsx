@@ -1,11 +1,12 @@
 import ReusableTitle from "./sub-components/ReusableTitle";
 import "../styles/EducationComp.css";
-import eduIcon from "../assets/images/education.svg";
-import certificateIcon from "../assets/images/online-certificate.svg";
-import institutionIcon from "../assets/images/institution.svg";
-import emailIcon from "../assets/images/email.svg";
+import eduIcon from "../assets/images/miscellaneous/education.svg";
+import certificateIcon from "../assets/images/miscellaneous/online-certificate.svg";
+import institutionIcon from "../assets/images/miscellaneous/institution.svg";
+import emailIcon from "../assets/images/miscellaneous/email.svg";
 import { educationData } from "../Data/Data";
-
+import { div as MDiv } from "motion/react-client";
+import { defaultSpring, fadeIn } from "../animations/animation";
 const EducationComp = () => {
   return (
     <div>
@@ -23,10 +24,10 @@ export default EducationComp;
 
 const MainTitle = ({ title, Icon }: { title: string; Icon: string }) => {
   return (
-    <div className="education-title">
+    <MDiv className="education-title">
       <img src={Icon} alt="Icon" className="iconImage" />
       <h2>{title}</h2>
-    </div>
+    </MDiv>
   );
 };
 
@@ -34,7 +35,13 @@ const CertificationCard = () => {
   return (
     <div className="certification-container">
       {Object.entries(educationData.certificationData).map(([key, cert]) => (
-        <div className="certification-card" key={key}>
+        <MDiv
+          initial={fadeIn.initialy}
+          whileInView={fadeIn.whileInViewy}
+          transition={defaultSpring}
+          className="certification-card"
+          key={key}
+        >
           <div className="certification-card-title">
             <h4>{cert.courseName}</h4>
             <h5>{cert.authorName}</h5>
@@ -45,7 +52,7 @@ const CertificationCard = () => {
               <div key={index}>{tag}</div>
             ))}
           </div>
-        </div>
+        </MDiv>
       ))}
     </div>
   );
@@ -60,7 +67,12 @@ const TimelineSection = () => {
             <img src={eduIcon} alt="icon" className="timelineIcon" />
             <hr />
           </div>
-          <div className="timeline-card-grid">
+          <MDiv
+            initial={fadeIn.initialx}
+            whileInView={fadeIn.whileInViewx}
+            transition={defaultSpring}
+            className="timeline-card-grid"
+          >
             <div className="degree-title">{edu.degree}</div>
             <div className="institution">{edu.institution}</div>
             <div className="duration">{edu.duration}</div>
@@ -72,7 +84,7 @@ const TimelineSection = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </MDiv>
         </div>
       ))}
     </div>
@@ -83,7 +95,13 @@ const InstitutionCard = () => {
   return (
     <div className="institution-container">
       {Object.entries(educationData.institutionData).map(([key, inst]) => (
-        <div className="institution-card" key={key}>
+        <MDiv
+          initial={fadeIn.initialy}
+          whileInView={fadeIn.whileInViewy}
+          transition={defaultSpring}
+          className="institution-card"
+          key={key}
+        >
           <div className="institution-card-title">
             <img src={inst.institutionIcon} alt="icon" />
             <div>{inst.institutionName}</div>
@@ -96,7 +114,7 @@ const InstitutionCard = () => {
           <div className="link">
             <a href={inst.websiteLink}>Visit Website 🔗</a>
           </div>
-        </div>
+        </MDiv>
       ))}
     </div>
   );

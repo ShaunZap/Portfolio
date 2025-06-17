@@ -2,9 +2,9 @@ import { div as MDiv, img as MImg } from "motion/react-client";
 import "../styles/Footer.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import homeIcon from "../assets/images/home.svg";
-import backIcon from "../assets/images/left-arrow.svg";
-import infoIcon from "../assets/images/info.svg";
+import homeIcon from "../assets/images/miscellaneous/home.svg";
+import backIcon from "../assets/images/miscellaneous/left-arrow.svg";
+import infoIcon from "../assets/images/miscellaneous/info.svg";
 const Footer = () => {
   const navigate = useNavigate();
 

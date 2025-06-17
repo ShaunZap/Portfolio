@@ -5,128 +5,155 @@
   flex-direction: column;
   background-color: var(--color-light-peach);
   gap: 10px;
-  padding: 10px;
+  padding: 20px;
 
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 20px);
+  .inner-container {
+    display: flex;
     gap: 10px;
-    width: 98%;
-    margin: 0 auto;
-    background-color: var(--color-brand-1400);
-    padding: 10px;
+    flex-direction: row;
 
-    .company-name {
-      background-color: var(--color-brand-1000);
-      grid-area: 1/2/4/21;
-      font-size: var(--font-size-medium);
-      font-weight: 500;
-      padding: 5px;
-      color: var(--color-light-peach);
-      letter-spacing: var(--letter-spacing-medium);
+    .timeline-container {
+      flex: 1;
+      width: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
-    }
-    .job-title {
-      background-color: var(--color-primary-peach);
-      grid-area: 4/2/7/21;
-      color: var(--color-brand-1000);
-      font-size: var(--font-size-medium);
-      font-weight: 500;
-      padding: 5px;
-      letter-spacing: var(--letter-spacing-medium);
-      display: flex;
-      align-items: center;
-    }
-    .job-duration {
-      background-color: var(--color-brand-1000);
-      color: var(--color-light-peach);
-      grid-area: 1/1/21/2;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      height: 100%;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: var(--font-size-medium);
-      padding: 5px;
-      letter-spacing: var(--letter-spacing-medium);
-    }
-    .job-description {
-      background-color: var(--color-primary-peach);
-      grid-area: 7/2/21/13;
-      font-weight: 500;
-      color: var(--color-primary-black);
-      overflow: hidden;
 
-      div {
-        background-color: var(--color-brand-1000);
-        width: 100%;
-        padding: 10px;
-        color: var(--color-light-peach);
-        font-size: var(--font-size-small);
-        letter-spacing: var(--letter-spacing-small);
-      }
-      p {
-        padding: 10px;
-        margin: 0;
-        font-size: var(--font-size-small);
-        letter-spacing: var(--letter-spacing-small);
-      }
-    }
-    .job-location {
-      background-color: var(--color-primary-peach);
-      grid-area: 17/13/21/21;
-      font-size: 25px;
-      font-weight: 500;
-      color: var(--color-primary-black);
-      overflow: hidden;
-
-      div {
-        background-color: var(--color-brand-1000);
-        width: 100%;
-        padding: 5px;
-        color: var(--color-light-peach);
-        font-size: var(--font-size-small);
-        letter-spacing: var(--letter-spacing-small);
-      }
-      p {
-        padding: 5px;
-        margin: 0;
-        font-size: var(--font-size-small);
-        letter-spacing: var(--letter-spacing-small);
-      }
-    }
-    .tech-stack {
-      background-color: var(--color-primary-peach);
-      grid-area: 7/13/17/21;
-      color: var(--color-primary-black);
-      font-size: 25px;
-      overflow: hidden;
-      font-weight: 500;
-
-      div {
-        background-color: var(--color-brand-1000);
-        width: 100%;
-        padding: 10px;
-        color: var(--color-light-peach);
-        font-size: var(--font-size-small);
-        letter-spacing: var(--letter-spacing-small);
-      }
-      .tech-stack-container {
+      img {
+        width: 50px;
+        height: 50px;
         background-color: var(--color-primary-peach);
+        padding: 4px;
+        border: 5px solid var(--color-brand-1000);
+      }
+      hr {
+        background-color: var(--color-brand-1000);
+        height: 100%;
+        width: 6px;
+      }
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: repeat(17, 20px);
+      gap: 2px;
+      width: 95%;
+      margin: 0 auto;
+      background-color: var(--color-brand-1400);
+      padding: 2px;
+
+      .company-name {
+        background-color: var(--color-brand-1000);
+        grid-area: 1/2/4/21;
+        font-size: var(--font-size-medium);
+        font-weight: 600;
+        padding: 5px;
+        color: var(--color-light-peach);
+        letter-spacing: var(--letter-spacing-medium);
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        p {
+        align-items: center;
+      }
+      .job-title {
+        background-color: var(--color-primary-peach);
+        grid-area: 4/2/6/21;
+        color: var(--color-brand-1000);
+        font-size: var(--font-size-medium);
+        font-weight: 600;
+        padding: 5px;
+        letter-spacing: var(--letter-spacing-medium);
+        display: flex;
+        align-items: center;
+      }
+      .job-duration {
+        background-color: var(--color-brand-1000);
+        color: var(--color-light-peach);
+        grid-area: 1/1/18/2;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        height: 100%;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--font-size-small);
+        padding: 5px;
+        letter-spacing: var(--letter-spacing-medium);
+      }
+      .job-description {
+        background-color: var(--color-primary-peach);
+        grid-area: 6/2/18/13;
+        font-weight: 500;
+        color: var(--color-primary-black);
+        overflow: hidden;
+
+        div {
           background-color: var(--color-brand-1000);
-          color: var();
-          padding: 0px 5px 0px 5px;
+          width: 100%;
+          padding: 10px;
+          color: var(--color-light-peach);
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-small);
+        }
+        p {
+          padding: 10px;
           margin: 0;
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
+        }
+      }
+      .job-location {
+        background-color: var(--color-primary-peach);
+        grid-area: 14/13/18/21;
+        font-size: 25px;
+        font-weight: 500;
+        color: var(--color-primary-black);
+        overflow: hidden;
+
+        div {
+          background-color: var(--color-brand-1000);
+          width: 100%;
+          padding: 5px;
+          color: var(--color-light-peach);
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-small);
+        }
+        p {
+          padding: 5px;
+          margin: 0;
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-small);
+        }
+      }
+      .tech-stack {
+        background-color: var(--color-primary-peach);
+        grid-area: 6/13/14/21;
+        color: var(--color-primary-black);
+        font-size: 25px;
+        overflow: hidden;
+        font-weight: 500;
+
+        div {
+          background-color: var(--color-brand-1000);
+          width: 100%;
+          padding: 10px;
+          color: var(--color-light-peach);
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-small);
+        }
+        .tech-stack-container {
+          background-color: var(--color-primary-peach);
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          p {
+            background-color: var(--color-brand-1000);
+            color: var();
+            padding: 0px 5px 0px 5px;
+            margin: 0;
+            font-size: var(--font-size-small);
+            letter-spacing: var(--letter-spacing-small);
+            border-radius: 2px;
+          }
         }
       }
     }

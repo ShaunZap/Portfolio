@@ -4,9 +4,15 @@ import frontEndIcon from "../assets/images/webdevIcons/frontend.svg";
 import backEndIcon from "../assets/images/webdevIcons/backend.svg";
 import databaseIcon from "../assets/images/webdevIcons/db.svg";
 import otherToolsIcon from "../assets/images/webdevIcons/tools.svg";
-import externalLinkIcon from "../assets/images/el.svg";
+import externalLinkIcon from "../assets/images/miscellaneous/el.svg";
 import { skillsData } from "../Data/Data";
 import { Skill } from "../types/type";
+import { div as MDiv } from "motion/react-client";
+import {
+  defaultSpring,
+  fadeIn,
+  smallAnimations,
+} from "../animations/animation";
 
 const SkillsComp = () => {
   const { frontendData, databaseData, backEndData, otherToolsData } =
@@ -29,10 +35,10 @@ export default SkillsComp;
 
 const MainTitle = ({ title, Icon }: { title: string; Icon: string }) => {
   return (
-    <div className="skill-main-title">
+    <MDiv className="skill-main-title">
       <img src={Icon} alt="Icon" className="iconImage" />
       <h2>{title}</h2>
-    </div>
+    </MDiv>
   );
 };
 
@@ -40,7 +46,14 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
   return (
     <div className="outer-container">
       {Object.entries(data).map(([key, value]) => (
-        <div className="skill-card" key={key}>
+        <MDiv
+          initial={fadeIn.initialy}
+          whileInView={fadeIn.whileInViewy}
+          whileHover={smallAnimations.whileHover}
+          transition={defaultSpring}
+          className="skill-card"
+          key={key}
+        >
           <div className="skill-card-title">
             <img src={value.icon} alt={value.title} />
             <h4>{value.title}</h4>
@@ -80,7 +93,7 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
               <img src={externalLinkIcon} alt="icon" />
             </a>
           </div>
-        </div>
+        </MDiv>
       ))}
     </div>
   );

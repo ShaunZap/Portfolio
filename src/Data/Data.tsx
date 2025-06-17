@@ -1,4 +1,4 @@
-import dummyImage from "../assets/images/dummy.png";
+import dummyImage from "../assets/images/miscellaneous/dummy.png";
 import goaUniIcon from "../assets/images/institutionIcons/goauni.svg";
 import rosaryBcaIcon from "../assets/images/institutionIcons/rosarybca.svg";
 import rosaryHscIcon from "../assets/images/institutionIcons/rosary.svg";

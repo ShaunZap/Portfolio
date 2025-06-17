@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { img as MImg, div as MDiv } from "motion/react-client";
-import dummyIcon from "../assets/images/dummy.png";
+import dummyIcon from "../assets/images/miscellaneous/dummy.png";
 import "../styles/Sections.css";
 const Sections = () => {
   const sectionLinks = [
