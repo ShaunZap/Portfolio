@@ -112,7 +112,13 @@ const InstitutionCard = () => {
           </div>
           <div className="address">{inst.address}</div>
           <div className="link">
-            <a href={inst.websiteLink}>Visit Website 🔗</a>
+            <a
+              href={inst.websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Website 🔗
+            </a>
           </div>
         </MDiv>
       ))}
