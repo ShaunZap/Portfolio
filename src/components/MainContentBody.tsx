@@ -1,16 +1,16 @@
 import Sections from "./Sections";
-import ClockComp from "./sub-components/ClockComp";
-import WeatherComp from "./sub-components/WeatherComp";
+import Quotes from "./sub-components/Quotes";
+import NewsApp from "./sub-components/newsApp";
 import "../styles/MainContentStyle.css";
 
 function MainContentBody() {
   return (
     <div className="main-content-layout">
-      <div className="weather-component">
-        <WeatherComp />
+      <div className="quotes-component">
+        <Quotes />
       </div>
-      <div className="clock-component">
-        <ClockComp />
+      <div className="news-component">
+        <NewsApp />
       </div>
       <div className="sections-component">
         <Sections />

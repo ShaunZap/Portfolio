@@ -12,6 +12,6 @@ export const smallAnimations = {
 export const defaultSpring = {
   duration: 0.4,
   ease: "easeOut",
-  type: "spring",
+  type: "tween",
   stiffness: 100,
 };

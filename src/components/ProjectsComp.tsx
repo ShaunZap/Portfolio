@@ -10,8 +10,8 @@ const ProjectsComp = () => (
     <div className="project-container">
       {Object.entries(projectData).map(([key, project]) => (
         <MDiv
-          initial={fadeIn.initialy}
-          whileInView={fadeIn.whileInViewy}
+          initial={fadeIn.initialx}
+          whileInView={fadeIn.whileInViewx}
           transition={defaultSpring}
           className="project-card"
           key={key}

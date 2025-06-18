@@ -12,7 +12,7 @@
 }
 .main-content {
   height: 88vh;
-  background-color: var(--color-light-peach);
+  background-color: var(--color-primary-peach);
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;

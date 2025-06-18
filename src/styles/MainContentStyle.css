@@ -1,27 +1,26 @@
 @import "../GlobalStyles.css";
 
 .main-content-layout {
-  width: 96%;
+  width: 99%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(30, 1fr);
   grid-template-rows: repeat(15, 1fr);
   height: 100%;
+  padding: 10px;
 }
 
-.weather-component {
+.quotes-component {
   width: 100%;
   height: 100%;
   grid-area: 1/1/12/16;
-  background-color: red;
-  border-radius: 10px;
+  border: 5px solid var(--color-brand-1000);
 }
-.clock-component {
+.news-component {
   width: 100%;
   height: 100%;
   grid-area: 1/17/12/31;
-  background-color: blue;
-  border-radius: 10px;
+  border: 5px solid var(--color-brand-1000);
 }
 
 .sections-component {

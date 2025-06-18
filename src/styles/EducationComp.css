@@ -164,6 +164,7 @@
         font-size: var(--font-size-xsmall);
         letter-spacing: var(--letter-spacing-xsmall);
         padding: 4px;
+        border-radius: 2px;
       }
     }
   }

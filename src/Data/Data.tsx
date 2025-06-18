@@ -26,6 +26,12 @@ import githubIcon from "../assets/images/techIcons/github.svg";
 import figmaIcon from "../assets/images/techIcons/figma.svg";
 import dockerIcon from "../assets/images/techIcons/docker.svg";
 import postmanIcon from "../assets/images/techIcons/postman-api.svg";
+import briefcaseIcon from "../assets/images/miscellaneous/briefcase.svg";
+import userICon from "../assets/images/miscellaneous/user.svg";
+import codeICon from "../assets/images/miscellaneous/code.svg";
+import institutionICon from "../assets/images/miscellaneous/institution.svg";
+import toolICon from "../assets/images/webdevIcons/tools.svg";
+
 import {
   SkillsData,
   AboutDatas,
@@ -33,6 +39,14 @@ import {
   EducationData,
   ExperienceData,
 } from "../types/type";
+
+export const sectionLinks = [
+  { name: "About", link: "/about", icon: userICon },
+  { name: "Projects", link: "/projects", icon: codeICon },
+  { name: "Experience", link: "/experience", icon: briefcaseIcon },
+  { name: "Education", link: "/education", icon: institutionICon },
+  { name: "Skills", link: "/skills", icon: toolICon },
+];
 
 export const AboutData: AboutDatas = {
   profilePic: dummyImage,
