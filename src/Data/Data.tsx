@@ -1,4 +1,4 @@
-import dummyImage from "../assets/images/miscellaneous/dummy.png";
+import profilePic from "../assets/images/miscellaneous/profilePic.png";
 import goaUniIcon from "../assets/images/institutionIcons/goauni.svg";
 import rosaryBcaIcon from "../assets/images/institutionIcons/rosarybca.svg";
 import rosaryHscIcon from "../assets/images/institutionIcons/rosary.svg";
@@ -49,7 +49,7 @@ export const sectionLinks = [
 ];
 
 export const AboutData: AboutDatas = {
-  profilePic: dummyImage,
+  profilePic: profilePic,
   description: `et id sunt reprehenderit repellat quod, ipsum consectetur quos molestiae commodi vero! Vel eligendi error id inventore repudiandae, exercitationem consequuntur.`,
   subtitle: "Hobbies",
   description2: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quas distinctio, veritatis inventore nemo aliquam cupiditate, natus provident id atque dolores! Maxime consectetur ipsum asperiores mollitia illum temporibus nisi facere!`,
