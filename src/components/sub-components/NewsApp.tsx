@@ -20,7 +20,7 @@ const NewsApp = () => {
     async function fetchNews() {
       try {
         const res = await fetch(
-          `https://gnews.io/api/v4/top-headlines?country=IN&max=10&apikey=${apikey}&lang=en`
+          `https://gnews.io/api/v4/top-headlines?country=in&max=10&apikey=${apikey}&lang=en`
         );
         const data = await res.json();
         setNewsData(data.articles || []);

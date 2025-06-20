@@ -34,7 +34,7 @@ const ProjectsComp = () => (
                 className="stack-item"
                 key={index}
               >
-                <img src={tech.icon} alt={tech.name} />
+                <img src={tech.icon} draggable={false} alt={tech.name} />
               </MDiv>
             ))}
           </div>
