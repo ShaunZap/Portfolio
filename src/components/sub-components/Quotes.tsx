@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import "../../styles/Quotes.css";
 
 // Define the type for a single quote
 interface Quote {
-  id?: number;
+  id: number;
   quote: string;
   author: string;
 }
@@ -32,13 +33,11 @@ const Quotes = () => {
   return (
     <div className="quotes-container">
       {loading ? (
-        <p>Loading quotes...</p>
+        <p className="loading">Loading quotes...</p>
       ) : (
         quotes.map((quote, index) => (
           <div key={quote.id ?? index} className="quote-card">
-            <p className="quote-text">
-              {index + 1}. "{quote.quote}"
-            </p>
+            <p className="quote-text">"{quote.quote}"</p>
             <p className="quote-author">- {quote.author}</p>
           </div>
         ))

@@ -1,0 +1,44 @@
+@import "../GlobalStyles.css";
+
+.quotes-container {
+  /* padding: 10px; */
+
+  .loading {
+    font-size: var(--font-size-small);
+    color: var(--color-brand-1000);
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing-xsmall);
+    padding: 5px;
+  }
+
+  .quote-card {
+    background-color: var(--color-light-peach);
+
+    .quote-text {
+      color: var(--color-brand-1000);
+      font-size: var(--font-size-small);
+      font-weight: 500;
+      padding: 5px;
+      letter-spacing: var(--letter-spacing-xsmall);
+    }
+
+    .quote-author {
+      color: var(--color-brand-1000);
+      font-size: var(--font-size-xsmall);
+      font-weight: 500;
+      letter-spacing: var(--letter-spacing-xsmall);
+      padding: 5px;
+    }
+  }
+  .quote-card:nth-child(even) {
+    background-color: var(--color-brand-1000);
+
+    .quote-text {
+      color: var(--color-light-peach);
+    }
+
+    .quote-author {
+      color: var(--color-light-peach);
+    }
+  }
+}

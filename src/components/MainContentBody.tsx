@@ -1,6 +1,6 @@
 import Sections from "./Sections";
 import Quotes from "./sub-components/Quotes";
-import NewsApp from "./sub-components/newsApp";
+import NewsApp from "./sub-components/NewsApp";
 import "../styles/MainContentStyle.css";
 
 function MainContentBody() {
