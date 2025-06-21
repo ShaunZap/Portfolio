@@ -7,6 +7,8 @@ export const fadeIn = {
 
 export const smallAnimations = {
   whileHover: { rotate: 5 },
+  shrinkCard: { scale: 0.96 },
+  scaleCard: { scale: 1.02 },
 };
 
 export const defaultSpring = {

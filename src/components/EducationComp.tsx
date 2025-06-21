@@ -6,7 +6,11 @@ import institutionIcon from "../assets/images/miscellaneous/institution.svg";
 import emailIcon from "../assets/images/miscellaneous/email.svg";
 import { educationData } from "../Data/Data";
 import { div as MDiv } from "motion/react-client";
-import { defaultSpring, fadeIn } from "../animations/animation";
+import {
+  defaultSpring,
+  fadeIn,
+  smallAnimations,
+} from "../animations/animation";
 const EducationComp = () => {
   return (
     <div>
@@ -39,6 +43,7 @@ const CertificationCard = () => {
           initial={fadeIn.initialy}
           whileInView={fadeIn.whileInViewy}
           transition={defaultSpring}
+          whileHover={smallAnimations.shrinkCard}
           className="certification-card"
           key={key}
         >
@@ -70,6 +75,7 @@ const TimelineSection = () => {
           <MDiv
             initial={fadeIn.initialx}
             whileInView={fadeIn.whileInViewx}
+            whileHover={smallAnimations.scaleCard}
             transition={defaultSpring}
             className="timeline-card-grid"
           >
@@ -98,6 +104,7 @@ const InstitutionCard = () => {
         <MDiv
           initial={fadeIn.initialy}
           whileInView={fadeIn.whileInViewy}
+          whileHover={smallAnimations.shrinkCard}
           transition={defaultSpring}
           className="institution-card"
           key={key}
