@@ -50,9 +50,17 @@ export const sectionLinks = [
 
 export const AboutData: AboutDatas = {
   profilePic: profilePic,
-  description: `et id sunt reprehenderit repellat quod, ipsum consectetur quos molestiae commodi vero! Vel eligendi error id inventore repudiandae, exercitationem consequuntur.`,
+  description: `Hey there, I'm Shaun Barreto – a front-end developer from Goa, India, who occasionally dips a toe into the mysterious world of the backend (and promptly regrets it).
+
+I spend my days wrangling pixels, writing code that works (most of the time), and pretending to understand the complexities of the universe – when in reality, I'm just trying to center a div.
+
+I love building smooth UIs, breaking things so I can fix them again, and occasionally asking Stack Overflow for the 458th time why my state isn't updating.
+
+Currently open to cool opportunities, caffeine-fueled coding sprints, and meme-worthy bugs. Let’s build something that doesn’t crash on first render`,
   subtitle: "Hobbies",
-  description2: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quas distinctio, veritatis inventore nemo aliquam cupiditate, natus provident id atque dolores! Maxime consectetur ipsum asperiores mollitia illum temporibus nisi facere!`,
+  description2: `When I’m not battling bugs or explaining to people that "React" is not just an emotional state, I’m probably drowning in music, anime, manga, or video games — and loving every chaotic second of it. Occasionally, I do step outside to play football, table tennis, badminton, or just to remind myself what sunlight feels like (yes, I do touch grass sometimes, thank you very much).
+
+In my free time (aka when I'm not questioning life over a console error), I binge-watch anime, dive into manga lore, and button-mash my way through game bosses like it’s therapy. So here are some of my favorite series and titles — in case you’re looking to lose sleep and productivity too. `,
   hobbies: {
     anime: {
       title: "Anime",

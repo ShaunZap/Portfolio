@@ -32,16 +32,19 @@ const Quotes = () => {
 
   return (
     <div className="quotes-container">
-      {loading ? (
-        <p className="loading">Loading quotes...</p>
-      ) : (
-        quotes.map((quote, index) => (
-          <div key={quote.id ?? index} className="quote-card">
-            <p className="quote-text">"{quote.quote}"</p>
-            <p className="quote-author">- {quote.author}</p>
-          </div>
-        ))
-      )}
+      <div className="title">Wise Words (from People Smarter Than Me)</div>
+      <div className="content">
+        {loading ? (
+          <p className="loading">Loading quotes...</p>
+        ) : (
+          quotes.map((quote, index) => (
+            <div key={quote.id ?? index} className="quote-card">
+              <p className="quote-text">"{quote.quote}"</p>
+              <p className="quote-author">- {quote.author}</p>
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
 };

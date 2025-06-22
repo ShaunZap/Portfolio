@@ -10,7 +10,7 @@
     text-align: center;
 
     .section-link {
-      border: 5px solid var(--color-brand-1000);
+      border: 2px solid var(--color-brand-1000);
       display: inline-block;
       width: 80px;
       height: 80px;

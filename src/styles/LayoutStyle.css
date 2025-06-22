@@ -8,7 +8,7 @@
 .notification-panel {
   width: 100%;
   height: 5vh;
-  background-color: var(--color-brand-1200);
+  background-color: var(--color-brand-1250);
 }
 .main-content {
   height: 88vh;
@@ -20,5 +20,5 @@
 .footer {
   width: 100%;
   height: 7vh;
-  background-color: var(--color-brand-1200);
+  background-color: var(--color-brand-1250);
 }

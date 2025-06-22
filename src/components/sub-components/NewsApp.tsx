@@ -36,27 +36,30 @@ const NewsApp = () => {
 
   return (
     <div className="news-container">
-      {loading ? (
-        <div className="loading">Loading news...</div>
-      ) : (
-        newsData.map((article, index) => (
-          <div className="news-article" key={index}>
-            <div className="news-title">{article.title}</div>
-            <div className="news-content">{article.description}</div>
-            <div className="news-image">
-              <img src={article.image || newsIcon} alt="news" />
+      <div className="title">Meanwhile, on Earth…</div>
+      <div className="content">
+        {loading ? (
+          <div className="loading">Loading news...</div>
+        ) : (
+          newsData.map((article, index) => (
+            <div className="news-article" key={index}>
+              <div className="news-title">{article.title}</div>
+              <div className="news-content">{article.description}</div>
+              <div className="news-image">
+                <img src={article.image || newsIcon} alt="news" />
+              </div>
+              <div className="news-date">
+                {new Date(article.publishedAt).toLocaleString()}
+              </div>
+              <div className="newsButton">
+                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  more info
+                </a>
+              </div>
             </div>
-            <div className="news-date">
-              {new Date(article.publishedAt).toLocaleString()}
-            </div>
-            <div className="newsButton">
-              <a href={article.url} target="_blank" rel="noopener noreferrer">
-                more info
-              </a>
-            </div>
-          </div>
-        ))
-      )}
+          ))
+        )}
+      </div>
     </div>
   );
 };

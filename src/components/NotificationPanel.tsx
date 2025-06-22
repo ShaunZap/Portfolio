@@ -1,4 +1,4 @@
 const NotificationPanel = () => {
-  return <div>Notification</div>;
+  return <div>Shaun Barreto</div>;
 };
 export default NotificationPanel;

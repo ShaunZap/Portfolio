@@ -14,17 +14,16 @@
   width: 100%;
   height: 100%;
   grid-area: 1/1/12/16;
-  border: 5px solid var(--color-brand-1000);
-  overflow-y: scroll;
-  scrollbar-width: none;
+  border-radius: 2px;
+  border: 5px solid var(--color-brand-1250);
+
 }
 .news-component {
   width: 100%;
   height: 100%;
   grid-area: 1/17/12/31;
-  border: 5px solid var(--color-brand-1000);
-  overflow-y: scroll;
-  scrollbar-width: none;
+  border-radius: 2px;
+  border: 5px solid var(--color-brand-1250);
 }
 
 .sections-component {
