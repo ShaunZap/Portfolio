@@ -72,7 +72,7 @@
   .stack-item {
     width: 55px;
     height: 55px;
-    background-color: var(--color-primary-peach);
+    background-color: var(--color-brand-500);
     border-radius: 5px;
     padding: 2px;
     flex-shrink: 0;

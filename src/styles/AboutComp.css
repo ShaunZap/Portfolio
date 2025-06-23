@@ -7,7 +7,7 @@
 
   .image-container {
     grid-area: 1 / 1 / 11 / 8;
-    background-color: var(--color-light-peach );
+    background-color: var(--color-light-peach);
 
     img {
       object-fit: scale-down;
@@ -24,7 +24,6 @@
     letter-spacing: var(--letter-spacing-small);
     padding: 30px;
     white-space: pre-line;
-
   }
   ::-webkit-scrollbar {
     width: 5px;
