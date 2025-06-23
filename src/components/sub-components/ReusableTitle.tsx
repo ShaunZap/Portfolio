@@ -9,21 +9,18 @@ const ReusableTitle = ({ title }: { title: string }) => {
     const letters = containerRef.current?.querySelectorAll(".letter");
     if (letters) {
       letters.forEach((letter, index) => {
-        const el = letter as HTMLElement;
-        if (typeof el.animate === "function") {
-          el.animate(
-            [
-              { opacity: 0, transform: "translateY(30px)" },
-              { opacity: 1, transform: "translateY(0)" },
-            ],
-            {
-              delay: index * 80,
-              duration: 700,
-              easing: "ease-out",
-              fill: "forwards",
-            }
-          );
-        }
+        (letter as HTMLElement).animate(
+          [
+            { opacity: 0, transform: "translateY(30px)" },
+            { opacity: 1, transform: "translateY(0)" },
+          ],
+          {
+            delay: index * 80,
+            duration: 700,
+            easing: "ease-out",
+            fill: "forwards",
+          }
+        );
       });
     }
   }, [title]);
@@ -31,7 +28,6 @@ const ReusableTitle = ({ title }: { title: string }) => {
   return (
     <div>
       <MDiv
-        data-testid="reusable-title"
         ref={containerRef}
         style={{
           fontSize: "180px",
