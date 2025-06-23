@@ -7,13 +7,14 @@
   margin-top: 20px;
 
   .iconImage {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     padding: 5px;
+    opacity: 0.7;
   }
   h2 {
     flex: 1;
-    color: var(--color-primary-black);
+    color: var(--color-brand-1200);
     font-size: var(--font-size-large);
     letter-spacing: var(--letter-spacing-medium);
     padding: 0px 0px 0px 10px;
@@ -36,7 +37,7 @@
     padding: 5px;
 
     .skill-card-title {
-      background-color: var(--color-off-white);
+      background-color: var(--color-light-peach);
       display: flex;
       flex-direction: row;
       gap: 2px;

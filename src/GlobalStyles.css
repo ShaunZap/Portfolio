@@ -1,19 +1,22 @@
 :root {
-  --color-brand-500: rgb(165, 169, 180); /*Metallic Silver*/
-  --color-brand-700: rgb(120, 130, 145); /* Dark Silver Gray */
-  --color-brand-800: rgb(54, 69, 79); /* Charcoal*/
-  --color-brand-900: rgb(44, 53, 57); /* Gunmetal*/
-  --color-brand-1000: rgb(53, 57, 53); /* Onyx*/
-  --color-brand-1100: rgb(52, 52, 52); /* Jet*/
-  --color-brand-1200: rgb(40, 40, 43); /* Matt*/
-  --color-brand-1250: rgb(33, 33, 35); /* Shadow */
-  --color-brand-1300: rgb(27, 27, 27); /* Eerie */
-  --color-brand-1400: rgb(27, 18, 18); /* Licorice*/
-  --color-primary-black: #1c2526; /* Primary Black */
-  --color-off-white: #faf9f6; /* Off White */
-  --color-primary-peach: #ffefd5;
-  --color-light-peach: #fff5e6;
-  --font-size-large: 100px;
+ --color-brand-500: #e0d6c3;       /* Warm Sand – great for button backgrounds */
+  --color-brand-700: #c4b9a5;       /* Soft Taupe – good for hover or secondary buttons */
+  --color-brand-800: #9e9484;       /* Dusty Bronze – text highlights or icon backgrounds */
+  --color-brand-900: #7d7363;       /* Mocha Ash – elegant depth */
+  --color-brand-1000: #5a5244;      /* Deep Bronze – base background / card bg */
+  --color-brand-1100: #4b4438;      /* Rich Umber – navbars, sections */
+  --color-brand-1200: #3b352a;      /* Shadow Bronze – modal or footer backgrounds */
+  --color-brand-1250: #2f2a22;      /* Dark Coffee – sidebar or body background */
+  --color-brand-1300: #1e1b17;      /* Charred Earth – hero overlays or deepest shadows */
+  --color-brand-1400: #17140f;      /* Earth Black – darkest accents */
+
+  --color-primary-black: #2a2a2a;   /* Charcoal Black – consistent with the warm theme */
+  --color-off-white: #fefaf1;       /* Linen – beautiful as text on darker backgrounds */
+  --color-primary-peach: #f4e3c1;   /* Soft Gold – updated from old peach, better harmony */
+  --color-light-peach: #fff1da;     /* Champagne – great for card backgrounds or highlight blocks */
+
+
+  --font-size-large: 80px;
   --font-size-medium: 35px;
   --font-size-small: 25px;
   --font-size-xsmall: 20px;

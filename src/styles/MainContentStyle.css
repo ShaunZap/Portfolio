@@ -13,16 +13,17 @@
 .quotes-component {
   width: 100%;
   height: 100%;
-  grid-area: 1/1/12/16;
+  grid-area: 1/1/12/14;
   border-radius: 2px;
-  border: 5px solid var(--color-brand-1250);
+  border: 5px solid var(--color-brand-700);
+
 }
 .news-component {
   width: 100%;
   height: 100%;
-  grid-area: 1/17/12/31;
+  grid-area: 1/15/12/31;
   border-radius: 2px;
-  border: 5px solid var(--color-brand-1250);
+  border: 5px solid var(--color-brand-700);
 }
 
 .sections-component {

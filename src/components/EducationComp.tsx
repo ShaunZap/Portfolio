@@ -15,12 +15,12 @@ const EducationComp = () => {
   return (
     <div>
       <ReusableTitle title={"Education"} />
-      <MainTitle maintitle={"Education Timeline"} Icon={eduIcon} />
+      <MainTitle maintitle={"Lessons, Deadlines & Drama"} Icon={eduIcon} />
       <TimelineSection />
-      <MainTitle maintitle={"Online Certifications"} Icon={certificateIcon} />
+      <MainTitle maintitle={"Click & Learn Stuff"} Icon={certificateIcon} />
       <CertificationCard />
       <MainTitle
-        maintitle={"Educational Institutions"}
+        maintitle={"The Halls of Homework"}
         Icon={institutionIcon}
       />
       <InstitutionCard />

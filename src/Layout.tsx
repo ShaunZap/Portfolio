@@ -6,6 +6,7 @@ import { routeList } from "./Routes";
 import "./styles/LayoutStyle.css";
 import { AnimatePresence, motion } from "framer-motion";
 
+
 const pageTransition = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
@@ -27,7 +28,7 @@ const PageTransitionOverlay = () => {
         right: 0,
         bottom: 0,
         transformOrigin: "top",
-        backgroundColor: "#111", // or use a brand color
+        backgroundColor: "var(--color-brand-1250)", // or use a brand color
         zIndex: 9999,
       }}
     />
