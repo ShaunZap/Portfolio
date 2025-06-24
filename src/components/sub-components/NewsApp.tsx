@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react";
 import newsIcon from "../../assets/images/miscellaneous/news.svg";
 import "../../styles/News.css";
-
+import { Article } from "../../types/type";
 const apikey = import.meta.env.VITE_NEWS_API_KEY;
-
-type Article = {
-  title: string;
-  description: string;
-  image: string;
-  publishedAt: string;
-  url: string;
-};
 
 const NewsApp = () => {
   const [newsData, setNewsData] = useState<Article[]>([]);

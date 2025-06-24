@@ -14,13 +14,13 @@ describe("EducationComp", () => {
   it("renders all MainTitles with correct headings", () => {
     render(<EducationComp />);
     expect(
-      screen.getByRole("heading", { name: "Education Timeline" })
+      screen.getByRole("heading", { name: "Lessons, Deadlines & Drama" })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Online Certifications" })
+      screen.getByRole("heading", { name: "Click & Learn Stuff" })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Educational Institutions" })
+      screen.getByRole("heading", { name: "The Halls of Homework" })
     ).toBeInTheDocument();
   });
 

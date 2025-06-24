@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../styles/Quotes.css";
-
-// Define the type for a single quote
-interface Quote {
-  id: number;
-  quote: string;
-  author: string;
-}
+import { Quote } from "../../types/type";
 
 const Quotes = () => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
