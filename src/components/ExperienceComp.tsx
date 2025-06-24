@@ -11,7 +11,7 @@ const ExperienceComp = () => {
       <ReusableTitle title={"Experience"} />
       <div className="outer-card-container">
         {Object.entries(experienceData).map(([key, exp]) => (
-          <div className="inner-container">
+          <div className="inner-container" key={key}>
             <div className="timeline-container">
               <img src={briefcaseIcon} alt="icon" />
               <hr />
@@ -38,7 +38,9 @@ const ExperienceComp = () => {
                 <div>Tech Stack</div>
                 <div className="tech-stack-container">
                   {exp.techStack.map((tech, index) => (
-                    <p key={index}>{tech}</p>
+                    <p key={index} data-testid={`${index}+${tech}`}>
+                      {tech}
+                    </p>
                   ))}
                 </div>
               </div>
