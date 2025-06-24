@@ -53,6 +53,7 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
           transition={defaultSpring}
           className="skill-card"
           key={key}
+          data-testid={`skill-cards`}
         >
           <div className="skill-card-title">
             <img src={value.icon} alt={value.title} />
@@ -61,7 +62,12 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
           <div className="proficiency-section">
             <div className="proficiency-info">
               <div className="title">Proficiency Level:</div>
-              <div className="proficiency-level">{value.proficiency.level}</div>
+              <div
+                className="proficiency-level"
+                data-testid={`${value.title}+${value.proficiency.level}`}
+              >
+                {value.proficiency.level}
+              </div>
             </div>
             <div className="proficiency-bar">
               <div

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { img as MImg, div as MDiv } from "motion/react-client";
+import { div as MDiv } from "motion/react-client";
 import "../styles/Sections.css";
 import { sectionLinks } from "../Data/Data";
 const Sections = () => {
@@ -12,7 +12,7 @@ const Sections = () => {
           key={index}
         >
           <Link to={data.link} className="section-link">
-            <MImg src={data.icon} alt={data.name} className="section-icon" />
+            <img src={data.icon} alt={data.name} className="section-icon" />
           </Link>
           <div className="section-name">{data.name}</div>
         </MDiv>

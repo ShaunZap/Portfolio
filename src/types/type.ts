@@ -85,3 +85,17 @@ export type ExperienceData = {
   jobLocation: string;
   techStack: string[];
 };
+
+export type Article = {
+  title: string;
+  description: string;
+  image: string;
+  publishedAt: string;
+  url: string;
+};
+
+export type Quote = {
+  id: number;
+  quote: string;
+  author: string;
+};
