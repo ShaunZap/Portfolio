@@ -44,7 +44,12 @@ const ReusableTitle = ({ title }: { title: string }) => {
         }}
       >
         {title.split("").map((char, i) => (
-          <span key={i} className="letter" style={{ opacity: 0 }}>
+          <span
+            key={i}
+            className="letter"
+            data-testid={char === " " ? "letter-space" : "letter"}
+            style={{ opacity: 0 }}
+          >
             {char === " " ? "\u00A0" : char}
           </span>
         ))}

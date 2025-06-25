@@ -11,7 +11,15 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "lcov"],
       all: true,
-      exclude: ["node_modules/", "coverage/"],
+      exclude: [
+        "node_modules/",
+        "coverage/",
+        "**/*.d.ts",
+        "vite.config.ts",
+        "eslint.config.js",
+        "**/types/**",
+        "src/main.tsx",
+      ],
     },
   },
 });
