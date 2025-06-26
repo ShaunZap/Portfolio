@@ -1,0 +1,31 @@
+@import "../GlobalStyles.css";
+
+.panel-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5vh;
+  align-items: center;
+  padding: 0px 10px;
+
+  .titlelogo {
+    justify-content: start;
+    color: var(--color-primary-peach);
+    font-size: var(--font-size-small);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: 600;
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: end;
+    gap: 10px;
+
+    .batteryicon {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

@@ -34,7 +34,8 @@ const ReusableTitle = ({ title }: { title: string }) => {
         data-testid="reusable-title"
         ref={containerRef}
         style={{
-          fontSize: "180px",
+          fontFamily: '"Monoton", sans-serif',
+          fontSize: "120px",
           fontWeight: "500",
           padding: "20px",
           color: "var(--color-primary-peach)",

@@ -1,6 +1,7 @@
 import Sections from "./Sections";
 import Quotes from "./sub-components/Quotes";
 import NewsApp from "./sub-components/NewsApp";
+import NowSection from "./sub-components/NowSection";
 import "../styles/MainContentStyle.css";
 
 function MainContentBody() {
@@ -14,6 +15,9 @@ function MainContentBody() {
       </div>
       <div className="sections-component">
         <Sections />
+      </div>
+      <div className="now-section-component">
+        <NowSection />
       </div>
     </div>
   );

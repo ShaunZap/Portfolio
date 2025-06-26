@@ -51,7 +51,7 @@
     color: var(--color-light-peach);
     background-color: var(--color-brand-1250);
     padding: 30px 30px 30px 30px;
-    letter-spacing: var(--letter-spacing-small);
+    letter-spacing: var(--letter-spacing-xsmall);
     white-space: pre-line;
   }
   .hobbies-list {
