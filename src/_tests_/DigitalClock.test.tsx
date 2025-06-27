@@ -3,20 +3,28 @@ import { render, screen } from "@testing-library/react";
 import DigitalClock from "../components/sub-components/DigitalClock";
 
 describe("DigitalClock", () => {
+  const fixedDate = new Date("2023-01-01T05:30:00");
+
   beforeEach(() => {
-    vi.useFakeTimers(); // Control the timer
+    vi.useFakeTimers(); // Mock timers
+    vi.setSystemTime(fixedDate); // Fix system time
   });
 
   afterEach(() => {
-    vi.useRealTimers(); // Restore after test
+    vi.useRealTimers(); // Restore
   });
 
-  it("renders the current time on mount", () => {
+  it("renders the fixed time on mount", () => {
     render(<DigitalClock />);
-    const now = new Date().toLocaleTimeString("en-IN", { hour12: true });
+    const expectedTime = fixedDate.toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
 
-    now.split("").forEach((char) => {
-      if (char.trim() !== "") {
+    // Check each character except space
+    expectedTime.split("").forEach((char) => {
+      if (char.trim()) {
         expect(screen.getAllByText(char).length).toBeGreaterThan(0);
       }
     });
@@ -25,11 +33,11 @@ describe("DigitalClock", () => {
   it("updates the time after 1 second", () => {
     render(<DigitalClock />);
 
-    // Advance time by 1 second
+    // Move time forward by 1 second
     vi.advanceTimersByTime(1000);
 
-    // Rerendering happens internally due to state update
-    const updatedTime = screen.getAllByText(":")[0];
-    expect(updatedTime).not.toBeNull();
+    // Assert that something rerendered (optional)
+    const colonElements = screen.getAllByText(":");
+    expect(colonElements.length).toBeGreaterThan(0);
   });
 });

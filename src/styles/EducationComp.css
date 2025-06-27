@@ -84,7 +84,7 @@
       }
       .duration {
         background-color: var(--color-primary-peach);
-        grid-area: 4/13/6/18;
+        grid-area: 4/13/6/17;
         font-size: var(--font-size-small);
         font-weight: 600;
         letter-spacing: var(--letter-spacing-small);
@@ -92,7 +92,7 @@
       }
       .gpa {
         background-color: var(--color-primary-peach);
-        grid-area: 4/18/6/21;
+        grid-area: 4/17/6/21;
         font-size: var(--font-size-small);
         letter-spacing: var(--letter-spacing-small);
         padding: 5px;
@@ -261,5 +261,280 @@
         margin-bottom: 2px;
       }
     }
+  }
+}
+
+/* Responsive Layout */
+
+@media screen and (max-width: 900px) {
+  .education-title {
+    margin-top: 40px;
+
+    .iconImage {
+      width: 50px;
+      height: 50px;
+      padding: 3px;
+    }
+    h2 {
+      font-size: var(--font-size-medium);
+      letter-spacing: var(--letter-spacing-small);
+      padding: 0px 0px 0px 5px;
+    }
+  }
+
+  .education-timeline-container {
+    margin-top: 10px;
+    gap: 5px;
+
+    .timeline-item-container {
+      width: 99%;
+
+      .timeline-separator {
+        .timelineIcon {
+          width: 40px;
+          height: 40px;
+          padding: 3px;
+          border: 3px solid var(--color-brand-1000);
+        }
+        hr {
+          width: 4px;
+        }
+      }
+
+      .timeline-card-grid {
+        grid-template-rows: repeat(8, 20px);
+        gap: 3px;
+        border: 3px solid var(--color-brand-1000);
+
+        .degree-title {
+          grid-area: 1 / 1 / 3 / 21;
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-small);
+        }
+        .institution {
+          grid-area: 3/1/5/13;
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .duration {
+          grid-area: 3/13/5/17;
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .gpa {
+          grid-area: 3/17/5/21;
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .highlights {
+          grid-area: 5/1/9/21;
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+      }
+    }
+  }
+
+  .certification-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 5px;
+
+    .certification-card {
+      border: 3px solid var(--color-brand-1000);
+
+      .certification-card-title {
+        h4 {
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+          border-bottom: 1px solid var(--color-light-peach);
+        }
+        h5 {
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+      }
+      .certification-card-content {
+        font-size: var(--font-size-xsmall);
+        letter-spacing: var(--letter-spacing-xsmall);
+      }
+      .certification-card-tags {
+        gap: 10px;
+        margin-top: 5px;
+
+        div {
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+          padding: 4px;
+          border-radius: 2px;
+          padding: 0px 3px 0px 3px;
+        }
+      }
+    }
+  }
+
+  .institution-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    padding: 5px;
+
+    .institution-card {
+      border: 3px solid var(--color-brand-700);
+      padding: 5px;
+
+      .institution-card-title {
+        gap: 5px;
+
+        img {
+          padding: 3px;
+        }
+
+        div {
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+      }
+      .email {
+        gap: 2px;
+
+        img {
+          width: 25px;
+          height: 25px;
+          padding: 3px;
+        }
+
+        div {
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+        }
+      }
+      .address {
+        font-size: var(--font-size-uxsmall);
+        letter-spacing: var(--letter-spacing-uxsmall);
+      }
+
+      .link {
+        a {
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+          padding: 3px;
+          border: 2px solid var(--color-brand-700);
+          margin-bottom: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .education-title {
+    margin-top: 20px;
+
+    .iconImage {
+      width: 35px;
+      height: 35px;
+      padding: 3px;
+    }
+    h2 {
+      font-size: var(--font-size-small);
+      letter-spacing: var(--letter-spacing-xsmall);
+      padding: 0px 0px 0px 3px;
+    }
+  }
+
+  .education-timeline-container {
+    margin-top: 8px;
+    gap: 5px;
+
+    .timeline-item-container {
+      width: 99%;
+
+      .timeline-separator {
+        .timelineIcon {
+          width: 25px;
+          height: 25px;
+          padding: 1px;
+          border: 2px solid var(--color-brand-1000);
+        }
+        hr {
+          width: 4px;
+        }
+      }
+
+      .timeline-card-grid {
+        grid-template-rows: repeat(8, 20px);
+        gap: 2px;
+        border: 3px solid var(--color-brand-1000);
+
+        .degree-title {
+          grid-area: 1 / 1 / 3 / 21;
+          font-size: var(--font-size-xsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .institution {
+          grid-area: 3/1/4/21;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+          padding: 2px;
+        }
+        .duration {
+          grid-area: 4/1/5/10;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+          padding: 2px;
+        }
+        .gpa {
+          grid-area: 4/10/5/21;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+          padding: 2px;
+        }
+        .highlights {
+          grid-area: 5/1/9/21;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+        }
+      }
+    }
+  }
+
+  .certification-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 5px;
+
+    .certification-card {
+      border: 2px solid var(--color-brand-1000);
+
+      .certification-card-title {
+        h4 {
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+          border-bottom: 1px solid var(--color-light-peach);
+        }
+        h5 {
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-uxsmall);
+        }
+      }
+      .certification-card-content {
+        font-size: var(--font-size-uxsmall);
+        letter-spacing: var(--letter-spacing-uxsmall);
+      }
+      .certification-card-tags {
+        gap: 5px;
+        margin-top: 2px;
+
+        div {
+          padding: 0px 2px 0px 2px;
+        }
+      }
+    }
+  }
+
+  .institution-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }

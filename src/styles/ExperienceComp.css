@@ -103,7 +103,6 @@
       .job-location {
         background-color: var(--color-primary-peach);
         grid-area: 14/13/18/21;
-        font-size: 25px;
         font-weight: 500;
         color: var(--color-primary-black);
         overflow: hidden;
@@ -127,7 +126,6 @@
         background-color: var(--color-primary-peach);
         grid-area: 6/13/14/21;
         color: var(--color-primary-black);
-        font-size: 25px;
         overflow: hidden;
         font-weight: 500;
 
@@ -146,12 +144,198 @@
           gap: 10px;
           p {
             background-color: var(--color-brand-1000);
-            color: var();
             padding: 0px 5px 0px 5px;
-            margin: 0;
             font-size: var(--font-size-small);
             letter-spacing: var(--letter-spacing-small);
             border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Layout */
+
+@media screen and (max-width: 900px) {
+  .outer-card-container {
+    gap: 10px;
+    padding: 10px;
+
+    .inner-container {
+      gap: 10px;
+
+      .timeline-container {
+        img {
+          width: 40px;
+          height: 40px;
+          padding: 3px;
+          border: 3px solid var(--color-brand-1000);
+        }
+        hr {
+          width: 4px;
+        }
+      }
+      .card-container {
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(18, 20px);
+        gap: 2px;
+        width: 95%;
+        padding: 2px;
+
+        .company-name {
+          grid-area: 1/2/3/21;
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .job-title {
+          grid-area: 3/2/5/21;
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .job-duration {
+          grid-area: 1/1/19/2;
+          font-size: var(--font-size-small);
+          letter-spacing: var(--letter-spacing-small);
+        }
+        .job-description {
+          grid-area: 5/2/14/21;
+
+          div {
+            padding: 5px;
+            font-size: var(--font-size-small);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+          p {
+            padding: 5px;
+            font-size: var(--font-size-xsmall);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+        }
+        .job-location {
+          grid-area: 14/13/19/21;
+
+          div {
+            padding: 5px;
+            font-size: var(--font-size-small);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+          p {
+            padding: 5px;
+            font-size: var(--font-size-xsmall);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+        }
+        .tech-stack {
+          grid-area: 14/2/19/13;
+
+          div {
+            padding: 5px;
+            font-size: var(--font-size-small);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+          .tech-stack-container {
+            gap: 5px;
+            p {
+              padding: 0px 2px 0px 2px;
+              font-size: var(--font-size-xsmall);
+              letter-spacing: var(--letter-spacing-xsmall);
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .outer-card-container {
+    gap: 5px;
+    padding: 10px 2px;
+
+    .inner-container {
+      gap: 5px;
+
+      .timeline-container {
+        img {
+          width: 25px;
+          height: 25px;
+          padding: 2px;
+          border: 2px solid var(--color-brand-1000);
+        }
+        hr {
+          width: 3px;
+        }
+      }
+      .card-container {
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(12, 20px);
+        gap: 2px;
+        width: 98%;
+        padding: 2px;
+
+        .company-name {
+          grid-area: 1/2/2/21;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .job-title {
+          grid-area: 2/2/3/21;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+        }
+        .job-duration {
+          grid-area: 1/1/13/2;
+          font-size: var(--font-size-uxsmall);
+          letter-spacing: var(--letter-spacing-xsmall);
+          padding: 2px;
+        }
+        .job-description {
+          grid-area: 3/2/8/21;
+
+          div {
+            padding: 0px 5px;
+            font-size: var(--font-size-uxsmall);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+          p {
+            padding: 0px 5px;
+            font-size: var(--font-size-uxsmall);
+            letter-spacing: var(--letter-spacing-uxsmall);
+          }
+        }
+        .job-location {
+          grid-area: 8/13/13/21;
+
+          div {
+            padding: 0px 5px;
+            font-size: var(--font-size-uxsmall);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+          p {
+            padding: 0px 5px;
+            font-size: var(--font-size-uxsmall);
+            letter-spacing: var(--letter-spacing-uxsmall);
+          }
+        }
+        .tech-stack {
+          grid-area: 8/2/13/13;
+
+          div {
+            padding: 0px 5px;
+            font-size: var(--font-size-uxsmall);
+            letter-spacing: var(--letter-spacing-xsmall);
+          }
+          .tech-stack-container {
+            gap: 2px;
+            padding: 3px;
+            p {
+              padding: 0px 3px 0px 3px;
+              font-size: 16px;
+              letter-spacing: var(--letter-spacing-uxsmall);
+              border-radius: 2px;
+            }
           }
         }
       }

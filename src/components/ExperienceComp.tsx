@@ -23,9 +23,11 @@ const ExperienceComp = () => {
               className="card-container"
               key={key}
             >
-              <div className="company-name">{exp.companyName}</div>
+              <div className="company-name">
+                Company Name: {exp.companyName}
+              </div>
               <div className="job-duration">{exp.jobDuration}</div>
-              <div className="job-title">{exp.jobTitle}</div>
+              <div className="job-title">Role: {exp.jobTitle}</div>
               <div className="job-description">
                 <div>Description</div>
                 <p>{exp.jobDescription}</p>

@@ -1,9 +1,13 @@
 import { div as MDiv } from "motion/react-client";
 import { useEffect, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+
 import "../../GlobalStyles.css";
 
 const ReusableTitle = ({ title }: { title: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile900 = useMediaQuery({ query: "(max-width: 900px)" });
+  const isMobile600 = useMediaQuery({ query: "(max-width: 600px)" });
 
   useEffect(() => {
     const letters = containerRef.current?.querySelectorAll(".letter");
@@ -35,9 +39,9 @@ const ReusableTitle = ({ title }: { title: string }) => {
         ref={containerRef}
         style={{
           fontFamily: '"Monoton", sans-serif',
-          fontSize: "120px",
+          fontSize: isMobile600 ? "40px" : isMobile900 ? "80px" : "120px",
           fontWeight: "500",
-          padding: "20px",
+          padding: isMobile600 ? "10px" : "20px",
           color: "var(--color-primary-peach)",
           backgroundColor: "var(--color-brand-1000)",
           letterSpacing: "10px",
