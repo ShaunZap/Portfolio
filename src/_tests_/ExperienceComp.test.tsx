@@ -22,9 +22,11 @@ describe("ExperienceComp", () => {
     expect(screen.getAllByText("Tech Stack")).toHaveLength(experiences.length);
 
     experiences.forEach((exp) => {
-      expect(screen.getByText(exp.companyName)).toBeInTheDocument();
+      expect(
+        screen.getByText(`Company Name: ${exp.companyName}`)
+      ).toBeInTheDocument();
       expect(screen.getByText(exp.jobDuration)).toBeInTheDocument();
-      expect(screen.getByText(exp.jobTitle)).toBeInTheDocument();
+      expect(screen.getByText(`Role: ${exp.jobTitle}`)).toBeInTheDocument();
       expect(screen.getByText(exp.jobDescription)).toBeInTheDocument();
       expect(screen.getByText(exp.jobLocation)).toBeInTheDocument();
 
