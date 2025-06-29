@@ -34,3 +34,23 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .now-section {
+    .title {
+      font-size: var(--font-size-xsmall);
+      letter-spacing: var(--letter-spacing-xsmall);
+      padding: 5px;
+    }
+    .content {
+      font-size: var(--font-size-uxsmall);
+      letter-spacing: var(--letter-spacing-uxsmall);
+
+      padding: 5px;
+
+      span {
+        font-size: var(--font-size-xsmall);
+      }
+    }
+  }
+}

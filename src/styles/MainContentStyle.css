@@ -35,3 +35,39 @@
   height: 100%;
   grid-area: 1/15/5/31;
 }
+
+@media screen and (max-width: 600px) {
+  .main-content-layout {
+    width: 100%;
+
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(40, 1fr);
+    padding: 5px;
+    gap: 5px;
+  }
+
+  .quotes-component {
+    width: 100%;
+    height: 100%;
+    grid-area: 25/1/36/31;
+    border: 5px solid var(--color-brand-700);
+  }
+  .news-component {
+    width: 100%;
+    height: 100%;
+    grid-area: 10/1/25/31;
+    border: 5px solid var(--color-brand-700);
+  }
+
+  .sections-component {
+    width: 100%;
+    height: 100%;
+    grid-area: 36/1/41/31;
+  }
+
+  .now-section-component {
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/10/31;
+  }
+}

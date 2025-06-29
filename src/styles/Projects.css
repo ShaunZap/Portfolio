@@ -52,8 +52,8 @@
   font-size: var(--font-size-small);
   font-weight: 500;
   letter-spacing: var(--letter-spacing-small);
-  /* overflow-y: scroll;
-  scrollbar-width: none; */
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 .project-stack {
   background-color: var(--color-brand-1000);
@@ -94,7 +94,7 @@
   flex-direction: row;
   overflow: hidden;
   gap: 5px;
-  font-size: 25px;
+  font-size: var(--font-size-small);
   cursor: pointer;
 
   .live {
@@ -129,5 +129,89 @@
         letter-spacing: var(--letter-spacing-small);
       }
     }
+  }
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 900px) {
+  .project-card {
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(39, 15px);
+  }
+  .project-title {
+    grid-area: 1/1/4/31;
+  }
+  .project-image {
+    grid-area: 4/1/25/31;
+  }
+  .project-description {
+    grid-area: 25/1/33/31;
+  }
+  .project-stack {
+    grid-area: 33/1/37/31;
+  }
+  .project-links {
+    grid-area: 37/1/40/31;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-container {
+    padding: 10px 2px;
+
+  }
+  .project-card {
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(28, 15px);
+    gap: 2px;
+    padding: 2px;
+  }
+  .project-title {
+    grid-area: 1/1/3/31;
+
+    hr {
+      width: 100%;
+      border: 1px solid var(--color-light-peach);
+      height: 4px;
+    }
+    h2 {
+      padding: 0 6px;
+      color: var(--color-light-peach);
+      font-size: var(--font-size-small);
+      letter-spacing: var(--letter-spacing-small);
+    }
+  }
+  .project-image {
+    grid-area: 3/1/15/31;
+  }
+  .project-description {
+    grid-area: 15/1/24/31;
+    font-size: var(--font-size-xsmall);
+    letter-spacing: var(--letter-spacing-xsmall);
+    padding: 5px;
+  scrollbar-width: thin;
+
+  }
+  .project-stack {
+    grid-area: 24/1/27/31;
+
+     .stack-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      user-select: none;
+    }
+  }
+  }
+  .project-links {
+    grid-area: 27/1/29/31;
+  gap: 2px;
+  font-size: var(--font-size-xsmall);
+
   }
 }
