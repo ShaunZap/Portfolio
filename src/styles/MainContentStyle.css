@@ -41,7 +41,7 @@
     width: 100%;
 
     grid-template-columns: repeat(30, 1fr);
-    grid-template-rows: repeat(40, 1fr);
+    grid-template-rows: repeat(42, 1fr);
     padding: 5px;
     gap: 5px;
   }

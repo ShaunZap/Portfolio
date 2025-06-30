@@ -270,61 +270,61 @@
       }
       .card-container {
         grid-template-columns: repeat(20, 1fr);
-        grid-template-rows: repeat(12, 20px);
-        gap: 2px;
+        grid-template-rows: repeat(15, 20px);
+        gap: 4px;
         width: 98%;
-        padding: 2px;
+        padding: 4px;
 
         .company-name {
           grid-area: 1/2/2/21;
-          font-size: var(--font-size-uxsmall);
+          font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
         .job-title {
           grid-area: 2/2/3/21;
-          font-size: var(--font-size-uxsmall);
+          font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
         .job-duration {
-          grid-area: 1/1/13/2;
-          font-size: var(--font-size-uxsmall);
+          grid-area: 1/1/16/2;
+          font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
           padding: 2px;
         }
         .job-description {
-          grid-area: 3/2/8/21;
+          grid-area: 3/2/9/21;
 
           div {
             padding: 0px 5px;
-            font-size: var(--font-size-uxsmall);
+            font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
           p {
             padding: 0px 5px;
-            font-size: var(--font-size-uxsmall);
+            font-size: 18px;
             letter-spacing: var(--letter-spacing-uxsmall);
           }
         }
         .job-location {
-          grid-area: 8/13/13/21;
+          grid-area: 13/2/16/21;
 
           div {
             padding: 0px 5px;
-            font-size: var(--font-size-uxsmall);
+            font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
           p {
             padding: 0px 5px;
-            font-size: var(--font-size-uxsmall);
+            font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-uxsmall);
           }
         }
         .tech-stack {
-          grid-area: 8/2/13/13;
+          grid-area: 9/2/13/21;
 
           div {
             padding: 0px 5px;
-            font-size: var(--font-size-uxsmall);
+            font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
           .tech-stack-container {
@@ -332,7 +332,7 @@
             padding: 3px;
             p {
               padding: 0px 3px 0px 3px;
-              font-size: 16px;
+              font-size: 18px;
               letter-spacing: var(--letter-spacing-uxsmall);
               border-radius: 2px;
             }
