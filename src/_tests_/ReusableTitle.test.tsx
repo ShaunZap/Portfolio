@@ -1,14 +1,31 @@
 import { render, screen, within } from "@testing-library/react";
 import ReusableTitle from "../components/sub-components/ReusableTitle";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vitest, beforeAll, beforeEach } from "vitest";
 
 describe("ReusableTitle", () => {
   const testTitle = "Hello World";
+  const animateMock = vitest.fn();
 
   it("renders the component with correct data-testid", () => {
     render(<ReusableTitle title={testTitle} />);
     const reusableTitle = screen.getByTestId("reusable-title");
     expect(reusableTitle).toBeInTheDocument();
+  });
+
+  beforeAll(() => {
+    HTMLElement.prototype.animate = animateMock;
+  });
+
+  beforeEach(() => {
+    animateMock.mockClear(); // Reset call history before each test
+  });
+
+  it("animates each letter using el.animate", () => {
+    render(<ReusableTitle title="Test" />);
+    const letters = screen.getAllByTestId("letter");
+
+    // Check that each .letter span triggered an animate call
+    expect(animateMock).toHaveBeenCalledTimes(letters.length);
   });
 
   it("renders each character as a span with class 'letter'", () => {
@@ -50,3 +67,22 @@ describe("ReusableTitle", () => {
     });
   });
 });
+
+vitest.mock("motion/react-client", () => ({
+  div: ({
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    animate,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    initial,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    whileInView,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    whileHover,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    transition,
+    ...rest
+  }: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  }) => <div {...rest} />,
+}));

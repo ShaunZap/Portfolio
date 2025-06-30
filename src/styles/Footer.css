@@ -40,3 +40,60 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.modal-container {
+  position: absolute;
+  bottom: 50px;
+  left: 30%;
+  z-index: 998;
+}
+
+.modal-card {
+  background-color: var(--color-brand-900);
+  padding: 10px;
+  color: var(--color-light-peach);
+  min-width: 180px;
+  border: 2px solid var(--color-brand-1100);
+  position: relative;
+}
+
+.modal-card h2 {
+  margin: 0 0 10px;
+  font-size: var(--font-size-small);
+}
+
+.modal-card hr {
+  border: none;
+  border-top: 2px solid var(--color-primary-peach);
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: var(--color-light-peach);
+  color: var(--color-brand-1000);
+  top: 15px;
+  right: 10px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.modal-card a {
+  color: var(--color-light-peach);
+  text-decoration: none;
+  font-size: var(--font-size-xsmall);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.modal-card img {
+  width: 40px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
