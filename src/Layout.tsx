@@ -6,7 +6,6 @@ import { routeList } from "./Routes";
 import "./styles/LayoutStyle.css";
 import { AnimatePresence, motion } from "framer-motion";
 
-
 const pageTransition = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
@@ -23,10 +22,10 @@ const PageTransitionOverlay = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       style={{
         position: "fixed",
-        top: 0,
+        top: 30,
         left: 0,
         right: 0,
-        bottom: 0,
+        bottom: 40,
         transformOrigin: "top",
         backgroundColor: "var(--color-brand-1250)", // or use a brand color
         zIndex: 9999,
