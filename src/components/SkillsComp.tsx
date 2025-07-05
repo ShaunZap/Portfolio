@@ -73,14 +73,12 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
               <div
                 className="progress"
                 style={{ width: `${value.proficiency.percentage}%` }}
-              ></div>
-            </div>
-            <div className="proficiency-percentage">
-              {value.proficiency.percentage}%
+              >
+                {value.proficiency.percentage}%
+              </div>
             </div>
           </div>
           <div className="skill-card-info-section">
-            <div className="skill-card-info">{value.description}</div>
             <div className="highlights">
               {value.highlights.map((highlight, index) => (
                 <div className="highlight" key={index}>

@@ -25,7 +25,7 @@
   width: 99%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 10px;
 
   .skill-card {
@@ -90,13 +90,11 @@
         .progress {
           background-color: var(--color-light-peach);
           height: 15px;
+          text-align: end;
+          color: var(--color-brand-1000);
+          font-weight: 500;
+          font-size: var(--font-size-uxsmall);
         }
-      }
-      .proficiency-percentage {
-        padding: 0px 2px 0px 0px;
-        text-align: right;
-        font-size: var(--font-size-uxsmall);
-        color: var(--color-off-white);
       }
     }
 
@@ -104,15 +102,7 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      gap: 10px;
 
-      .skill-card-info {
-        background-color: var(--color-brand-1000);
-        padding: 2px;
-        color: var(--color-off-white);
-        font-size: var(--font-size-xsmall);
-        letter-spacing: var(--letter-spacing-xsmall);
-      }
       .highlights {
         display: flex;
         flex-direction: row;
@@ -172,7 +162,7 @@
   }
 
   .outer-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
     .skill-card {
       padding: 3px;
@@ -198,7 +188,7 @@
 
         .proficiency-info {
           .title {
-            font-size: var(--font-size-uxsmall);
+            font-size: 14px;
             letter-spacing: var(--letter-spacing-uxsmall);
           }
           .proficiency-level {
@@ -211,7 +201,7 @@
         .proficiency-bar {
           .progress {
             background-color: var(--color-light-peach);
-            height: 10px;
+            height: 14px;
           }
         }
         .proficiency-percentage {
@@ -233,6 +223,7 @@
           div {
             font-size: var(--font-size-uxsmall);
             letter-spacing: var(--letter-spacing-uxsmall);
+            padding: 0px 2px 0px 2px;
           }
         }
       }

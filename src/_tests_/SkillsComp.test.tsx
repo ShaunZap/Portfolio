@@ -41,9 +41,8 @@ describe("SkillsComp", () => {
       const card = skillCards[index];
       const utils = within(card);
 
-      // Title and description
+      // Title
       expect(utils.getByText(skill.title)).toBeInTheDocument();
-      expect(utils.getByText(skill.description)).toBeInTheDocument();
 
       // Proficiency
       const proficiencylvlID = `${skill.title}+${skill.proficiency.level}`;
