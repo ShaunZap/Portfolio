@@ -147,6 +147,7 @@
     .hobbies-list {
       background-color: var(--color-brand-1300);
       padding: 5px;
+      gap: 30px;
 
       .hobbie-card {
         padding: 5px;
