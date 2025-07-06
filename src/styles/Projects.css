@@ -98,7 +98,7 @@
   cursor: pointer;
 
   .live {
-    background-color: var(--color-brand-1000);
+    background-color: var(--color-brand-1200);
     width: 100%;
 
     a {
@@ -111,7 +111,7 @@
     }
   }
   .github {
-    background-color: var(--color-brand-1000);
+    background-color: var(--color-brand-1200);
     width: 100%;
 
     a {
