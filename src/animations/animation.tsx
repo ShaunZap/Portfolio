@@ -6,7 +6,7 @@ export const fadeIn = {
 };
 
 export const smallAnimations = {
-  whileHover: { rotate: 5 },
+  whileHover: { rotate: 3 },
   shrinkCard: { scale: 0.96 },
   scaleCard: { scale: 1.02 },
 };
