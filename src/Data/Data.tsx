@@ -211,9 +211,8 @@ export const educationData: EducationData = {
       duration: "2022 - 2024",
       gpa: "8.39/10",
       highlights: [
-        "Dean's List (2019-2022)",
-        "President, Coding Club",
-        "Capstone Project: Portfolio Website",
+        "Top 10% of the class",
+        "Co-ordinator, Astral Coder @ Infofest – Managed and organized a competitive coding event as part of a major tech fest. ",
       ],
     },
     {
@@ -221,22 +220,14 @@ export const educationData: EducationData = {
       institution: "Rosary College of Commerce and Arts",
       duration: "2018 - 2021",
       gpa: "8.18/10",
-      highlights: [
-        "Top 5% of the class",
-        "Math & Computer Science Stream",
-        "Science Fair State Finalist",
-      ],
+      highlights: ["Top 5% of the class"],
     },
     {
       degree: "Higher Secondary School Certificate",
       institution: "Rosary Higher Secondary School",
       duration: "2016 - 2018",
       gpa: "8/10",
-      highlights: [
-        "Science Stream with Mathematics",
-        "Participated in State Level Science Exhibition",
-        "Member of the Student Council",
-      ],
+      highlights: ["Participated in various inter-school competitions"],
     },
     {
       degree: "Secondary School Certificate",
@@ -244,28 +235,12 @@ export const educationData: EducationData = {
       duration: "2005 - 2016",
       gpa: "7.75/10",
       highlights: [
-        "Top 10% in the state board exams",
-        "Active member of the Science Club",
         "Participated in various inter-school competitions",
+        "part of the class football team",
       ],
     },
   ],
   certificationData: [
-    {
-      courseName:
-        "React - The Complete Guide (incl Hooks, React Router, Redux)",
-      authorName: "Maximilian Schwarzmüller",
-      description:
-        "Master ReactJS from the ground up, with hooks, React Router, Redux, and more! Build engaging user interfaces with confidence.",
-      tags: ["react", "frontend", "web development"],
-    },
-    {
-      courseName: "The Complete JavaScript Course 2024: From Zero to Expert!",
-      authorName: "Jonas Schmedtmann",
-      description:
-        "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Includes ES6, OOP, AJAX, Webpack.",
-      tags: ["javascript", "programming", "web development"],
-    },
     {
       courseName:
         "Node.js, Express, MongoDB & More: The Complete Bootcamp 2024",
@@ -275,18 +250,32 @@ export const educationData: EducationData = {
       tags: ["nodejs", "express", "mongodb", "backend"],
     },
     {
-      courseName: "Python for Data Science and Machine Learning Bootcamp",
-      authorName: "Jose Portilla",
+      courseName: "The Ultimate React Course 2025: React, Redux & More!",
+      authorName: "Jonas Schmedtmann",
       description:
-        "Learn how to use NumPy, Pandas, Seaborn, Matplotlib, Plotly, Scikit-learn, and more to become a Data Scientist or ML Engineer!",
-      tags: ["python", "data science", "machine learning"],
+        "Master React, Redux, Next js and modern JavaScript to build powerful web applications with this comprehensive course.",
+      tags: ["react", "redux", "nextjs", "javascript", "web development"],
     },
     {
-      courseName: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
-      authorName: "Colt Steele",
+      courseName: "Learning Git & GitHub",
+      authorName: "Ray Villalobos",
       description:
-        "Become an expert at SQL! Understand the basics of MySQL, create and manage databases, and query data like a pro.",
-      tags: ["mysql", "database", "sql"],
+        "Learn the fundamentals of Git and GitHub, including version control, branching, merging, and collaboration on software projects.",
+      tags: ["git", "github", "version control", "collaboration"],
+    },
+    {
+      courseName: "Javascript Essential Training",
+      authorName: "Morten Rand-Hendriksen",
+      description:
+        "Master the fundamentals of JavaScript, including variables, functions, loops, and objects, to build interactive web applications.",
+      tags: ["javascript", "web development", "programming"],
+    },
+    {
+      courseName: "CSS for Programmers",
+      authorName: "Morten Rand-Hendriksen",
+      description:
+        "Learn CSS fundamentals, including selectors, properties, and layout techniques, to style web pages effectively.",
+      tags: ["css", "web design", "styling"],
     },
   ],
   institutionData: [
@@ -323,31 +312,33 @@ export const educationData: EducationData = {
 
 export const experienceData: ExperienceData[] = [
   {
-    companyName: "InnovateX Solutions",
-    jobDuration: "March 2023 - Nov 2024",
-    jobTitle: "Full Stack Developer",
+    companyName: "Zapcom Group Inc",
+    jobDuration: "Jan 2024 - Present",
+    jobTitle: "Frontend Developer",
     jobDescription:
-      "Developed and maintained web applications using modern JavaScript frameworks. Collaborated with cross-functional teams to define, design, and ship new features. Implemented RESTful APIs and optimized database queries for performance.",
+      "Built a responsive UI from scratch using React, TypeScript, and Material UI. Integrated RESTful APIs and applied template-driven patterns for scalable, maintainable code.",
     jobLocation: "Bengaluru, India, Remote",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "TypeScript", "AWS"],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TypeScript",
+      "Material UI",
+      "Git",
+      "Postman",
+      "Figma",
+      "Next.js",
+    ],
   },
   {
-    companyName: "TechWave Solutions",
-    jobDuration: "June 2022 - Feb 2023",
-    jobTitle: "Software Engineer Intern",
+    companyName: "Mrinqo Technologies",
+    jobDuration: "Nov 2019 - Dec 2019",
+    jobTitle: "Intern",
     jobDescription:
-      "Assisted in the development of a web application for managing client projects. Wrote clean, maintainable code and participated in code reviews. Gained experience in Agile methodologies and version control systems.",
+      "Assisted in Testing and debugging web applications, Iot devices, and mobile applications. Gained hands-on experience in testing methodologies and tools. ",
     jobLocation: "Goa, India",
-    techStack: ["JavaScript", "React", "Node.js", "Git", "MySQL"],
-  },
-  {
-    companyName: "CodeCrafters Inc.",
-    jobDuration: "Jan 2021 - May 2022",
-    jobTitle: "Junior Developer",
-    jobDescription:
-      "Contributed to the development of internal tools and applications. Collaborated with senior developers to enhance application performance and user experience. Participated in daily stand-ups and sprint planning sessions.",
-    jobLocation: "Remote",
-    techStack: ["Python", "Django", "PostgreSQL", "Docker"],
+    techStack: ["selenium"],
   },
 ];
 
@@ -433,35 +424,11 @@ export const skillsData: SkillsData = {
       moreInfoLink: "https://reactjs.org/",
     },
     {
-      title: "HTML",
-      icon: htmlICon,
-      proficiency: {
-        level: "Advanced",
-        percentage: 90,
-      },
-      description:
-        "HTML is the standard markup language used to structure content on the web. It forms the backbone of all websites and web applications.",
-      highlights: ["Semantic Tags", "Forms", "Accessibility"],
-      moreInfoLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    },
-    {
-      title: "CSS",
-      icon: cssIcon,
-      proficiency: {
-        level: "Advanced",
-        percentage: 85,
-      },
-      description:
-        "CSS controls the visual appearance of web pages, enabling layout, colors, fonts, and responsive design across devices and screen sizes.",
-      highlights: ["Flexbox", "Grid", "Responsive Design"],
-      moreInfoLink: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    },
-    {
       title: "Bootstrap",
       icon: bootstrapIcon,
       proficiency: {
         level: "Intermediate",
-        percentage: 75,
+        percentage: 80,
       },
       description:
         "Bootstrap is a CSS framework for building responsive websites quickly using a grid system and pre-designed components.",
@@ -496,8 +463,8 @@ export const skillsData: SkillsData = {
       title: "JavaScript",
       icon: jsIcon,
       proficiency: {
-        level: "Advanced",
-        percentage: 90,
+        level: "Intermediate`",
+        percentage: 70,
       },
       description:
         "JavaScript is a versatile programming language used to create interactive web pages. It runs in browsers and powers client-side logic.",
@@ -509,7 +476,7 @@ export const skillsData: SkillsData = {
       icon: typeIcon,
       proficiency: {
         level: "Intermediate",
-        percentage: 75,
+        percentage: 65,
       },
       description:
         "TypeScript is a superset of JavaScript that adds static typing. It helps catch bugs early and improves code readability and maintainability.",
@@ -521,7 +488,7 @@ export const skillsData: SkillsData = {
       icon: nextIcon,
       proficiency: {
         level: "Intermediate",
-        percentage: 70,
+        percentage: 60,
       },
       description:
         "Next.js is a React framework that supports server-side rendering, static site generation, and full-stack development with built-in API routes.",
@@ -582,23 +549,11 @@ export const skillsData: SkillsData = {
       moreInfoLink: "https://firebase.google.com/",
     },
     {
-      title: "MySQL",
-      icon: mySqlIcon,
-      proficiency: {
-        level: "Intermediate",
-        percentage: 70,
-      },
-      description:
-        "MySQL is a widely used open-source relational database system. It stores structured data and supports SQL for querying and managing databases efficiently.",
-      highlights: ["SQL Queries", "Joins", "Stored Procedures"],
-      moreInfoLink: "https://www.mysql.com/",
-    },
-    {
       title: "Supabase",
       icon: supabaseIcon,
       proficiency: {
-        level: "Intermediate",
-        percentage: 65,
+        level: "Beginner",
+        percentage: 55,
       },
       description:
         "Supabase is an open-source Firebase alternative that provides authentication, PostgreSQL database, real-time updates, and edge functions for building full-stack apps.",
@@ -612,7 +567,7 @@ export const skillsData: SkillsData = {
       icon: gitIcon,
       proficiency: {
         level: "Intermediate",
-        percentage: 80,
+        percentage: 65,
       },
       description:
         "Git is a distributed version control system that allows developers to track changes in their codebase, collaborate with others, and manage different versions of their projects.",
@@ -624,7 +579,7 @@ export const skillsData: SkillsData = {
       icon: githubIcon,
       proficiency: {
         level: "Intermediate",
-        percentage: 80,
+        percentage: 70,
       },
       description:
         "GitHub is a web-based platform for version control using Git. It allows for code hosting, collaboration, issue tracking, and CI/CD workflows.",
@@ -643,24 +598,13 @@ export const skillsData: SkillsData = {
       highlights: ["API Testing", "Collections", "Environment Variables"],
       moreInfoLink: "https://www.postman.com/",
     },
-    {
-      title: "VS Code",
-      icon: vsIcon,
-      proficiency: {
-        level: "Advanced",
-        percentage: 90,
-      },
-      description:
-        "Visual Studio Code is a lightweight and powerful code editor with features like IntelliSense, debugging, and Git integration.",
-      highlights: ["Extensions", "Integrated Terminal", "Snippets"],
-      moreInfoLink: "https://code.visualstudio.com/",
-    },
+
     {
       title: "Docker",
       icon: dockerIcon,
       proficiency: {
         level: "Beginner",
-        percentage: 60,
+        percentage: 50,
       },
       description:
         "Docker is a platform that enables developers to build, deploy, and run applications using containers for consistency across environments.",
