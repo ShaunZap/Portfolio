@@ -21,7 +21,7 @@
       img {
         width: 50px;
         height: 50px;
-        background-color: var(--color-primary-peach);
+        background-color: var(--color-light-peach);
         padding: 4px;
         border: 5px solid var(--color-brand-1000);
       }
@@ -53,7 +53,7 @@
         align-items: center;
       }
       .job-title {
-        background-color: var(--color-primary-peach);
+        background-color: var(--color-light-peach);
         grid-area: 4/2/6/21;
         color: var(--color-brand-1000);
         font-size: var(--font-size-medium);
@@ -79,10 +79,10 @@
         letter-spacing: var(--letter-spacing-medium);
       }
       .job-description {
-        background-color: var(--color-primary-peach);
+        background-color: var(--color-light-peach);
         grid-area: 6/2/18/13;
         font-weight: 500;
-        color: var(--color-primary-black);
+        color: var(--color-brand-1000);
         overflow: hidden;
 
         div {
@@ -101,10 +101,10 @@
         }
       }
       .job-location {
-        background-color: var(--color-primary-peach);
+        background-color: var(--color-light-peach);
         grid-area: 14/13/18/21;
         font-weight: 500;
-        color: var(--color-primary-black);
+        color: var(--color-brand-1000);
         overflow: hidden;
 
         div {
@@ -123,7 +123,7 @@
         }
       }
       .tech-stack {
-        background-color: var(--color-primary-peach);
+        background-color: var(--color-light-peach);
         grid-area: 6/13/14/21;
         color: var(--color-primary-black);
         overflow: hidden;
@@ -138,12 +138,13 @@
           letter-spacing: var(--letter-spacing-small);
         }
         .tech-stack-container {
-          background-color: var(--color-primary-peach);
+          background-color: var(--color-light-peach);
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
           p {
-            background-color: var(--color-brand-1000);
+            background-color: var(--color-brand-900);
+            color: var(--color-off-white);
             padding: 0px 5px 0px 5px;
             font-size: var(--font-size-small);
             letter-spacing: var(--letter-spacing-small);
@@ -271,29 +272,29 @@
       }
       .card-container {
         grid-template-columns: repeat(20, 1fr);
-        grid-template-rows: repeat(15, 20px);
+        grid-template-rows: repeat(17, 20px);
         gap: 1px;
         width: 98%;
         padding: 1px;
 
         .company-name {
-          grid-area: 1/2/2/21;
+          grid-area: 1/2/3/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
         .job-title {
-          grid-area: 2/2/3/21;
+          grid-area: 3/2/5/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
         .job-duration {
-          grid-area: 1/1/16/2;
+          grid-area: 1/1/18/2;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
           padding: 2px;
         }
         .job-description {
-          grid-area: 3/2/9/21;
+          grid-area: 5/2/11/21;
 
           div {
             padding: 0px 5px;
@@ -307,7 +308,7 @@
           }
         }
         .job-location {
-          grid-area: 13/2/16/21;
+          grid-area: 15/2/18/21;
 
           div {
             padding: 0px 5px;
@@ -321,7 +322,7 @@
           }
         }
         .tech-stack {
-          grid-area: 9/2/13/21;
+          grid-area: 11/2/15/21;
 
           div {
             padding: 0px 5px;
@@ -329,7 +330,7 @@
             letter-spacing: var(--letter-spacing-xsmall);
           }
           .tech-stack-container {
-            gap: 2px;
+            gap: 5px;
             padding: 3px;
             p {
               padding: 0px 3px 0px 3px;
