@@ -1,34 +1,4 @@
-import profilePic from "../assets/images/miscellaneous/profilePic.png";
-import goaUniIcon from "../assets/images/institutionIcons/goauni.svg";
-import rosaryBcaIcon from "../assets/images/institutionIcons/rosarybca.svg";
-import rosaryHscIcon from "../assets/images/institutionIcons/rosary.svg";
-import perpetualIcon from "../assets/images/institutionIcons/perpetual.svg";
-import projectIcon1 from "../assets/images/projectIcons/Souper.png";
-import projectIcon2 from "../assets/images/projectIcons/animeRealm.png";
-import htmlICon from "../assets/images/techIcons/html.svg";
-import cssIcon from "../assets/images/techIcons/css.svg";
-import jsIcon from "../assets/images/techIcons/js.svg";
-import typeIcon from "../assets/images/techIcons/typescript.svg";
-import nextIcon from "../assets/images/techIcons/next.svg";
-import nodeJsIcon from "../assets/images/techIcons/nodejs.svg";
-import expressIcon from "../assets/images/techIcons/express-js.svg";
-import mongodbIcon from "../assets/images/techIcons/mongoDb.svg";
-import muiIcon from "../assets/images/techIcons/material-ui.svg";
-import tailwindIcon from "../assets/images/techIcons/tailwindcss.svg";
-import bootstrapIcon from "../assets/images/techIcons/bootstrap.svg";
-import reactIcon from "../assets/images/techIcons/react.svg";
-import gitIcon from "../assets/images/techIcons/git.svg";
-import firebaseIcon from "../assets/images/techIcons/firebase.svg";
-import supabaseIcon from "../assets/images/techIcons/supabase.svg";
-import githubIcon from "../assets/images/techIcons/github.svg";
-import figmaIcon from "../assets/images/techIcons/figma.svg";
-import dockerIcon from "../assets/images/techIcons/docker.svg";
-import postmanIcon from "../assets/images/techIcons/postman-api.svg";
-import briefcaseIcon from "../assets/images/miscellaneous/briefcase.svg";
-import userICon from "../assets/images/miscellaneous/user.svg";
-import codeICon from "../assets/images/miscellaneous/code.svg";
-import institutionICon from "../assets/images/miscellaneous/institution.svg";
-import toolICon from "../assets/images/webdevIcons/tools.svg";
+import { imageIcons } from "./ImageIcons";
 
 import {
   SkillsData,
@@ -39,15 +9,15 @@ import {
 } from "../types/type";
 
 export const sectionLinks = [
-  { name: "About", link: "/about", icon: userICon },
-  { name: "Projects", link: "/projects", icon: codeICon },
-  { name: "Experience", link: "/experience", icon: briefcaseIcon },
-  { name: "Education", link: "/education", icon: institutionICon },
-  { name: "Skills", link: "/skills", icon: toolICon },
+  { name: "About", link: "/about", icon: imageIcons.userICon },
+  { name: "Projects", link: "/projects", icon: imageIcons.codeICon },
+  { name: "Experience", link: "/experience", icon: imageIcons.briefcaseIcon },
+  { name: "Education", link: "/education", icon: imageIcons.institutionICon },
+  { name: "Skills", link: "/skills", icon: imageIcons.toolICon },
 ];
 
 export const AboutData: AboutDatas = {
-  profilePic: profilePic,
+  profilePic: imageIcons.profilePic,
   description: `Hey there, I'm Shaun Barreto – a front-end developer from Goa, India, who occasionally dips a toe into the mysterious world of the backend (and promptly regrets it).
 
 I spend my days wrangling pixels, writing code that works (most of the time), and pretending to understand the complexities of the universe – when in reality, I'm just trying to center a div.
@@ -279,28 +249,28 @@ export const educationData: EducationData = {
   institutionData: [
     {
       institutionName: "Goa university",
-      institutionIcon: goaUniIcon,
+      institutionIcon: imageIcons.goaUniIcon,
       email: "registrar@unigoa.ac.in",
       address: "Goa University, Taleigao Plateau, Goa 403206, India",
       websiteLink: "https://www.unigoa.ac.in/",
     },
     {
       institutionName: "Rosary College of Commerce and Arts",
-      institutionIcon: rosaryBcaIcon,
+      institutionIcon: imageIcons.rosaryBcaIcon,
       email: "principal@rosarycollege.ac.in",
       address: "Navelim, Goa 403707, India",
       websiteLink: "https://www.rosarycollege.org/",
     },
     {
       institutionName: "Rosary Higher Secondary School",
-      institutionIcon: rosaryHscIcon,
+      institutionIcon: imageIcons.rosaryHscIcon,
       email: "rosaryhrsec_1988@yahoo.com",
       address: "Navelim, Goa 403707, India",
       websiteLink: "https://rosaryhssnavelim.in/",
     },
     {
       institutionName: "Perpetual Succour Convent High School",
-      institutionIcon: perpetualIcon,
+      institutionIcon: imageIcons.perpetualIcon,
       email: "perpetualschool@gmail.com",
       address: "Navelim, Goa 403707, India",
       websiteLink: "https://perpetualschoolnavelim.edu.in/",
@@ -342,21 +312,21 @@ export const experienceData: ExperienceData[] = [
 
 export const projectData: ProjectData[] = [
   {
-    projectImage: projectIcon1,
+    projectImage: imageIcons.projectIcon1,
     projectTitle: "Souper",
     projectDescription:
       "Souper is a restaurant website created as a project to learn and practice CSS Grid layout. It's a frontend-only site, and all the images used were generated using various AI tools such as Leonardo AI, DALL·E, and Clipdrop.co.",
     techStackIcons: [
       {
-        icon: htmlICon,
+        icon: imageIcons.htmlICon,
         name: "HTML5",
       },
       {
-        icon: cssIcon,
+        icon: imageIcons.cssIcon,
         name: "CSS3",
       },
       {
-        icon: jsIcon,
+        icon: imageIcons.jsIcon,
         name: "JavaScript",
       },
     ],
@@ -366,37 +336,37 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    projectImage: projectIcon2,
+    projectImage: imageIcons.projectIcon2,
     projectTitle: "AnimeRealm",
     projectDescription:
       "Anime Realm is a web application that allows users to explore and discover anime and manga series. It features a user-friendly interface, search functionality, and detailed information about each anime/manga.it uses jikan API to fetch anime/manga data.",
     techStackIcons: [
       {
-        icon: htmlICon,
+        icon: imageIcons.htmlICon,
         name: "HTML5",
       },
       {
-        icon: cssIcon,
+        icon: imageIcons.cssIcon,
         name: "CSS3",
       },
       {
-        icon: jsIcon,
+        icon: imageIcons.jsIcon,
         name: "JavaScript",
       },
       {
-        icon: mongodbIcon,
+        icon: imageIcons.mongodbIcon,
         name: "MongoDB",
       },
       {
-        icon: expressIcon,
+        icon: imageIcons.expressIcon,
         name: "Express.js",
       },
       {
-        icon: nodeJsIcon,
+        icon: imageIcons.nodeJsIcon,
         name: "Node.js",
       },
       {
-        icon: bootstrapIcon,
+        icon: imageIcons.bootstrapIcon,
         name: "Bootstrap",
       },
     ],
@@ -411,7 +381,7 @@ export const skillsData: SkillsData = {
   frontendData: [
     {
       title: "React",
-      icon: reactIcon,
+      icon: imageIcons.reactIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 75,
@@ -423,7 +393,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Bootstrap",
-      icon: bootstrapIcon,
+      icon: imageIcons.bootstrapIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 80,
@@ -435,7 +405,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Material UI",
-      icon: muiIcon,
+      icon: imageIcons.muiIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 70,
@@ -447,7 +417,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Tailwind CSS",
-      icon: tailwindIcon,
+      icon: imageIcons.tailwindIcon,
       proficiency: {
         level: "Advanced",
         percentage: 85,
@@ -459,7 +429,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "JavaScript",
-      icon: jsIcon,
+      icon: imageIcons.jsIcon,
       proficiency: {
         level: "Intermediate`",
         percentage: 70,
@@ -471,7 +441,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "TypeScript",
-      icon: typeIcon,
+      icon: imageIcons.typeIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 65,
@@ -483,7 +453,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Next.js",
-      icon: nextIcon,
+      icon: imageIcons.nextIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 60,
@@ -498,7 +468,7 @@ export const skillsData: SkillsData = {
   backEndData: [
     {
       title: "Node.js",
-      icon: nodeJsIcon,
+      icon: imageIcons.nodeJsIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 70,
@@ -510,7 +480,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Express.js",
-      icon: expressIcon,
+      icon: imageIcons.expressIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 70,
@@ -524,7 +494,7 @@ export const skillsData: SkillsData = {
   databaseData: [
     {
       title: "MongoDB",
-      icon: mongodbIcon,
+      icon: imageIcons.mongodbIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 65,
@@ -536,7 +506,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Firebase",
-      icon: firebaseIcon,
+      icon: imageIcons.firebaseIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 65,
@@ -548,7 +518,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Supabase",
-      icon: supabaseIcon,
+      icon: imageIcons.supabaseIcon,
       proficiency: {
         level: "Beginner",
         percentage: 55,
@@ -562,7 +532,7 @@ export const skillsData: SkillsData = {
   otherToolsData: [
     {
       title: "Git",
-      icon: gitIcon,
+      icon: imageIcons.gitIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 65,
@@ -574,7 +544,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "GitHub",
-      icon: githubIcon,
+      icon: imageIcons.githubIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 70,
@@ -586,7 +556,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Postman",
-      icon: postmanIcon,
+      icon: imageIcons.postmanIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 75,
@@ -599,7 +569,7 @@ export const skillsData: SkillsData = {
 
     {
       title: "Docker",
-      icon: dockerIcon,
+      icon: imageIcons.dockerIcon,
       proficiency: {
         level: "Beginner",
         percentage: 50,
@@ -611,7 +581,7 @@ export const skillsData: SkillsData = {
     },
     {
       title: "Figma",
-      icon: figmaIcon,
+      icon: imageIcons.figmaIcon,
       proficiency: {
         level: "Intermediate",
         percentage: 70,
