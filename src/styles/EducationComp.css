@@ -107,7 +107,8 @@
         font-weight: 600;
 
         ul {
-          list-style: none;
+          list-style: square;
+          margin-left: 22px;
         }
       }
     }
@@ -500,6 +501,10 @@
           grid-area: 7/1/13/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-uxsmall);
+
+          ul {
+            margin-left: 16px;
+          }
         }
       }
     }

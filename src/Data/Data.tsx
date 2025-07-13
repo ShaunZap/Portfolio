@@ -25,7 +25,7 @@ I spend my days wrangling pixels, writing code that works (most of the time), an
 I love building smooth UIs, breaking things so I can fix them again, and occasionally asking Stack Overflow for the 458th time why my state isn't updating.
 
 Currently open to cool opportunities, caffeine-fueled coding sprints, and meme-worthy bugs. Let’s build something that doesn’t crash on first render`,
-  subtitle: "Hobbies",
+  subtitle: "Side Quests",
   description2: `When I’m not battling bugs or explaining to people that "React" is not just an emotional state, I’m probably drowning in music, anime, manga, or video games — and loving every chaotic second of it. Occasionally, I do step outside to play football, table tennis, badminton, or just to remind myself what sunlight feels like (yes, I do touch grass sometimes, thank you very much).
 
 In my free time (aka when I'm not questioning life over a console error), I binge-watch anime, dive into manga lore, and button-mash my way through game bosses like it’s therapy. So here are some of my favorite series and titles — in case you’re looking to lose sleep and productivity too. `,
@@ -179,7 +179,7 @@ export const educationData: EducationData = {
       duration: "2022 - 2024",
       gpa: "8.39/10",
       highlights: [
-        "Top 10% of the class",
+        "Top 10% of the class (not sure how accurate this is)",
         "Co-ordinator, Astral Coder @ Infofest – Managed and organized a competitive coding event as part of a major tech fest. ",
       ],
     },
@@ -188,14 +188,22 @@ export const educationData: EducationData = {
       institution: "Rosary College of Commerce and Arts",
       duration: "2018 - 2021",
       gpa: "8.18/10",
-      highlights: ["Top 5% of the class"],
+      highlights: [
+        "Top 5% of the class",
+        "created projects",
+        "got first intership at Mrinqo Technologies",
+      ],
     },
     {
       degree: "Higher Secondary School Certificate",
       institution: "Rosary Higher Secondary School",
       duration: "2016 - 2018",
       gpa: "8/10",
-      highlights: ["Participated in various inter-school competitions"],
+      highlights: [
+        "Participated in 'SOME' inter-school competitions",
+        "did Commerce",
+        "Played Guitar sometimes",
+      ],
     },
     {
       degree: "Secondary School Certificate",
@@ -203,8 +211,9 @@ export const educationData: EducationData = {
       duration: "2005 - 2016",
       gpa: "7.75/10",
       highlights: [
-        "Participated in various inter-school competitions",
+        "Participated in 'SOME' inter-school competitions",
         "part of the class football team",
+        "lazed around in class",
       ],
     },
   ],
