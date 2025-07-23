@@ -384,6 +384,38 @@ export const projectData: ProjectData[] = [
       github: "https://github.com/ShaunZap/AnimeRealm",
     },
   },
+  {
+    projectImage: imageIcons.parseMintIcon,
+    projectTitle: "ParseMint",
+    projectDescription:
+      "ParseMint is an AI-powered resume analyzer that evaluates resumes for ATS compatibility, skill relevance, and role alignment. It extracts insights, scores key areas like formatting and keyword match, and provides actionable feedback to improve job application success—all through an intuitive, responsive interface built with Next.js and Gemini AI.",
+    techStackIcons: [
+      {
+        icon: imageIcons.nextIcon,
+        name: "NextJs",
+      },
+      {
+        icon: imageIcons.typeIcon,
+        name: "TypeScript",
+      },
+      {
+        icon: imageIcons.tailwindIcon,
+        name: "Tailwind",
+      },
+      {
+        icon: imageIcons.aceternityIcon,
+        name: "Aceternity",
+      },
+      {
+        icon: imageIcons.geminiIcon,
+        name: "Gemini",
+      },
+    ],
+    projectLinks: {
+      live: "https://airesume-beta-two.vercel.app/",
+      github: "https://github.com/shaun-j-barreto/airesume",
+    },
+  },
 ];
 
 export const skillsData: SkillsData = {

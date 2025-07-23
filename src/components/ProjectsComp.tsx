@@ -3,6 +3,8 @@ import { div as MDiv } from "motion/react-client";
 import ReusableTitle from "./sub-components/ReusableTitle";
 import { projectData } from "../Data/Data";
 import { defaultSpring, fadeIn } from "../animations/animation";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const ProjectsComp = () => (
   <div>
@@ -29,14 +31,21 @@ const ProjectsComp = () => (
           </div>
           <div className="project-stack">
             {project.techStackIcons.map((tech, index) => (
-              <MDiv
-                whileHover={{ rotate: 10 }}
-                className="stack-item"
+              <a
                 key={index}
+                data-tooltip-id="tech-tooltip"
+                data-tooltip-content={tech.name}
               >
-                <img src={tech.icon} draggable={false} alt={tech.name} />
-              </MDiv>
+                <MDiv whileHover={{ rotate: 10 }} className="stack-item">
+                  <img src={tech.icon} draggable={false} alt={tech.name} />
+                </MDiv>
+              </a>
             ))}
+            <Tooltip
+              id="tech-tooltip"
+              place="top"
+              className="project-tooltip"
+            />
           </div>
           <div className="project-links">
             <MDiv whileHover={{ scale: 0.95 }} className="live">
