@@ -55,13 +55,15 @@ const Footer = () => {
           </MDiv>
         </Link>
 
-        <MDiv className="outer-button" whileHover={{ scale: 1.1 }}>
-          <MImg
-            src={resumeIcon}
-            className="resume-icon"
-            data-testid="resume-icon"
-          />
-        </MDiv>
+        <a href="/ShaunBarretoCV.pdf" target="_blank" rel="noopener noreferrer">
+          <MDiv className="outer-button" whileHover={{ scale: 1.1 }}>
+            <MImg
+              src={resumeIcon}
+              className="resume-icon"
+              data-testid="resume-icon"
+            />
+          </MDiv>
+        </a>
       </MDiv>
       {showModal && (
         <div className="modal-container">
