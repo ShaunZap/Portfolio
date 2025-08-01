@@ -32,6 +32,8 @@ import toolICon from "../assets/images/webdevIcons/tools.svg";
 import parseMintIcon from "../assets/images/projectIcons/parseMint.png";
 import aceternityIcon from "../assets/images/techIcons/aceternity.svg";
 import geminiIcon from "../assets/images/techIcons/gemini.svg";
+import portfolioIcon from "../assets/images/projectIcons/potfolio.png";
+import framericon from "../assets/images/techIcons/framer-motion.svg";
 
 export const imageIcons = {
   profilePic,
@@ -44,6 +46,7 @@ export const imageIcons = {
   projectIcon1,
   projectIcon2,
   htmlICon,
+  framericon,
   cssIcon,
   jsIcon,
   typeIcon,
@@ -68,4 +71,5 @@ export const imageIcons = {
   institutionICon,
   toolICon,
   parseMintIcon,
+  portfolioIcon,
 };
