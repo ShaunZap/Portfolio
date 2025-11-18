@@ -38,14 +38,22 @@ const NewsApp = () => {
               <div className="news-title">{article.title}</div>
               <div className="news-content">{article.description}</div>
               <div className="news-image">
-                <img src={article.image || newsIcon} alt="news" />
+                <img
+                  src={
+                    article?.image && article.image !== "null"
+                      ? article.image
+                      : newsIcon
+                  }
+                  alt="news"
+                />
               </div>
               <div className="news-date">
-                {new Date(article.publishedAt).toLocaleString()}
+                published on:{" "}
+                {new Date(article.publishedAt).toLocaleDateString()}
               </div>
               <div className="newsButton">
                 <a href={article.url} target="_blank" rel="noopener noreferrer">
-                  more info
+                  click for more info
                 </a>
               </div>
             </div>

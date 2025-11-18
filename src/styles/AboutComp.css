@@ -7,7 +7,7 @@
 
   .image-container {
     grid-area: 1 / 1 / 11 / 8;
-    background-color: var(--color-light-peach);
+    background-color: var(--color-brand-1250);
 
     img {
       object-fit: scale-down;
@@ -18,8 +18,8 @@
   .about-description {
     overflow-y: scroll;
     grid-area: 1 / 8 / 11 / 21;
-    background-color: var(--color-brand-1250);
-    color: var(--color-light-peach);
+    background-color: var(--color-primary-peach);
+    color: var(--color-brand-1000);
     font-size: var(--font-size-small);
     letter-spacing: var(--letter-spacing-small);
     padding: 30px;
@@ -42,14 +42,14 @@
     font-size: var(--font-size-large);
     letter-spacing: var(--letter-spacing-large);
     font-weight: 500;
-    color: var(--color-brand-1000);
-    background-color: var(--color-primary-peach);
+    color: var(--color-primary-peach);
+    background-color: var(--color-brand-1000);
     padding: 10px 30px 10px 30px;
   }
   .hobbies-description {
     font-size: var(--font-size-small);
-    color: var(--color-light-peach);
-    background-color: var(--color-brand-1250);
+    color: var(--color-brand-1000);
+    background-color: var(--color-primary-peach);
     padding: 30px 30px 30px 30px;
     letter-spacing: var(--letter-spacing-xsmall);
     white-space: pre-line;
@@ -58,7 +58,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: var(--color-brand-1250);
+    background-color: var(--color-primary-peach);
     padding: 30px;
 
     .hobbie-card {
@@ -67,16 +67,16 @@
       padding: 10px;
 
       .hobbie-title {
-        background-color: var(--color-primary-peach);
+        background-color: var(--color-brand-1250);
         object-fit: cover;
-        color: var(--color-brand-1000);
+        color: var(--color-light-peach);
         font-size: var(--font-size-small);
         font-weight: 600;
         letter-spacing: var(--letter-spacing-small);
         padding: 5px;
       }
       ul {
-        background-color: var(--color-brand-1250);
+        background-color: var(--color-brand-1000);
         list-style: none;
         height: 300px;
         overflow-y: scroll;
@@ -89,7 +89,7 @@
           letter-spacing: var(--letter-spacing-small);
         }
         li:nth-child(even) {
-          background-color: var(--color-brand-900);
+          background-color: var(--color-brand-800);
         }
       }
       ul::-webkit-scrollbar {
@@ -148,7 +148,7 @@
       letter-spacing: var(--letter-spacing-xsmall);
     }
     .hobbies-list {
-      background-color: var(--color-brand-1300);
+      /* background-color: var(--color-brand-1300); */
       padding: 5px;
       gap: 30px;
 

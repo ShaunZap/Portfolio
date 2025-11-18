@@ -5,9 +5,11 @@ const NowSection = () => {
     <div className="now-section">
       <div className="title">This Month’s Dev Drama</div>
       <div className="content">
-        <span>"</span>From experimenting with ai tools like [ tempo.new,
-        fishjam.io, lovable.dev, firebase Studio] to making a project with Next
-        JS for my portfolio <span>"</span>
+        <span>"</span>Been researching ai tools that can help me become more
+        productive. Tailoring my resume. Started with another next js project,
+        where you can create,upload, edit Memes.could like, comment,
+        learderboards etc etc.
+        <span>"</span>
       </div>
     </div>
   );

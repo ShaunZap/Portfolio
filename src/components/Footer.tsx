@@ -7,8 +7,9 @@ import resumeIcon from "../assets/images/miscellaneous/resume.svg";
 import infoIcon from "../assets/images/miscellaneous/info.svg";
 import linkedinIcon from "../assets/images/miscellaneous/linkedin.svg";
 import githubIcon from "../assets/images/techIcons/github.svg";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
-// Simple modal component
 const InfoModal = ({ onClose }: { onClose: () => void }) => (
   <div className="modal-card">
     <h2>Links</h2>
@@ -42,7 +43,13 @@ const Footer = () => {
           whileHover={{ scale: 1.1 }}
           onClick={() => setShowModal(!showModal)}
         >
-          <MImg src={infoIcon} className="info-icon" data-testid="info-icon" />
+          <MImg
+            src={infoIcon}
+            className="info-icon"
+            data-testid="info-icon"
+            data-tooltip-id="info-tip"
+            data-tooltip-content="More Info"
+          />
         </MDiv>
 
         <Link to="/">
@@ -51,6 +58,8 @@ const Footer = () => {
               src={homeIcon}
               className="home-icon"
               data-testid="home-icon"
+              data-tooltip-id="home-tip"
+              data-tooltip-content="Go to Home"
             />
           </MDiv>
         </Link>
@@ -61,10 +70,16 @@ const Footer = () => {
               src={resumeIcon}
               className="resume-icon"
               data-testid="resume-icon"
+              data-tooltip-id="resume-tip"
+              data-tooltip-content="View Resume"
             />
           </MDiv>
         </a>
       </MDiv>
+      <Tooltip id="info-tip" place="top" className="footer-tooltip" />
+      <Tooltip id="home-tip" place="top" className="footer-tooltip" />
+      <Tooltip id="resume-tip" place="top" className="footer-tooltip" />
+
       {showModal && (
         <div className="modal-container">
           <InfoModal onClose={() => setShowModal(false)} />

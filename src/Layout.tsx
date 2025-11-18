@@ -19,10 +19,10 @@ const PageTransitionOverlay = () => {
       initial={{ scaleY: 1 }}
       animate={{ scaleY: 0 }}
       exit={{ scaleY: 1 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       style={{
         position: "fixed",
-        top: 30,
+        top: 0,
         left: 0,
         right: 0,
         bottom: 40,

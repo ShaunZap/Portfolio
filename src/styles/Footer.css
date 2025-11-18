@@ -40,11 +40,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.footer-tooltip {
+  background-color: var(--color-brand-500) !important;
+  border: 1px solid var(--color-brand-1000);
+  color: var(--color-brand-1200) !important;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-xsmall);
+}
 .modal-container {
   position: absolute;
   bottom: 50px;
-  left: 30%;
+  left: 35%;
   z-index: 998;
 }
 
@@ -52,7 +58,7 @@
   background-color: var(--color-brand-900);
   padding: 10px;
   color: var(--color-light-peach);
-  min-width: 180px;
+  min-width: 150px;
   border: 2px solid var(--color-brand-1100);
   position: relative;
 }
