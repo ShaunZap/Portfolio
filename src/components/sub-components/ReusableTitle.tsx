@@ -42,8 +42,8 @@ const ReusableTitle = ({ title }: { title: string }) => {
           fontSize: isMobile600 ? "40px" : isMobile900 ? "80px" : "120px",
           fontWeight: "500",
           padding: isMobile600 ? "10px" : "20px",
-          color: "var(--color-primary-peach)",
-          backgroundColor: "var(--color-brand-1000)",
+          color: "var(--color-brand-700)",
+          backgroundColor: "var(--color-brand-1400)",
           letterSpacing: "10px",
           gap: "5px",
         }}

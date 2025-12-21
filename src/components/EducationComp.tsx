@@ -1,8 +1,5 @@
 import ReusableTitle from "./sub-components/ReusableTitle";
 import "../styles/EducationComp.css";
-import eduIcon from "../assets/images/miscellaneous/education.svg";
-import certificateIcon from "../assets/images/miscellaneous/online-certificate.svg";
-import institutionIcon from "../assets/images/miscellaneous/institution.svg";
 import emailIcon from "../assets/images/miscellaneous/email.svg";
 import { educationData } from "../Data/Data";
 import { div as MDiv } from "motion/react-client";
@@ -11,17 +8,19 @@ import {
   fadeIn,
   smallAnimations,
 } from "../animations/animation";
+import { GraduationCapIcon, University, BadgeCheck, Mail, Link } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 const EducationComp = () => {
   return (
     <div>
       <ReusableTitle title={"Education"} />
-      <MainTitle maintitle={"Lessons, Deadlines & Drama"} Icon={eduIcon} />
+      <MainTitle maintitle={"Lessons, Deadlines & Drama"} Icon={GraduationCapIcon} />
       <TimelineSection />
-      <MainTitle maintitle={"Click & Learn Stuff"} Icon={certificateIcon} />
+      <MainTitle maintitle={"Click & Learn Stuff"} Icon={BadgeCheck} />
       <CertificationCard />
       <MainTitle
         maintitle={"The Halls of Homework"}
-        Icon={institutionIcon}
+        Icon={University}
       />
       <InstitutionCard />
     </div>
@@ -34,11 +33,11 @@ const MainTitle = ({
   Icon,
 }: {
   maintitle: string;
-  Icon: string;
+  Icon: LucideIcon;
 }) => {
   return (
     <MDiv className="education-title">
-      <img src={Icon} alt="Icon" className="iconImage" />
+      <Icon size={60} strokeWidth={1} color="white"/>
       <h2>{maintitle}</h2>
     </MDiv>
   );
@@ -83,7 +82,8 @@ const TimelineSection = () => {
       {Object.entries(educationData.timelineData).map(([key, edu]) => (
         <div className="timeline-item-container" key={key}>
           <div className="timeline-separator">
-            <img src={eduIcon} alt="timelineicon" className="timelineIcon" />
+            <GraduationCapIcon size={50} color="white" strokeWidth={1} className="timelineImage" />
+
             <hr />
           </div>
           <MDiv
@@ -138,7 +138,7 @@ const InstitutionCard = () => {
             <div>{inst.institutionName}</div>
           </div>
           <div className="email">
-            <img src={emailIcon} alt="icon" />
+            <Mail size={15} strokeWidth={1} color="white" />
             <div>{inst.email}</div>
           </div>
           <div className="address" data-testid={`${key}-${inst.address}`}>
@@ -150,7 +150,8 @@ const InstitutionCard = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit Website 🔗
+              <div>Visit Website</div>
+            <Link size={15}/>
             </a>
           </div>
         </MDiv>

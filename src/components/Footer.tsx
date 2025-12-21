@@ -2,9 +2,7 @@ import { useState } from "react";
 import { div as MDiv, img as MImg } from "motion/react-client";
 import "../styles/Footer.css";
 import { Link } from "react-router-dom";
-import homeIcon from "../assets/images/miscellaneous/home.svg";
-import resumeIcon from "../assets/images/miscellaneous/resume.svg";
-import infoIcon from "../assets/images/miscellaneous/info.svg";
+import { Info,House, FileUser  } from "lucide-react";
 import linkedinIcon from "../assets/images/miscellaneous/linkedin.svg";
 import githubIcon from "../assets/images/techIcons/github.svg";
 import { Tooltip } from "react-tooltip";
@@ -43,9 +41,10 @@ const Footer = () => {
           whileHover={{ scale: 1.1 }}
           onClick={() => setShowModal(!showModal)}
         >
-          <MImg
-            src={infoIcon}
-            className="info-icon"
+          <Info
+            size={30}
+            color="white"
+            strokeWidth={1}
             data-testid="info-icon"
             data-tooltip-id="info-tip"
             data-tooltip-content="More Info"
@@ -54,9 +53,10 @@ const Footer = () => {
 
         <Link to="/">
           <MDiv className="outer-button" whileHover={{ scale: 1.1 }}>
-            <MImg
-              src={homeIcon}
-              className="home-icon"
+            <House
+              size={30}
+              color="white"
+              strokeWidth={1}
               data-testid="home-icon"
               data-tooltip-id="home-tip"
               data-tooltip-content="Go to Home"
@@ -66,9 +66,10 @@ const Footer = () => {
 
         <a href="/ShaunBarretoCV.pdf" target="_blank" rel="noopener noreferrer">
           <MDiv className="outer-button" whileHover={{ scale: 1.1 }}>
-            <MImg
-              src={resumeIcon}
-              className="resume-icon"
+            <FileUser
+              size={30}
+              color="white"
+              strokeWidth={1}
               data-testid="resume-icon"
               data-tooltip-id="resume-tip"
               data-tooltip-content="View Resume"

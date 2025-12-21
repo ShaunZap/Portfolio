@@ -8,12 +8,14 @@ import {
   ExperienceData,
 } from "../types/type";
 
+import { BriefcaseBusiness, CodeXml, User, Cog, University } from "lucide-react";
+
 export const sectionLinks = [
-  { name: "About", link: "/about", icon: imageIcons.userICon },
-  { name: "Projects", link: "/projects", icon: imageIcons.codeICon },
-  { name: "Experience", link: "/experience", icon: imageIcons.briefcaseIcon },
-  { name: "Education", link: "/education", icon: imageIcons.institutionICon },
-  { name: "Skills", link: "/skills", icon: imageIcons.toolICon },
+  { name: "About", link: "/about", icon: User },
+  { name: "Projects", link: "/projects", icon: CodeXml },
+  { name: "Experience", link: "/experience", icon: BriefcaseBusiness },
+  { name: "Education", link: "/education", icon: University },
+  { name: "Skills", link: "/skills", icon: Cog },
 ];
 
 export const AboutData: AboutDatas = {

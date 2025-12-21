@@ -1,10 +1,5 @@
 import ReusableTitle from "./sub-components/ReusableTitle";
 import "../styles/SkillComp.css";
-import frontEndIcon from "../assets/images/webdevIcons/frontend.svg";
-import backEndIcon from "../assets/images/webdevIcons/backend.svg";
-import databaseIcon from "../assets/images/webdevIcons/db.svg";
-import otherToolsIcon from "../assets/images/webdevIcons/tools.svg";
-import externalLinkIcon from "../assets/images/miscellaneous/el.svg";
 import { skillsData } from "../Data/Data";
 import { Skill } from "../types/type";
 import { div as MDiv } from "motion/react-client";
@@ -13,6 +8,8 @@ import {
   fadeIn,
   smallAnimations,
 } from "../animations/animation";
+import { LayoutGrid, Server, Database, Cloud, SquareArrowUpRight } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 const SkillsComp = () => {
   const { frontendData, databaseData, backEndData, otherToolsData } =
@@ -20,23 +17,23 @@ const SkillsComp = () => {
   return (
     <div>
       <ReusableTitle title={"Skills"} />
-      <MainTitle title={"Front-End Development"} Icon={frontEndIcon} />
+      <MainTitle title={"Front-End Development"} Icon={LayoutGrid} />
       <SkillCardGenerator data={frontendData} />
-      <MainTitle title={"Back-End Development"} Icon={backEndIcon} />
+      <MainTitle title={"Back-End Development"} Icon={Server} />
       <SkillCardGenerator data={backEndData} />
-      <MainTitle title={"Databases"} Icon={databaseIcon} />
+      <MainTitle title={"Databases"} Icon={Database} />
       <SkillCardGenerator data={databaseData} />
-      <MainTitle title={"Other Tools & Technologies"} Icon={otherToolsIcon} />
+      <MainTitle title={"Other Tools & Technologies"} Icon={Cloud} />
       <SkillCardGenerator data={otherToolsData} />
     </div>
   );
 };
 export default SkillsComp;
 
-const MainTitle = ({ title, Icon }: { title: string; Icon: string }) => {
+const MainTitle = ({ title, Icon }: { title: string; Icon: LucideIcon }) => {
   return (
     <MDiv className="skill-main-title">
-      <img src={Icon} alt="Icon" className="iconImage" />
+      <Icon size={60} strokeWidth={1} color="white"/>
       <h2>{title}</h2>
     </MDiv>
   );
@@ -94,7 +91,7 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
               rel="noopener noreferrer"
             >
               <div>more info on {value.title}</div>
-              <img src={externalLinkIcon} alt="icon" />
+             <SquareArrowUpRight size={15} color="white" strokeWidth={1} />
             </a>
           </div>
         </MDiv>

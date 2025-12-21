@@ -5,6 +5,7 @@ import { projectData } from "../Data/Data";
 import { defaultSpring, fadeIn } from "../animations/animation";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import { Github, GithubIcon, LinkIcon } from "lucide-react";
 
 const ProjectsComp = () => (
   <div>
@@ -54,7 +55,7 @@ const ProjectsComp = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div>🔗</div>
+               <LinkIcon size={30} color="grey" />
               </a>
             </MDiv>
             <MDiv whileHover={{ scale: 0.95 }} className="github">
@@ -63,7 +64,7 @@ const ProjectsComp = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div>Github</div>
+                <Github size={30} color="grey" />
               </a>
             </MDiv>
           </div>

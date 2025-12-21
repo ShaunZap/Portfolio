@@ -18,44 +18,43 @@
       flex-direction: column;
       align-items: center;
 
-      img {
-        width: 50px;
-        height: 50px;
-        background-color: var(--color-light-peach);
-        padding: 4px;
-        border: 5px solid var(--color-brand-1000);
+      .timelineImage{
+      border: 1px solid var(--color-brand-1200);
+      padding: 5px;
       }
+
       hr {
-        background-color: var(--color-brand-1000);
+        background-color: var(--color-brand-1200);
         height: 100%;
-        width: 6px;
+        width: 1px;
+        border: none;
       }
     }
     .card-container {
       display: grid;
       grid-template-columns: repeat(20, 1fr);
       grid-template-rows: repeat(17, 20px);
-      gap: 2px;
+      gap: 1px;
       width: 95%;
       margin: 0 auto;
-      background-color: var(--color-brand-1400);
-      padding: 2px;
+      background-color: var(--color-brand-1200);
+      padding: 1px;
 
       .company-name {
-        background-color: var(--color-brand-1000);
+        background-color: var(--color-brand-700);
         grid-area: 1/2/4/21;
         font-size: var(--font-size-medium);
         font-weight: 600;
         padding: 5px;
-        color: var(--color-light-peach);
+        color: var(--color-brand-1400);
         letter-spacing: var(--letter-spacing-medium);
         display: flex;
         align-items: center;
       }
       .job-title {
-        background-color: var(--color-light-peach);
+        background-color: var(--color-brand-1400);
         grid-area: 4/2/6/21;
-        color: var(--color-brand-1000);
+        color: var(--color-brand-700);
         font-size: var(--font-size-medium);
         font-weight: 600;
         padding: 5px;
@@ -64,8 +63,8 @@
         align-items: center;
       }
       .job-duration {
-        background-color: var(--color-brand-1000);
-        color: var(--color-light-peach);
+        background-color: var(--color-brand-1400);
+        color: var(--color-brand-700);
         grid-area: 1/1/18/2;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
@@ -79,19 +78,21 @@
         letter-spacing: var(--letter-spacing-medium);
       }
       .job-description {
-        background-color: var(--color-light-peach);
+        background-color: var(--color-brand-1400);
         grid-area: 6/2/18/13;
         font-weight: 500;
-        color: var(--color-brand-1000);
+        color: var(--color-brand-700);
         overflow: hidden;
 
         div {
-          background-color: var(--color-brand-1000);
+          background-color: var(--color-brand-1400);
           width: 100%;
           padding: 10px;
-          color: var(--color-light-peach);
+          color: var(--color-brand-700);
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
+        border-bottom: 1px solid var(--color-brand-1200);
+
         }
         p {
           padding: 10px;
@@ -101,19 +102,22 @@
         }
       }
       .job-location {
-        background-color: var(--color-light-peach);
+        background-color: var(--color-brand-1400);
         grid-area: 14/13/18/21;
         font-weight: 500;
-        color: var(--color-brand-1000);
+        color: var(--color-brand-700);
         overflow: hidden;
+        
 
         div {
-          background-color: var(--color-brand-1000);
+          background-color: var(--color-brand-1400);
           width: 100%;
           padding: 5px;
-          color: var(--color-light-peach);
+          color: var(--color-brand-700);
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
+        border-bottom: 1px solid var(--color-brand-1200);
+
         }
         p {
           padding: 5px;
@@ -123,32 +127,38 @@
         }
       }
       .tech-stack {
-        background-color: var(--color-light-peach);
+        background-color: var(--color-brand-1400);
         grid-area: 6/13/14/21;
-        color: var(--color-primary-black);
+        color: var(--color-brand-700);
         overflow: hidden;
         font-weight: 500;
 
         div {
-          background-color: var(--color-brand-1000);
+          background-color: var(--color-brand-1400);
           width: 100%;
           padding: 10px;
-          color: var(--color-light-peach);
+          color: var(--color-brand-700);
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
         }
         .tech-stack-container {
-          background-color: var(--color-light-peach);
+          background-color: var(--color-brand-1400);
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
+          border-top: 1px solid var(--color-brand-1200);
           p {
-            background-color: var(--color-brand-900);
-            color: var(--color-off-white);
+            background-color: var(--color-brand-700);
+            color: var(--color-brand-1400);
             padding: 0px 5px 0px 5px;
             font-size: var(--font-size-small);
             letter-spacing: var(--letter-spacing-small);
-            border-radius: 2px;
+            border: 1px solid var(--color-brand-1200);
+
+            &:hover{
+              background-color: var(--color-brand-1400);
+              color: var(--color-brand-700);
+            }
           }
         }
       }
@@ -160,29 +170,17 @@
 
 @media screen and (max-width: 900px) {
   .outer-card-container {
-    gap: 10px;
     padding: 10px;
 
     .inner-container {
       gap: 10px;
 
-      .timeline-container {
-        img {
-          width: 40px;
-          height: 40px;
-          padding: 3px;
-          border: 3px solid var(--color-brand-1000);
-        }
-        hr {
-          width: 4px;
-        }
-      }
       .card-container {
         grid-template-columns: repeat(20, 1fr);
         grid-template-rows: repeat(18, 20px);
-        gap: 2px;
+        gap: 1px;
         width: 95%;
-        padding: 2px;
+        padding: 1px;
 
         .company-name {
           grid-area: 1/2/3/21;
@@ -260,15 +258,7 @@
 
       .timeline-container {
         display: none;
-        img {
-          width: 25px;
-          height: 25px;
-          padding: 2px;
-          border: 2px solid var(--color-brand-1000);
-        }
-        hr {
-          width: 3px;
-        }
+
       }
       .card-container {
         grid-template-columns: repeat(20, 1fr);

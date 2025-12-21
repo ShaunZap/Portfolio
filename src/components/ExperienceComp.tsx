@@ -1,9 +1,9 @@
 import ReusableTitle from "./sub-components/ReusableTitle";
 import "../styles/ExperienceComp.css";
 import { experienceData } from "../Data/Data";
-import briefcaseIcon from "../assets/images/miscellaneous/briefcase.svg";
 import { div as MDiv } from "motion/react-client";
 import { fadeIn, defaultSpring } from "../animations/animation";
+import { Briefcase } from "lucide-react";
 
 const ExperienceComp = () => {
   return (
@@ -13,7 +13,7 @@ const ExperienceComp = () => {
         {Object.entries(experienceData).map(([key, exp]) => (
           <div className="inner-container" key={key}>
             <div className="timeline-container">
-              <img src={briefcaseIcon} alt="icon" />
+              <Briefcase size={40} color="white" strokeWidth={1} className="timelineImage" />
               <hr />
             </div>
             <MDiv

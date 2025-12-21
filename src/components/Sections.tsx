@@ -12,7 +12,7 @@ const Sections = () => {
           key={index}
         >
           <Link to={data.link} className="section-link">
-            <img src={data.icon} alt={data.name} className="section-icon" />
+            <data.icon size={40} color="white" strokeWidth={1} />
           </Link>
           <div className="section-name">{data.name}</div>
         </MDiv>

@@ -7,38 +7,21 @@
   gap: 30px;
   align-items: center;
   height: 100%;
+
 }
 
 .outer-button {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: var(--color-primary-peach);
+  background-color: var(--color-brand-1400);
   position: relative;
   cursor: pointer;
-}
-
-.home-icon {
-  width: 22px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.resume-icon {
-  width: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.info-icon {
-  width: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  /* border: 1px solid var(--color-brand-1200); */
 }
 .footer-tooltip {
   background-color: var(--color-brand-500) !important;
