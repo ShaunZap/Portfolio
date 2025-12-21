@@ -21,11 +21,12 @@
     flex-direction: row;
     flex: 1;
     justify-content: end;
+    align-items: center;
     gap: 10px;
 
     .batteryicon {
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
       filter: grayscale(100%);
     }
   }
