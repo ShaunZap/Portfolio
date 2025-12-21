@@ -10,32 +10,34 @@ describe("ProjectsComp", () => {
   });
 
   it("renders all projects with title, description, tech stack and links", () => {
-    render(<ProjectsComp />);
+  render(<ProjectsComp />);
 
-    const projectCards = screen.getAllByRole("heading", { level: 2 });
+  // Use a better way to find cards: identify the cards themselves
+  const projectCards = document.querySelectorAll(".project-card");
 
-    projectCards.forEach((titleEl, index) => {
-      const project = projectData[index];
-      const card = titleEl.closest(".project-card") as HTMLElement;
-      const utils = within(card);
+  projectCards.forEach((card, index) => {
+    const project = Object.values(projectData)[index];
+    const utils = within(card as HTMLElement);
 
-      // Title and description
-      expect(utils.getByText(project.projectTitle)).toBeInTheDocument();
-      expect(utils.getByText(project.projectDescription)).toBeInTheDocument();
+    // Title and description
+    expect(utils.getByText(project.projectTitle)).toBeInTheDocument();
+    expect(utils.getByText(project.projectDescription)).toBeInTheDocument();
 
-      // Tech stack
-      project.techStackIcons.forEach((tech) => {
-        expect(utils.getByAltText(tech.name)).toBeInTheDocument();
-      });
-
-      // Links
-      const github = utils.getByRole("link", { name: /github/i });
-      const live = utils.getByRole("link", { name: "🔗" });
-
-      expect(github).toHaveAttribute("href", project.projectLinks.github);
-      expect(live).toHaveAttribute("href", project.projectLinks.live);
+    // Tech stack
+    project.techStackIcons.forEach((tech) => {
+      expect(utils.getByAltText(tech.name)).toBeInTheDocument();
     });
+
+    // --- Updated Links Logic ---
+    
+    const github = utils.getByRole("link", { name: /github/i });
+    
+    const live = utils.getByRole("link", { name: /live link/i });
+
+    expect(github).toHaveAttribute("href", project.projectLinks.github);
+    expect(live).toHaveAttribute("href", project.projectLinks.live);
   });
+});
 });
 
 vitest.mock("motion/react-client", () => ({

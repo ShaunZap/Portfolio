@@ -23,13 +23,13 @@ describe("AboutComp", () => {
     );
   });
 
-  it("renders the hobbies subtitle and description", () => {
-    render(<AboutComp />);
-    expect(screen.getByText("Hobbies")).toBeInTheDocument();
-    expect(screen.getByTestId("hobbie-desc")).toHaveTextContent(
-      'When I’m not battling bugs or explaining to people that "React" is not just an emotional state'
-    );
-  });
+ it("renders the hobbies subtitle and description", () => {
+  render(<AboutComp />);  
+  expect(screen.getByText(/Side Quests/i)).toBeInTheDocument();  
+  expect(screen.getByTestId("hobbie-desc")).toHaveTextContent(
+    'When I’m not battling bugs or explaining to people that "React" is not just an emotional state'
+  );
+});
 
   it("renders all hobby categories and items", () => {
     render(<AboutComp />);

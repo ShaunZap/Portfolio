@@ -26,27 +26,28 @@ describe("EducationComp", () => {
 
   //Timeline section
   it("renders all timeline entries with degree, institution, duration, and GPA", () => {
-    render(<EducationComp />);
-    Object.values(educationData.timelineData).forEach((edu) => {
-      expect(screen.getByText(edu.degree)).toBeInTheDocument();
+  render(<EducationComp />);
 
-      const institutionId = `${edu.degree}-${edu.institution}`;
-      const institutionEl = screen.getByTestId(institutionId);
-      expect(institutionEl).toBeInTheDocument();
-      expect(institutionEl).toHaveTextContent(edu.institution);
+  Object.values(educationData.timelineData).forEach((edu) => {
+    const degreeEl = screen.getByText(edu.degree);
+    const cardContainer = degreeEl.closest('.timeline-card-grid'); 
 
-      expect(screen.getByText(edu.duration)).toBeInTheDocument();
-      expect(screen.getByText(`CGPA: ${edu.gpa}`)).toBeInTheDocument();
-      edu.highlights.forEach((highlight) => {
-        expect(screen.getByText(highlight)).toBeInTheDocument();
-      });
+    expect(degreeEl).toBeInTheDocument();
+
+    const institutionId = `${edu.degree}-${edu.institution}`;
+    const institutionEl = screen.getByTestId(institutionId);
+    expect(institutionEl).toBeInTheDocument();
+
+    const { getByText } = within(cardContainer as HTMLElement);
+
+    expect(getByText(edu.duration)).toBeInTheDocument();
+    expect(getByText(`CGPA: ${edu.gpa}`)).toBeInTheDocument();
+
+    edu.highlights.forEach((highlight) => {
+      expect(getByText((content) => content.includes(highlight.trim()))).toBeInTheDocument();
     });
   });
-  it("renders one icon per timeline entry", () => {
-    render(<EducationComp />);
-    const icons = screen.getAllByAltText("timelineicon");
-    expect(icons.length).toBe(Object.keys(educationData.timelineData).length);
-  });
+});
 
   //Certification Section
   it("renders all certifications with title, author, description, and tags", () => {

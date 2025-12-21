@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { div as MDiv, img as MImg } from "motion/react-client";
+import { div as MDiv} from "motion/react-client";
 import "../styles/Footer.css";
 import { Link } from "react-router-dom";
 import { Info,House, FileUser  } from "lucide-react";

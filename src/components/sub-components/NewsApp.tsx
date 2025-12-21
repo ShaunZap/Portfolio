@@ -47,6 +47,8 @@ const NewsApp = () => {
                   alt="news"
                 />
               </div>
+              <div className="news-bottom-section">
+
               <div className="news-date">
                 published on:{" "}
                 {new Date(article.publishedAt).toLocaleDateString()}
@@ -55,6 +57,7 @@ const NewsApp = () => {
                 <a href={article.url} target="_blank" rel="noopener noreferrer">
                   click for more info
                 </a>
+              </div>
               </div>
             </div>
           ))

@@ -52,20 +52,20 @@ describe("NewsApp", () => {
       expect(screen.getByText("Test News 1")).toBeInTheDocument()
     );
 
-    for (const article of mockArticles) {
-      expect(screen.getByText(article.title)).toBeInTheDocument();
-      expect(screen.getByText(article.description)).toBeInTheDocument();
+   for (const article of mockArticles) {
+  expect(screen.getByText(article.title)).toBeInTheDocument();
+  expect(screen.getByText(article.description)).toBeInTheDocument();
 
-      // Check that a link with matching href exists
-      const links = screen.getAllByRole("link", { name: "more info" });
-      const matchingLink = links.find(
-        (link) => link.getAttribute("href") === article.url
-      );
-      expect(matchingLink).toBeTruthy();
-    }
 
-    // Optionally, assert total number of "more info" links
-    expect(screen.getAllByText("more info")).toHaveLength(mockArticles.length);
+  const links = screen.getAllByRole("link", { name: /more info/i });
+  
+  const matchingLink = links.find(
+    (link) => link.getAttribute("href") === article.url
+  );
+  expect(matchingLink).toBeTruthy();
+}
+
+expect(screen.getAllByText(/more info/i)).toHaveLength(mockArticles.length);
   });
 
   it("handles fetch error gracefully", async () => {

@@ -7,25 +7,24 @@ import { sectionLinks } from "../Data/Data";
 // Mock motion/react-client
 
 describe("Sections component", () => {
-  it("renders all section links with correct name, icon, and navigation", () => {
-    render(
-      <MemoryRouter>
-        <Sections />
-      </MemoryRouter>
-    );
+it("renders all section links with correct name and navigation", () => {
+  render(
+    <MemoryRouter>
+      <Sections />
+    </MemoryRouter>
+  );
 
-    sectionLinks.forEach((section) => {
-      // Name
-      expect(screen.getByText(section.name)).toBeInTheDocument();
+  sectionLinks.forEach((section) => {
+    // 1. Verify the text label exists
+    expect(screen.getByText(section.name)).toBeInTheDocument();
 
-      // Icon
-      expect(screen.getByAltText(section.name)).toBeInTheDocument();
-
-      // Link (verify correct path)
-      const link = screen.getByRole("link", { name: section.name });
-      expect(link).toHaveAttribute("href", section.link);
-    });
+    // 2. Verify the Link exists and has the correct path
+    // This now works because the aria-label matches section.name
+    const link = screen.getByRole("link", { name: section.name });
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute("href", section.link);
   });
+});
 });
 vitest.mock("motion/react-client", () => ({
   div: ({

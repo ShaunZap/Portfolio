@@ -1,6 +1,5 @@
 import ReusableTitle from "./sub-components/ReusableTitle";
 import "../styles/EducationComp.css";
-import emailIcon from "../assets/images/miscellaneous/email.svg";
 import { educationData } from "../Data/Data";
 import { div as MDiv } from "motion/react-client";
 import {
