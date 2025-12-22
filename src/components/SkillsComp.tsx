@@ -8,7 +8,13 @@ import {
   fadeIn,
   smallAnimations,
 } from "../animations/animation";
-import { LayoutGrid, Server, Database, Cloud, SquareArrowUpRight } from "lucide-react";
+import {
+  LayoutGrid,
+  Server,
+  Database,
+  Cloud,
+  SquareArrowUpRight,
+} from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 const SkillsComp = () => {
@@ -33,7 +39,7 @@ export default SkillsComp;
 const MainTitle = ({ title, Icon }: { title: string; Icon: LucideIcon }) => {
   return (
     <MDiv className="skill-main-title">
-      <Icon size={60} strokeWidth={1} color="white"/>
+      <Icon strokeWidth={1} color="white" className="main-icon" />
       <h2>{title}</h2>
     </MDiv>
   );
@@ -91,7 +97,7 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
               rel="noopener noreferrer"
             >
               <div>more info on {value.title}</div>
-             <SquareArrowUpRight size={15} color="white" strokeWidth={1} />
+              <SquareArrowUpRight size={15} color="white" strokeWidth={1} />
             </a>
           </div>
         </MDiv>

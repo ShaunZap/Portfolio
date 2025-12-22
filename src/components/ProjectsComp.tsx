@@ -55,7 +55,12 @@ const ProjectsComp = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-               <LinkIcon size={30} color="grey" aria-label="live link"/>
+                <LinkIcon
+                  size={30}
+                  color="grey"
+                  aria-label="live link"
+                  className="live-icon"
+                />
               </a>
             </MDiv>
             <MDiv whileHover={{ scale: 0.95 }} className="github">
@@ -64,7 +69,12 @@ const ProjectsComp = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github size={30} color="grey" aria-label="github"/>
+                <Github
+                  size={30}
+                  color="grey"
+                  aria-label="github"
+                  className="github-icon"
+                />
               </a>
             </MDiv>
           </div>

@@ -7,20 +7,26 @@ import {
   fadeIn,
   smallAnimations,
 } from "../animations/animation";
-import { GraduationCapIcon, University, BadgeCheck, Mail, Link } from "lucide-react";
+import {
+  GraduationCapIcon,
+  University,
+  BadgeCheck,
+  Mail,
+  Link,
+} from "lucide-react";
 import { LucideIcon } from "lucide-react";
 const EducationComp = () => {
   return (
     <div>
       <ReusableTitle title={"Education"} />
-      <MainTitle maintitle={"Lessons, Deadlines & Drama"} Icon={GraduationCapIcon} />
+      <MainTitle
+        maintitle={"Lessons, Deadlines & Drama"}
+        Icon={GraduationCapIcon}
+      />
       <TimelineSection />
       <MainTitle maintitle={"Click & Learn Stuff"} Icon={BadgeCheck} />
       <CertificationCard />
-      <MainTitle
-        maintitle={"The Halls of Homework"}
-        Icon={University}
-      />
+      <MainTitle maintitle={"The Halls of Homework"} Icon={University} />
       <InstitutionCard />
     </div>
   );
@@ -36,7 +42,7 @@ const MainTitle = ({
 }) => {
   return (
     <MDiv className="education-title">
-      <Icon size={60} strokeWidth={1} color="white"/>
+      <Icon strokeWidth={1} color="white" className="main-icon" />
       <h2>{maintitle}</h2>
     </MDiv>
   );
@@ -81,7 +87,12 @@ const TimelineSection = () => {
       {Object.entries(educationData.timelineData).map(([key, edu]) => (
         <div className="timeline-item-container" key={key}>
           <div className="timeline-separator">
-            <GraduationCapIcon size={50} color="white" strokeWidth={1} className="timelineImage" />
+            <GraduationCapIcon
+              size={50}
+              color="white"
+              strokeWidth={1}
+              className="timelineImage"
+            />
 
             <hr />
           </div>
@@ -150,7 +161,7 @@ const InstitutionCard = () => {
               rel="noopener noreferrer"
             >
               <div>Visit Website</div>
-            <Link size={15}/>
+              <Link size={15} />
             </a>
           </div>
         </MDiv>

@@ -28,8 +28,8 @@ describe("Footer component", () => {
     fireEvent.click(infoIcon);
 
     expect(screen.getByText("Links")).toBeInTheDocument();
-    expect(screen.getByText("Linkedin")).toBeInTheDocument();
-    expect(screen.getByText("Github")).toBeInTheDocument();
+    expect(screen.getByText(/linkedin/i)).toBeInTheDocument();
+    expect(screen.getByText(/github/i)).toBeInTheDocument();
   });
 
   it("closes modal when 'X' button is clicked", () => {

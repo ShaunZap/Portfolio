@@ -45,7 +45,6 @@
     height: 100%;
     object-fit: cover;
     filter: grayscale(60%);
-
   }
 }
 .project-description {
@@ -82,7 +81,6 @@
   scrollbar-width: none;
   border: 1px solid var(--color-brand-1200);
 
-
   .stack-item {
     width: 55px;
     height: 55px;
@@ -99,8 +97,7 @@
       height: 40px;
       object-fit: cover;
       user-select: none;
-    filter: grayscale(60%);
-
+      filter: grayscale(60%);
     }
   }
 }
@@ -117,7 +114,7 @@
     background-color: var(--color-brand-1400);
     width: 100%;
     transition: 0.4s ease-in-out;
-    border: 1px solid var(--color-brand-1200);  
+    border: 1px solid var(--color-brand-1200);
 
     &:hover {
       background-color: var(--color-brand-500);
@@ -137,7 +134,6 @@
     width: 100%;
     transition: 0.2s ease-in-out;
     border: 1px solid var(--color-brand-1200);
-
 
     &:hover {
       background-color: var(--color-brand-500);
@@ -239,5 +235,18 @@
     grid-area: 27/1/29/31;
     gap: 2px;
     font-size: var(--font-size-xsmall);
+
+    .live {
+      .live-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .github {
+      .github-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }

@@ -7,7 +7,7 @@
 
   .image-container {
     grid-area: 1 / 1 / 11 / 8;
-    background-color: var(--color-brand-1400);
+    background-color: var(--color-brand-700);
     border-top: 1px solid var(--color-brand-1200);
 
     img {
@@ -28,7 +28,6 @@
     white-space: pre-line;
     border-top: 1px solid var(--color-brand-1200);
     border-left: 1px solid var(--color-brand-1200);
-
   }
   ::-webkit-scrollbar {
     width: 5px;
@@ -125,10 +124,9 @@
 
     .image-container {
       grid-area: 1 / 1 / 22 / 31;
-      background-color: var(--color-brand-1300);
 
       img {
-        object-fit: contain;
+        object-fit: fill;
         width: 100%;
         height: 100%;
       }
@@ -138,6 +136,7 @@
       font-size: var(--font-size-xsmall);
       letter-spacing: var(--letter-spacing-uxsmall);
       padding: 10px;
+      border-left: none;
     }
   }
 
@@ -146,9 +145,9 @@
       font-size: 50px;
       letter-spacing: var(--letter-spacing-medium);
       padding: 2px 8px;
-      color: var(--color-light-peach);
-      background-color: var(--color-brand-900);
-      border-bottom: 5px solid var(--color-light-peach);
+      color: var(--color-brand-1400);
+      background-color: var(--color-brand-700);
+      border-bottom: 1px solid var(--color-brand-1200);
     }
     .hobbies-description {
       font-size: var(--font-size-xsmall);
@@ -156,7 +155,6 @@
       letter-spacing: var(--letter-spacing-xsmall);
     }
     .hobbies-list {
-      /* background-color: var(--color-brand-1300); */
       padding: 5px;
       gap: 30px;
 
