@@ -195,12 +195,12 @@
 
     hr {
       width: 100%;
-      border: 1px solid var(--color-light-peach);
+      border: 1px solid var(--color-brand-1400);
       height: 4px;
     }
     h2 {
       padding: 0 6px;
-      color: var(--color-light-peach);
+      color: var(--color-brand-1400);
       font-size: var(--font-size-small);
       letter-spacing: var(--letter-spacing-small);
     }
