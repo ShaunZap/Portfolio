@@ -31,7 +31,7 @@
 .modal-container {
   position: absolute;
   top: -150px;
-  left: -150px;
+  left: 0px;
   z-index: 998;
 }
 
@@ -103,5 +103,11 @@
       color: var(--color-brand-1400);
       background-color: var(--color-brand-700);
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-tooltip {
+    display: none;
   }
 }
