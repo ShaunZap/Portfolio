@@ -11,12 +11,24 @@ const NewsApp = () => {
   const handleFetchNews = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(
-        `/api-news/api/v4/top-headlines?country=in&max=10&apikey=${apikey}&lang=en`
-      );
+      const isDev = import.meta.env.DEV;
+      const targetUrl = `https://gnews.io/api/v4/top-headlines?country=in&max=10&apikey=${apikey}&lang=en`;
 
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
+      const finalUrl = isDev
+        ? `/api-news/api/v4/top-headlines?country=in&max=10&apikey=${apikey}&lang=en`
+        : `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
+
+      const res = await fetch(finalUrl);
+
+      const contentType = res.headers.get("content-type");
+      if (
+        !res.ok ||
+        !contentType ||
+        !contentType.includes("application/json")
+      ) {
+        const errorText = await res.text();
+        console.error("Expected JSON but got:", errorText.substring(0, 100));
+        throw new Error("Server did not return JSON. Check API key or Proxy.");
       }
 
       const data = await res.json();
