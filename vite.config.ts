@@ -22,4 +22,13 @@ export default defineConfig({
       ],
     },
   },
+  server: {
+    proxy: {
+      "/api-news": {
+        target: "https://gnews.io",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-news/, ""),
+      },
+    },
+  },
 });

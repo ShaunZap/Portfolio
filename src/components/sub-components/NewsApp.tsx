@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import newsIcon from "../../assets/images/miscellaneous/news.svg";
 import "../../styles/News.css";
 import { Article } from "../../types/type";
@@ -8,23 +8,29 @@ const NewsApp = () => {
   const [newsData, setNewsData] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchNews() {
-      try {
-        const res = await fetch(
-          `https://gnews.io/api/v4/top-headlines?country=in&max=10&apikey=${apikey}&lang=en`
-        );
-        const data = await res.json();
-        setNewsData(data.articles || []);
-      } catch (error) {
-        console.error("Error fetching news:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
+  const handleFetchNews = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(
+        `/api-news/api/v4/top-headlines?country=in&max=10&apikey=${apikey}&lang=en`
+      );
 
-    fetchNews();
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      setNewsData(data.articles || []);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    handleFetchNews();
+  }, [handleFetchNews]);
 
   return (
     <div className="news-container">
@@ -48,16 +54,19 @@ const NewsApp = () => {
                 />
               </div>
               <div className="news-bottom-section">
-
-              <div className="news-date">
-                published on:{" "}
-                {new Date(article.publishedAt).toLocaleDateString()}
-              </div>
-              <div className="newsButton">
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                  click for more info
-                </a>
-              </div>
+                <div className="news-date">
+                  published on:{" "}
+                  {new Date(article.publishedAt).toLocaleDateString()}
+                </div>
+                <div className="newsButton">
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    click for more info
+                  </a>
+                </div>
               </div>
             </div>
           ))
