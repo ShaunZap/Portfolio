@@ -1,14 +1,13 @@
-import DigitalClock from "./sub-components/DigitalClock";
-import batteryIcon from "../assets/images/miscellaneous/battery.svg";
+
 import "../styles/NotificationPanel.css"
+import ThemeSwitcher from "./sub-components/ThemeSwitcher";
 const NotificationPanel = () => {
   return (
     <div>
       <div className="panel-container">
         <div className="titlelogo">Shaun Barreto</div>
         <div className="right-container">
-          <img className="batteryicon" src={batteryIcon} alt="battery-Icon" />
-          <DigitalClock />
+          <ThemeSwitcher />
         </div>
       </div>
     </div>

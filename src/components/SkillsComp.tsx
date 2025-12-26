@@ -39,7 +39,7 @@ export default SkillsComp;
 const MainTitle = ({ title, Icon }: { title: string; Icon: LucideIcon }) => {
   return (
     <MDiv className="skill-main-title">
-      <Icon strokeWidth={1} color="white" className="main-icon" />
+      <Icon strokeWidth={1}  className="main-icon" />
       <h2>{title}</h2>
     </MDiv>
   );
@@ -97,7 +97,7 @@ const SkillCardGenerator = ({ data }: { data: Skill[] }) => {
               rel="noopener noreferrer"
             >
               <div>more info on {value.title}</div>
-              <SquareArrowUpRight size={15} color="white" strokeWidth={1} />
+              <SquareArrowUpRight size={15}  strokeWidth={1} />
             </a>
           </div>
         </MDiv>

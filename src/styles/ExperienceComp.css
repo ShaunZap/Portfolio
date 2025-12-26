@@ -17,10 +17,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      color: var(--color-brand-700);
 
-      .timelineImage{
-      border: 1px solid var(--color-brand-1200);
-      padding: 5px;
+      .timelineImage {
+        border: 1px solid var(--color-brand-1200);
+        padding: 5px;
       }
 
       hr {
@@ -30,6 +31,7 @@
         border: none;
       }
     }
+
     .card-container {
       display: grid;
       grid-template-columns: repeat(20, 1fr);
@@ -51,6 +53,7 @@
         display: flex;
         align-items: center;
       }
+
       .job-title {
         background-color: var(--color-brand-1400);
         grid-area: 4/2/6/21;
@@ -62,6 +65,7 @@
         display: flex;
         align-items: center;
       }
+
       .job-duration {
         background-color: var(--color-brand-1400);
         color: var(--color-brand-700);
@@ -77,6 +81,7 @@
         padding: 5px;
         letter-spacing: var(--letter-spacing-medium);
       }
+
       .job-description {
         background-color: var(--color-brand-1400);
         grid-area: 6/2/18/13;
@@ -91,9 +96,10 @@
           color: var(--color-brand-700);
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
-        border-bottom: 1px solid var(--color-brand-1200);
+          border-bottom: 1px solid var(--color-brand-1200);
 
         }
+
         p {
           padding: 10px;
           margin: 0;
@@ -101,13 +107,14 @@
           letter-spacing: var(--letter-spacing-small);
         }
       }
+
       .job-location {
         background-color: var(--color-brand-1400);
         grid-area: 14/13/18/21;
         font-weight: 500;
         color: var(--color-brand-700);
         overflow: hidden;
-        
+
 
         div {
           background-color: var(--color-brand-1400);
@@ -116,9 +123,10 @@
           color: var(--color-brand-700);
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
-        border-bottom: 1px solid var(--color-brand-1200);
+          border-bottom: 1px solid var(--color-brand-1200);
 
         }
+
         p {
           padding: 5px;
           margin: 0;
@@ -126,6 +134,7 @@
           letter-spacing: var(--letter-spacing-small);
         }
       }
+
       .tech-stack {
         background-color: var(--color-brand-1400);
         grid-area: 6/13/14/21;
@@ -141,12 +150,14 @@
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
         }
+
         .tech-stack-container {
           background-color: var(--color-brand-1400);
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
           border-top: 1px solid var(--color-brand-1200);
+
           p {
             background-color: var(--color-brand-700);
             color: var(--color-brand-1400);
@@ -155,7 +166,7 @@
             letter-spacing: var(--letter-spacing-small);
             border: 1px solid var(--color-brand-1200);
 
-            &:hover{
+            &:hover {
               background-color: var(--color-brand-1400);
               color: var(--color-brand-700);
             }
@@ -187,16 +198,19 @@
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .job-title {
           grid-area: 3/2/5/21;
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .job-duration {
           grid-area: 1/1/19/2;
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
         }
+
         .job-description {
           grid-area: 5/2/14/21;
 
@@ -205,12 +219,14 @@
             font-size: var(--font-size-small);
             letter-spacing: var(--letter-spacing-xsmall);
           }
+
           p {
             padding: 5px;
             font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
         }
+
         .job-location {
           grid-area: 14/13/19/21;
 
@@ -219,12 +235,14 @@
             font-size: var(--font-size-small);
             letter-spacing: var(--letter-spacing-xsmall);
           }
+
           p {
             padding: 5px;
             font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
         }
+
         .tech-stack {
           grid-area: 14/2/19/13;
 
@@ -233,8 +251,10 @@
             font-size: var(--font-size-small);
             letter-spacing: var(--letter-spacing-xsmall);
           }
+
           .tech-stack-container {
             gap: 5px;
+
             p {
               padding: 0px 2px 0px 2px;
               font-size: var(--font-size-xsmall);
@@ -260,6 +280,7 @@
         display: none;
 
       }
+
       .card-container {
         grid-template-columns: repeat(20, 1fr);
         grid-template-rows: repeat(17, 20px);
@@ -272,17 +293,20 @@
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .job-title {
           grid-area: 3/2/5/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .job-duration {
           grid-area: 1/1/18/2;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
           padding: 2px;
         }
+
         .job-description {
           grid-area: 5/2/11/21;
 
@@ -291,12 +315,14 @@
             font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
+
           p {
             padding: 0px 5px;
             font-size: 18px;
             letter-spacing: var(--letter-spacing-uxsmall);
           }
         }
+
         .job-location {
           grid-area: 15/2/18/21;
 
@@ -305,12 +331,14 @@
             font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
+
           p {
             padding: 0px 5px;
             font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-uxsmall);
           }
         }
+
         .tech-stack {
           grid-area: 11/2/15/21;
 
@@ -319,9 +347,11 @@
             font-size: var(--font-size-xsmall);
             letter-spacing: var(--letter-spacing-xsmall);
           }
+
           .tech-stack-container {
             gap: 5px;
             padding: 3px;
+
             p {
               padding: 0px 3px 0px 3px;
               font-size: 18px;

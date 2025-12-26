@@ -9,11 +9,13 @@
   margin-top: 20px;
   border-bottom: 1px solid var(--color-brand-1200);
   margin-bottom: 20px;
+  color: var(--color-brand-700);
 
   .main-icon {
     width: 60px;
     height: 60px;
   }
+
   h2 {
     flex: 1;
     color: var(--color-brand-500);
@@ -52,6 +54,7 @@
         padding: 5px;
         filter: grayscale(40%);
       }
+
       h4 {
         font-size: var(--font-size-medium);
         letter-spacing: var(--letter-spacing-small);
@@ -80,6 +83,7 @@
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .proficiency-level {
           flex: 1;
           background-color: var(--color-brand-1300);
@@ -126,6 +130,7 @@
         }
       }
     }
+
     .more-info-button {
       background-color: var(--color-brand-1400);
       padding: 0px 5px 0px 5px;
@@ -153,6 +158,7 @@
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         img {
           width: 10px;
           height: 10px;
@@ -167,11 +173,13 @@
 @media screen and (max-width: 600px) {
   .skill-main-title {
     margin-top: 20px;
+
     .main-icon {
       width: 40px;
       height: 40px;
       padding: 5px;
     }
+
     h2 {
       font-size: var(--font-size-medium);
       letter-spacing: var(--letter-spacing-small);
@@ -195,6 +203,7 @@
           height: 35px;
           padding: 3px;
         }
+
         h4 {
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-xsmall);
@@ -206,10 +215,12 @@
         gap: 3px;
 
         .proficiency-info {
+
           .title {
             font-size: 14px;
             letter-spacing: var(--letter-spacing-uxsmall);
           }
+
           .proficiency-level {
             font-size: var(--font-size-uxsmall);
             letter-spacing: var(--letter-spacing-uxsmall);
@@ -218,13 +229,15 @@
 
         .proficiency-bar {
           .progress {
-            background-color: var(--color-brand-1400);
+            background-color: var(--color-brand-700);
             height: 14px;
           }
         }
+
         .proficiency-percentage {
           padding: 0px 0px 0px 0px;
           font-size: 14px;
+
         }
       }
 
@@ -235,6 +248,7 @@
           font-size: var(--font-size-uxsmall);
           letter-spacing: var(--letter-spacing-uxsmall);
         }
+
         .highlights {
           gap: 5px;
 
@@ -245,6 +259,7 @@
           }
         }
       }
+
       .more-info-button {
         padding: 0px 3px 0px 3px;
 
@@ -255,6 +270,7 @@
             font-size: var(--font-size-uxsmall);
             letter-spacing: var(--letter-spacing-uxsmall);
           }
+
           img {
             width: 10px;
             height: 10px;

@@ -13,7 +13,7 @@ const ExperienceComp = () => {
         {Object.entries(experienceData).map(([key, exp]) => (
           <div className="inner-container" key={key}>
             <div className="timeline-container">
-              <Briefcase size={40} color="white" strokeWidth={1} className="timelineImage" />
+              <Briefcase size={40} strokeWidth={1} className="timelineImage" />
               <hr />
             </div>
             <MDiv

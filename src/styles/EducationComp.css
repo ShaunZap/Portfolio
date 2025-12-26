@@ -9,6 +9,8 @@
   padding: 5px;
   margin: 0 auto;
   width: 94%;
+  color: var(--color-brand-700);
+
 
   .main-icon {
     width: 60px;
@@ -38,6 +40,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    color: var(--color-brand-700);
 
     .timeline-separator {
       flex: 1;
@@ -80,6 +83,7 @@
         font-weight: 400;
         letter-spacing: var(--letter-spacing-medium);
       }
+
       .institution {
         background-color: var(--color-brand-1400);
         grid-area: 4/1/6/13;
@@ -88,6 +92,7 @@
         letter-spacing: var(--letter-spacing-small);
         padding: 5px;
       }
+
       .duration {
         background-color: var(--color-brand-1400);
         grid-area: 4/13/6/17;
@@ -96,6 +101,7 @@
         letter-spacing: var(--letter-spacing-small);
         padding: 5px;
       }
+
       .gpa {
         background-color: var(--color-brand-1400);
         grid-area: 4/17/6/21;
@@ -104,6 +110,7 @@
         padding: 5px;
         font-weight: 400;
       }
+
       .highlights {
         background-color: var(--color-brand-1400);
         grid-area: 6/1/11/21;
@@ -136,6 +143,7 @@
 
     .certification-card-title {
       background-color: var(--color-brand-700);
+
       h4 {
         color: var(--color-brand-1400);
         font-size: var(--font-size-small);
@@ -144,6 +152,7 @@
         padding: 5px;
         font-weight: 500;
       }
+
       h5 {
         color: var(--color-brand-700);
         background-color: var(--color-brand-1400);
@@ -154,6 +163,7 @@
         padding: 5px;
       }
     }
+
     .certification-card-content {
       background-color: var(--color-brand-1400);
       color: var(--color-brand-700);
@@ -162,6 +172,7 @@
       letter-spacing: var(--letter-spacing-small);
       padding: 5px;
     }
+
     .certification-card-tags {
       background-color: var(--color-brand-1400);
       display: flex;
@@ -223,6 +234,7 @@
         color: var(--color-brand-700);
       }
     }
+
     .email {
       background-color: var(--color-brand-1400);
       color: var(--color-brand-700);
@@ -242,6 +254,7 @@
         letter-spacing: var(--letter-spacing-xsmall);
       }
     }
+
     .address {
       background-color: var(--color-brand-1400);
       color: var(--color-brand-700);
@@ -316,6 +329,7 @@
           height: 40px;
           padding: 3px;
         }
+
         hr {
           width: 4px;
         }
@@ -331,21 +345,25 @@
           font-size: var(--font-size-small);
           letter-spacing: var(--letter-spacing-small);
         }
+
         .institution {
           grid-area: 3/1/5/13;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .duration {
           grid-area: 3/13/5/17;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .gpa {
           grid-area: 3/17/5/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .highlights {
           grid-area: 5/1/9/21;
           font-size: var(--font-size-xsmall);
@@ -370,15 +388,18 @@
           letter-spacing: var(--letter-spacing-xsmall);
           border-bottom: 1px solid var(--color-light-peach);
         }
+
         h5 {
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
       }
+
       .certification-card-content {
         font-size: var(--font-size-xsmall);
         letter-spacing: var(--letter-spacing-xsmall);
       }
+
       .certification-card-tags {
         gap: 10px;
         margin-top: 5px;
@@ -415,6 +436,7 @@
           letter-spacing: var(--letter-spacing-xsmall);
         }
       }
+
       .email {
         gap: 2px;
 
@@ -429,6 +451,7 @@
           letter-spacing: var(--letter-spacing-uxsmall);
         }
       }
+
       .address {
         font-size: var(--font-size-uxsmall);
         letter-spacing: var(--letter-spacing-uxsmall);
@@ -486,24 +509,28 @@
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-xsmall);
         }
+
         .institution {
           grid-area: 3/1/5/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-uxsmall);
           padding: 2px;
         }
+
         .duration {
           grid-area: 5/1/7/10;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-uxsmall);
           padding: 2px;
         }
+
         .gpa {
           grid-area: 5/10/7/21;
           font-size: var(--font-size-xsmall);
           letter-spacing: var(--letter-spacing-uxsmall);
           padding: 2px;
         }
+
         .highlights {
           grid-area: 7/1/13/21;
           font-size: var(--font-size-xsmall);
@@ -532,15 +559,18 @@
           letter-spacing: var(--letter-spacing-uxsmall);
           border-bottom: 1px solid var(--color-brand-1200);
         }
+
         h5 {
           font-size: var(--font-size-uxsmall);
           letter-spacing: var(--letter-spacing-uxsmall);
         }
       }
+
       .certification-card-content {
         font-size: var(--font-size-xsmall);
         letter-spacing: var(--letter-spacing-uxsmall);
       }
+
       .certification-card-tags {
         gap: 8px;
         padding: 3px;

@@ -42,7 +42,7 @@ const MainTitle = ({
 }) => {
   return (
     <MDiv className="education-title">
-      <Icon strokeWidth={1} color="white" className="main-icon" />
+      <Icon strokeWidth={1} className="main-icon" />
       <h2>{maintitle}</h2>
     </MDiv>
   );
@@ -89,7 +89,6 @@ const TimelineSection = () => {
           <div className="timeline-separator">
             <GraduationCapIcon
               size={50}
-              color="white"
               strokeWidth={1}
               className="timelineImage"
             />
@@ -148,7 +147,7 @@ const InstitutionCard = () => {
             <div>{inst.institutionName}</div>
           </div>
           <div className="email">
-            <Mail size={15} strokeWidth={1} color="white" />
+            <Mail size={15} strokeWidth={1}/>
             <div>{inst.email}</div>
           </div>
           <div className="address" data-testid={`${key}-${inst.address}`}>

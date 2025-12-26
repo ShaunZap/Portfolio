@@ -42,17 +42,16 @@ const Footer = () => {
     <>
       <MDiv className="footer-layout">
         <MDiv
-          className="outer-button"
           whileHover={{ scale: 1.1 }}
           onClick={() => setShowModal(!showModal)}
         >
           <Info
             size={30}
-            color="white"
             strokeWidth={1}
             data-testid="info-icon"
             data-tooltip-id="info-tip"
             data-tooltip-content="More Info"
+            className="footer-icons"
           />
           {showModal && (
             <div className="modal-container">
@@ -62,27 +61,27 @@ const Footer = () => {
         </MDiv>
 
         <Link to="/">
-          <MDiv className="outer-button" whileHover={{ scale: 1.1 }}>
+          <MDiv  whileHover={{ scale: 1.1 }}>
             <House
               size={30}
-              color="white"
               strokeWidth={1}
               data-testid="home-icon"
               data-tooltip-id="home-tip"
               data-tooltip-content="Go to Home"
+            className="footer-icons"
             />
           </MDiv>
         </Link>
 
         <a href="/ShaunBarretoCV.pdf" target="_blank" rel="noopener noreferrer">
-          <MDiv className="outer-button" whileHover={{ scale: 1.1 }}>
+          <MDiv  whileHover={{ scale: 1.1 }}>
             <FileUser
               size={30}
-              color="white"
               strokeWidth={1}
               data-testid="resume-icon"
               data-tooltip-id="resume-tip"
               data-tooltip-content="View Resume"
+            className="footer-icons"
             />
           </MDiv>
         </a>

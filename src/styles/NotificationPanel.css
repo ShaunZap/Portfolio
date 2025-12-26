@@ -10,7 +10,7 @@
 
   .titlelogo {
     justify-content: start;
-    color: var(--color-primary-peach);
+    color: var(--color-brand-700);
     font-size: var(--font-size-medium);
     letter-spacing: var(--letter-spacing-small);
     font-weight: 400;
@@ -24,10 +24,6 @@
     align-items: center;
     gap: 10px;
 
-    .batteryicon {
-      width: 30px;
-      height: 30px;
-      filter: grayscale(100%);
-    }
+  
   }
 }

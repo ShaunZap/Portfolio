@@ -1,32 +1,39 @@
 :root {
-/* Brand Scale (mapped to grayscale) */
-  --color-brand-500: #e0e0e0;       /* Light Gray (Warm Sand equivalent) */
-  --color-brand-700: #c8c8c8;       /* Medium-Light Gray (Soft Taupe equivalent) */
-  --color-brand-800: #b0b0b0;       /* Medium Gray (Dusty Bronze equivalent) */
-  --color-brand-900: #909090;       /* Darker Medium Gray (Mocha Ash equivalent) */
-  --color-brand-1000: #707070;      /* Dark Gray (Deep Bronze equivalent) */
-  --color-brand-1100: #5a5a5a;      /* Deep Gray (Rich Umber equivalent) */
-  --color-brand-1200: #484848;      /* Very Dark Gray (Shadow Bronze equivalent) */
-  --color-brand-1250: #353535;      /* Near Black (Dark Coffee equivalent) */
-  --color-brand-1300: #1a1a1a;      /* Charred Black (Charred Earth equivalent) */
-  --color-brand-1400: #0b0b11;      /* Earth Black (Darkest accents equivalent) */
-
-  /* Neutral & Secondary Colors (mapped to grayscale/B&W) */
-  --color-primary-black: #2a2a2a;   /* Charcoal Black */
-  --color-off-white: #f5f5f5;       /* Very Light Gray (Linen equivalent) */
-  --color-primary-peach: #d0d0d0;   /* Light Gray (Soft Gold equivalent) */
-  --color-light-peach: #fafafa;     /* Off-White (Champagne equivalent) */
+  --color-brand-500: #e0e0e0;
+  --color-brand-700: #c8c8c8;
+  --color-brand-800: #b0b0b0;
+  --color-brand-900: #909090;
+  --color-brand-1000: #707070;
+  --color-brand-1100: #5a5a5a;
+  --color-brand-1200: #484848;
+  --color-brand-1250: #353535;
+  --color-brand-1300: #1a1a1a;
+  --color-brand-1400: #0b0b11;
 
 
   --font-size-large: 80px;
   --font-size-medium: 35px;
   --font-size-small: 25px;
   --font-size-xsmall: 20px;
-  --font-size-uxsmall: 16px
-  --letter-spacing-large: 8px;
+  --font-size-uxsmall: 16px --letter-spacing-large: 8px;
   --letter-spacing-medium: 4px;
   --letter-spacing-small: 2px;
   --letter-spacing-xsmall: 1px;
 
-  
+
+}
+
+
+[data-theme='light'] {
+  --color-brand-1400: #f7f6f2;
+  --color-brand-1300: #efeee9;
+  --color-brand-1250: #e5e3db;
+  --color-brand-1200: #928c78;
+  --color-brand-1100: #a8a6a0;
+  --color-brand-1000: #8c8a84;
+  --color-brand-900: #6e6c67;
+  --color-brand-800: #52504c;
+  --color-brand-700: #3a3935;
+  --color-brand-500: #1e1e1c;
+
 }

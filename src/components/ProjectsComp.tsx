@@ -57,7 +57,6 @@ const ProjectsComp = () => (
               >
                 <LinkIcon
                   size={30}
-                  color="grey"
                   aria-label="live link"
                   className="live-icon"
                 />
@@ -71,7 +70,6 @@ const ProjectsComp = () => (
               >
                 <Github
                   size={30}
-                  color="grey"
                   aria-label="github"
                   className="github-icon"
                 />
