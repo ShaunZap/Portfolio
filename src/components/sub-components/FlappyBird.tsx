@@ -198,8 +198,8 @@ const FlappyBird = () => {
             {(!gameStarted || gameOver) && (
                 <div className="message-overlay">
                     <div className="message-box">
-                        <h2 style={{ color: 'var(--color-brand-500)' }}>{gameOver ? "GAME OVER" : "CHOPPY"}</h2>
-                        <p style={{ color: 'var(--color-brand-500)' }}>{gameOver ? `Final Score: ${score}` : "Tap to fly!"}</p>
+                        <h2 style={{ color: 'var(--color-brand-700)' }}>{gameOver ? "GAME OVER" : "CHOPPER"}</h2>
+                        <p style={{ color: 'var(--color-brand-700)' }}>{gameOver ? `Final Score: ${score}` : "Tap to fly!"}</p>
 
                         <button
                             className="start-btn"
