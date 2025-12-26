@@ -13,17 +13,17 @@ vi.mock("../components/sub-components/Quotes", () => ({
   default: () => <div data-testid="quotes-component">Quotes</div>,
 }));
 
-vi.mock("../components/sub-components/NewsApp", () => ({
+vi.mock("../components/sub-components/FlappyBird", () => ({
   __esModule: true,
-  default: () => <div data-testid="news-component">NewsApp</div>,
+  default: () => <div data-testid="game-component">FlappyBird</div>,
 }));
 
 describe("MainContentBody", () => {
-  it("renders Quotes, NewsApp, and Sections components", () => {
+  it("renders Quotes, FlappyBird, and Sections components", () => {
     render(<MainContentBody />);
 
     expect(screen.getByTestId("quotes-component")).toBeInTheDocument();
-    expect(screen.getByTestId("news-component")).toBeInTheDocument();
+    expect(screen.getByTestId("game-component")).toBeInTheDocument();
     expect(screen.getByTestId("sections-component")).toBeInTheDocument();
   });
 });
