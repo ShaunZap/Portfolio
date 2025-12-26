@@ -1,12 +1,16 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { Helicopter } from "lucide-react";
 import "../../styles/FlappyBird.css";
 
-const BIRD_SIZE = 30;
+const BIRD_SIZE = 36;
 // PHYSICS TWEAKS
-const GRAVITY = 0.25;
-const JUMP_STRENGTH = -5.5;
-const PIPE_WIDTH = 50;
-const PIPE_SPEED = 2.5;
+const GRAVITY = 0.18;
+const JUMP_STRENGTH = -4.5;
+const PIPE_WIDTH = 44;
+const PIPE_SPEED = 2.0;
+
+// --- CHANGED: Made blocks thinner (20px instead of 40px) ---
+const BLOCK_HEIGHT = 20;
 
 const FlappyBird = () => {
     const [birdY, setBirdY] = useState(200);
@@ -39,8 +43,6 @@ const FlappyBird = () => {
 
     const handleJump = useCallback((e?: React.MouseEvent | React.TouchEvent) => {
         if (gameOver) return;
-
-        // --- MOBILE FIX: GHOST CLICK PREVENTION ---
         const now = Date.now();
         if (e) {
             if (e.type === 'touchstart') {
@@ -49,7 +51,6 @@ const FlappyBird = () => {
                 if (now - lastTouchRef.current < 500) return;
             }
         }
-
         if (!gameStarted) setGameStarted(true);
         setVelocity(JUMP_STRENGTH);
     }, [gameOver, gameStarted]);
@@ -80,19 +81,27 @@ const FlappyBird = () => {
             let newPipes = prevPipes.map(p => ({ ...p, x: p.x - PIPE_SPEED }));
             newPipes = newPipes.filter(p => p.x > -PIPE_WIDTH);
 
-            // Scoring
             prevPipes.forEach((p, i) => {
                 if (p.x >= 50 && newPipes[i] && newPipes[i].x < 50) {
                     setScore(s => s + 1);
                 }
             });
 
-            // Spawning
+            // Spawning Logic
             const spawnDistance = dimensions.width < 400 ? 180 : 300;
 
             if (newPipes.length === 0 || newPipes[newPipes.length - 1].x < dimensions.width - spawnDistance) {
+
+                // --- CHANGED: MOBILE GAP LOGIC ---
+                const isMobile = dimensions.width < 600;
                 const minPipeHeight = 50;
-                const currentGap = Math.min(170, dimensions.height * 0.35);
+
+                // On mobile: Gap is 40% of screen, max 220px. 
+                // On Desktop: Gap is 35% of screen, max 170px.
+                const gapRatio = isMobile ? 0.40 : 0.35;
+                const maxGapSize = isMobile ? 220 : 170;
+
+                const currentGap = Math.min(maxGapSize, dimensions.height * gapRatio);
                 const maxPipeHeight = dimensions.height - currentGap - minPipeHeight;
 
                 if (maxPipeHeight > minPipeHeight) {
@@ -106,14 +115,13 @@ const FlappyBird = () => {
             return newPipes;
         });
 
-        // Collisions
         const birdBottom = birdY + BIRD_SIZE;
         if (birdBottom > dimensions.height || birdY < 0) setGameOver(true);
 
         pipes.forEach(pipe => {
             if (
-                pipe.x < 50 + BIRD_SIZE &&
-                pipe.x + PIPE_WIDTH > 50 &&
+                pipe.x < 50 + BIRD_SIZE - 2 &&
+                pipe.x + PIPE_WIDTH > 50 + 2 &&
                 (birdY < pipe.height || birdY + BIRD_SIZE > pipe.height + pipe.gap)
             ) {
                 setGameOver(true);
@@ -128,6 +136,25 @@ const FlappyBird = () => {
         return () => { if (requestRef.current) cancelAnimationFrame(requestRef.current); };
     }, [update]);
 
+    const renderBuildingBlocks = (totalHeight: number) => {
+        if (totalHeight <= 0) return null;
+        const numBlocks = Math.ceil(totalHeight / BLOCK_HEIGHT);
+        const blocks = [];
+        for (let i = 0; i < numBlocks; i++) {
+            const height = (i === numBlocks - 1)
+                ? totalHeight - (i * BLOCK_HEIGHT)
+                : BLOCK_HEIGHT;
+
+            blocks.push(
+                <div key={i} className="building-block" style={{
+                    height: `${height}px`,
+                    backgroundColor: i % 2 === 0 ? 'var(--color-brand-1000)' : 'var(--color-brand-1300)'
+                }} />
+            );
+        }
+        return blocks;
+    };
+
     return (
         <div
             className="flappy-container"
@@ -135,36 +162,44 @@ const FlappyBird = () => {
             onTouchStart={handleJump}
             ref={containerRef}
         >
-            {/* Title: Rendered exactly when NOT playing */}
             {!gameStarted && <div className="Flappy-title">Wanna pass some time??</div>}
 
             <div className="score-display" style={{ color: 'var(--color-brand-500)' }}>{score}</div>
 
-            <div className="bird" style={{
-                top: birdY,
-                left: 50,
-                width: BIRD_SIZE,
-                height: BIRD_SIZE,
-                transform: `rotate(${Math.min(Math.max(velocity * 4, -25), 90)}deg)`
-            }} />
+            <Helicopter
+                className="bird-icon"
+                size={BIRD_SIZE}
+                style={{
+                    top: birdY,
+                    left: 50,
+                    transform: `rotate(${Math.min(Math.max(velocity * 5, -20), 30)}deg)`
+                }}
+            />
 
-            {pipes.map((pipe, i) => (
-                <div key={`pipe-${i}`}>
-                    <div className="pipe top" style={{ left: pipe.x, height: pipe.height, width: PIPE_WIDTH }} />
-                    <div className="pipe bottom" style={{
-                        left: pipe.x,
-                        top: pipe.height + pipe.gap,
-                        width: PIPE_WIDTH,
-                        height: dimensions.height
-                    }} />
-                </div>
-            ))}
+            {pipes.map((pipe, i) => {
+                const bottomHeight = Math.max(0, dimensions.height - (pipe.height + pipe.gap));
+                return (
+                    <div key={`pipe-${i}`}>
+                        <div className="pipe building-container top" style={{ left: pipe.x, height: pipe.height, width: PIPE_WIDTH }}>
+                            {renderBuildingBlocks(pipe.height)}
+                        </div>
+                        <div className="pipe building-container bottom" style={{
+                            left: pipe.x,
+                            top: pipe.height + pipe.gap,
+                            width: PIPE_WIDTH,
+                            height: bottomHeight
+                        }}>
+                            {renderBuildingBlocks(bottomHeight)}
+                        </div>
+                    </div>
+                )
+            })}
 
             {(!gameStarted || gameOver) && (
                 <div className="message-overlay">
                     <div className="message-box">
-                        <h2 style={{ color: 'var(--color-brand-500)' }}>{gameOver ? "GAME OVER" : "FLAPPY"}</h2>
-                        <p style={{ color: 'var(--color-brand-500)' }}>{gameOver ? `Final Score: ${score}` : "Let's See Your Skills"}</p>
+                        <h2 style={{ color: 'var(--color-brand-500)' }}>{gameOver ? "GAME OVER" : "CHOPPY"}</h2>
+                        <p style={{ color: 'var(--color-brand-500)' }}>{gameOver ? `Final Score: ${score}` : "Tap to fly!"}</p>
 
                         <button
                             className="start-btn"

@@ -7,11 +7,13 @@
     touch-action: none;
     cursor: pointer;
     transition: background 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
     user-select: none;
     -webkit-user-select: none;
 }
 
-/* --- YOUR EXACT TITLE STYLE --- */
+/* --- YOUR SPECIFIC TITLE STYLE --- */
 .Flappy-title {
     font-size: var(--font-size-small);
     letter-spacing: var(--letter-spacing-small);
@@ -25,24 +27,48 @@
     z-index: 100;
 }
 
-.bird {
+.bird-icon {
     position: absolute;
-    background: var(--color-brand-700);
-    border-radius: 50%;
-    border: 2px solid var(--color-brand-1300);
-    z-index: 5;
-    transition: transform 0.1s;
+    z-index: 10;
+    color: var(--color-brand-700);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.1s ease-out;
 }
 
 .pipe {
     position: absolute;
-    background: var(--color-brand-700);
-    border: 1px solid var(--color-brand-1300);
+    z-index: 5;
 }
 
+.building-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-brand-1200);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-brand-1200);
+}
+
+.building-container.top {
+    flex-direction: column-reverse;
+    border-bottom: 4px solid var(--color-brand-700);
+}
+
+.building-container.bottom {
+    border-top: 4px solid var(--color-brand-700);
+}
+
+.building-block {
+    width: 100%;
+    box-sizing: border-box;
+    /* Made the gradient slightly stronger for thin blocks so they pop */
+    background-image: linear-gradient(to right, transparent 10%, rgba(255, 255, 255, 0.1) 50%, transparent 90%);
+}
+
+/* --- UI Styles --- */
 .score-display {
     position: absolute;
-    top: 40px;
+    top: 60px;
     width: 100%;
     text-align: center;
     font-size: var(--font-size-large);
@@ -55,67 +81,80 @@
 .message-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 20;
+    z-index: 50;
 }
 
 .message-box {
     text-align: center;
-    padding: 30px;
+    padding: 30px 40px;
     background: var(--color-brand-1400);
     border: 1px solid var(--color-brand-1200);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .message-box h2 {
     font-size: var(--font-size-medium);
     margin: 0;
     font-family: serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .message-box p {
-    font-size: var(--font-size-xsmall);
-    margin: 10px 0 20px 0;
+    font-size: var(--font-size-small);
+    margin: 15px 0 25px 0;
+    opacity: 0.8;
 }
 
 .start-btn {
     background: var(--color-brand-700);
     color: var(--color-brand-1400);
-    border: none;
-    padding: 12px 30px;
-    font-size: var(--font-size-xsmall);
-    font-weight: bold;
+    border: 1px solid var(--color-brand-1200);
+    padding: 14px 36px;
+    font-size: var(--font-size-small);
+    font-weight: 800;
     cursor: pointer;
+    border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: var(--letter-spacing-small);
-    transition: transform 0.1s;
+    letter-spacing: var(--letter-spacing-medium);
+    transition: all 0.1s;
+    box-shadow: 0 4px 0 var(--color-brand-900);
 }
 
 .start-btn:active {
-    transform: scale(0.95);
+    transform: translateY(4px);
+    box-shadow: none;
 }
 
 @media screen and (max-width: 600px) {
+    .message-box {
+        padding: 15px 30px;
+        margin-top: 40px;
+    }
 
     .message-box h2 {
         font-size: var(--font-size-medium);
     }
 
-    .message-box p {
-        font-size: var(--font-size-uxsmall);
+    .start-btn {
+        padding: 12px 30px;
+        font-size: var(--font-size-xsmall);
     }
 
-    .start-btn {
-        padding: 10px 30px;
-        font-size: var(--font-size-uxsmall);
+    /* Optional: Ensure building blocks don't get too faint on small screens */
+    .building-block {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
 
     .Flappy-title {
         font-size: var(--font-size-xsmall);
-        letter-spacing: var(--letter-spacing-small);
+        background-color: var(--color-brand-700);
+        color: var(--color-brand-1400);
     }
 }
