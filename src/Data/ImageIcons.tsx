@@ -29,11 +29,12 @@ import userICon from "../assets/images/miscellaneous/user.svg";
 import codeICon from "../assets/images/miscellaneous/code.svg";
 import institutionICon from "../assets/images/miscellaneous/institution.svg";
 import toolICon from "../assets/images/webdevIcons/tools.svg";
-import parseMintIcon from "../assets/images/projectIcons/parseMint.png";
 import aceternityIcon from "../assets/images/techIcons/aceternity.svg";
 import geminiIcon from "../assets/images/techIcons/gemini.svg";
-import portfolioIcon from "../assets/images/projectIcons/potfolio.png";
+import portfolioIcon from "../assets/images/projectIcons/portfolio.png";
+import shortlistIcon from "../assets/images/projectIcons/shortlist.png";
 import framericon from "../assets/images/techIcons/framer-motion.svg";
+import pythonIcon from "../assets/images/techIcons/python.svg";
 
 export const imageIcons = {
   profilePic,
@@ -70,6 +71,7 @@ export const imageIcons = {
   codeICon,
   institutionICon,
   toolICon,
-  parseMintIcon,
+  shortlistIcon,
   portfolioIcon,
+  pythonIcon,
 };

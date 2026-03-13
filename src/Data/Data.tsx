@@ -8,7 +8,13 @@ import {
   ExperienceData,
 } from "../types/type";
 
-import { BriefcaseBusiness, CodeXml, User, Cog, University } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  CodeXml,
+  User,
+  Cog,
+  University,
+} from "lucide-react";
 
 export const sectionLinks = [
   { name: "About", link: "/about", icon: User },
@@ -20,17 +26,13 @@ export const sectionLinks = [
 
 export const AboutData: AboutDatas = {
   profilePic: imageIcons.profilePic,
-  description: `Hey there, I'm Shaun Barreto – a front-end developer from Goa, India, who occasionally dips a toe into the mysterious world of the backend (and promptly regrets it).
+  description: `"Full-Stack Developer. AI Explorer. Problem Solver".
 
-I spend my days wrangling pixels, writing code that works (most of the time), and pretending to understand the complexities of the universe – when in reality, I'm just trying to center a div.
+Based in Goa, I bridge the gap between complex backend logic and high-fidelity frontends. My current focus is at the intersection of web development and Artificial Intelligence—implementing and fine-tuning models to create more impactful user tools. 
 
-I love building smooth UIs, breaking things so I can fix them again, and occasionally asking Stack Overflow for the 458th time why my state isn't updating.
-
-Currently open to cool opportunities, caffeine-fueled coding sprints, and meme-worthy bugs. Let’s build something that doesn’t crash on first render`,
+I value clean architecture, continuous learning, and a good cup of coffee. Let’s connect and build something that doesn't just work, but scales.`,
   subtitle: "Side Quests",
-  description2: `When I’m not battling bugs or explaining to people that "React" is not just an emotional state, I’m probably drowning in music, anime, manga, or video games — and loving every chaotic second of it. Occasionally, I do step outside to play football, table tennis, badminton, or just to remind myself what sunlight feels like (yes, I do touch grass sometimes, thank you very much).
-
-In my free time (aka when I'm not questioning life over a console error), I binge-watch anime, dive into manga lore, and button-mash my way through game bosses like it’s therapy. So here are some of my favorite series and titles — in case you’re looking to lose sleep and productivity too. `,
+  description2: `When I’m not coding, I’m usually surrounded by music. I’m a big fan of playing guitar, ukulele, and piano, and I love the challenge of picking up a new instrument. If I’m not playing music, I’m likely buried in a book—I enjoy everything from fiction and manga to deeper dives into philosophy and psychology. To stay active, I’m usually out on the football pitch or at the badminton court.`,
   hobbies: {
     anime: {
       title: "Anime (Top 10)",
@@ -322,10 +324,10 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    projectImage: imageIcons.parseMintIcon,
-    projectTitle: "ParseMint",
+    projectImage: imageIcons.shortlistIcon,
+    projectTitle: "Shortlist",
     projectDescription:
-      "ParseMint is an AI-powered resume analyzer that evaluates resumes for ATS compatibility, skill relevance, and role alignment. It extracts insights, scores key areas like formatting and keyword match, and provides actionable feedback to improve job application success—all through an intuitive, responsive interface built with Next.js and Gemini AI.",
+      "Shortlist is an AI-powered resume analyzer that evaluates resumes for ATS compatibility, skill relevance, and role alignment. It extracts insights, scores key areas like formatting and keyword match, and provides actionable feedback to improve job application success—all through an intuitive, responsive interface built with Next.js and Gemini AI.",
     techStackIcons: [
       {
         icon: imageIcons.nextIcon,
@@ -479,6 +481,18 @@ export const skillsData: SkillsData = {
         "Express.js is a minimal and flexible Node.js web framework that provides a robust set of features for building RESTful APIs and web applications.",
       highlights: ["Routing", "Middleware", "API Design"],
       moreInfoLink: "https://expressjs.com/",
+    },
+    {
+      title: "Python",
+      icon: imageIcons.pythonIcon,
+      proficiency: {
+        level: "Beginner",
+        percentage: 50,
+      },
+      description:
+        "Python is a high-level, interpreted programming language known for its readability and versatility. It's widely used in web development, data science, automation, and more.",
+      highlights: ["FastApi", "LangChain", "Pandas", "Playwright"],
+      moreInfoLink: "https://www.python.org/",
     },
   ],
   databaseData: [
