@@ -6,9 +6,7 @@ const NowSection = () => {
       <div className="title">This Month’s Dev Drama</div>
       <div className="content">
         <span>"</span>Been researching ai tools that can help me become more
-        productive. Tailoring my resume. Started with another next js project,
-        where you can create,upload, edit Memes.could like, comment,
-        learderboards etc etc.
+        productive. Tailoring my resume. Currently working on VaultHub, a knowledge engine that answers questions based on the data you feed it. It's like having a personal assistant for all your information needs. Excited to see how it evolves!
         <span>"</span>
       </div>
     </div>
