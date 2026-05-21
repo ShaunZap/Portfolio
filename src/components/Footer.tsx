@@ -61,27 +61,27 @@ const Footer = () => {
         </MDiv>
 
         <Link to="/">
-          <MDiv  whileHover={{ scale: 1.1 }}>
+          <MDiv whileHover={{ scale: 1.1 }}>
             <House
               size={30}
               strokeWidth={1}
               data-testid="home-icon"
               data-tooltip-id="home-tip"
               data-tooltip-content="Go to Home"
-            className="footer-icons"
+              className="footer-icons"
             />
           </MDiv>
         </Link>
 
-        <a href="/ShaunBarretoCV.pdf" target="_blank" rel="noopener noreferrer">
-          <MDiv  whileHover={{ scale: 1.1 }}>
+        <a href="/ShaunBarretoCV1.pdf" target="_blank" rel="noopener noreferrer">
+          <MDiv whileHover={{ scale: 1.1 }}>
             <FileUser
               size={30}
               strokeWidth={1}
               data-testid="resume-icon"
               data-tooltip-id="resume-tip"
               data-tooltip-content="View Resume"
-            className="footer-icons"
+              className="footer-icons"
             />
           </MDiv>
         </a>
