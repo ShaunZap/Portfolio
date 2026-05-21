@@ -69,12 +69,11 @@
       grid-template-rows: repeat(10, 20px);
       gap: 1px;
       color: var(--color-brand-700);
-      background-color: var(--color-brand-1200);
       border: 1px solid var(--color-brand-1200);
 
       .degree-title {
-        background-color: var(--color-brand-700);
-        color: var(--color-brand-1400);
+        background-color: transparent;
+        color: var(--color-brand-700);
         grid-area: 1 / 1 / 4 / 21;
         display: flex;
         align-items: center;
@@ -82,6 +81,7 @@
         font-size: var(--font-size-medium);
         font-weight: 400;
         letter-spacing: var(--letter-spacing-medium);
+        border-bottom: 1px solid var(--color-brand-700);
       }
 
       .institution {
@@ -124,6 +124,14 @@
           margin-left: 22px;
         }
       }
+
+      &:hover {
+        .degree-title {
+          background-color: var(--color-brand-700);
+          color: var(--color-brand-1400);
+          transition: 0.3s ease-in-out;
+        }
+      }
     }
   }
 }
@@ -142,10 +150,10 @@
     border: 1px solid var(--color-brand-1200);
 
     .certification-card-title {
-      background-color: var(--color-brand-700);
+      background-color: transparent;
 
       h4 {
-        color: var(--color-brand-1400);
+        color: var(--color-brand-700);
         font-size: var(--font-size-small);
         letter-spacing: var(--letter-spacing-small);
         border-bottom: 1px solid var(--color-brand-1200);
@@ -156,12 +164,14 @@
       h5 {
         color: var(--color-brand-700);
         background-color: var(--color-brand-1400);
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-xsmall);
         letter-spacing: var(--letter-spacing-small);
         border-bottom: 1px solid var(--color-brand-1200);
         font-weight: 500;
         padding: 5px;
       }
+
+
     }
 
     .certification-card-content {
@@ -190,6 +200,22 @@
         padding: 4px;
         border-radius: 2px;
         padding: 0px 5px 0px 5px;
+      }
+    }
+
+    &:hover {
+      .certification-card-title {
+        h4 {
+          background-color: var(--color-brand-700);
+          color: var(--color-brand-1400);
+          transition: 0.3s ease-in-out;
+        }
+
+        h5 {
+          background-color: var(--color-brand-700);
+          color: var(--color-brand-1400);
+          transition: 0.3s ease-in-out;
+        }
       }
     }
   }
