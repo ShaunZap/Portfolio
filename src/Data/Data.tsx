@@ -232,7 +232,13 @@ export const experienceData: ExperienceData[] = [
 
 export const projectData: ProjectData[] = [
   {
-    projectImage: imageIcons.projectIcon1,
+    projectImages: [
+      imageIcons.sooperIconOne,
+      imageIcons.sooperIconTwo,
+      imageIcons.sooperIconThree,
+      imageIcons.sooperIconFour,
+
+    ],
     projectTitle: "Souper",
     projectDescription:
       "Souper is a restaurant website created as a project to learn and practice CSS Grid layout. It's a frontend-only site, and all the images used were generated using various AI tools such as Leonardo AI, DALL·E, and Clipdrop.co.",
@@ -256,7 +262,11 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    projectImage: imageIcons.projectIcon2,
+    projectImages: [
+      imageIcons.animeRealmIconOne,
+      imageIcons.animeRealmIconTwo,
+      imageIcons.animeRealmIconThree,
+    ],
     projectTitle: "AnimeRealm",
     projectDescription:
       "Anime Realm is a web application that allows users to explore and discover anime and manga series. It features a user-friendly interface, search functionality, and detailed information about each anime/manga.it uses jikan API to fetch anime/manga data.",
@@ -296,7 +306,13 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    projectImage: imageIcons.portfolioIcon,
+    projectImages: [
+      imageIcons.portfolioIconOne,
+      imageIcons.portfolioIconTwo,
+      imageIcons.portfolioIconThree,
+      imageIcons.portfolioIconFour,
+      imageIcons.portfolioIconFive,
+    ],
     projectTitle: "Potfolio",
     projectDescription:
       "A sleek, mobile-first portfolio site featuring a homepage with quotes and news, and sections like About, Projects, Experience, Education, and Skills as app-like pages. Includes a bottom navigation bar for easy access to Info, Home, and Resume. Designed for smooth, app-style user experience",
@@ -324,7 +340,12 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    projectImage: imageIcons.shortlistIcon,
+    projectImages: [
+      imageIcons.shortlistIconOne,
+      imageIcons.shortlistIconTwo,
+      imageIcons.shortlistIconThree,
+      imageIcons.shortlistIconFour,
+    ],
     projectTitle: "Shortlist",
     projectDescription:
       "Shortlist is an AI-powered resume analyzer that evaluates resumes for ATS compatibility, skill relevance, and role alignment. It extracts insights, scores key areas like formatting and keyword match, and provides actionable feedback to improve job application success—all through an intuitive, responsive interface built with Next.js and Gemini AI.",
@@ -353,6 +374,63 @@ export const projectData: ProjectData[] = [
     projectLinks: {
       live: "https://airesume-beta-two.vercel.app/",
       github: "https://github.com/shaun-j-barreto/airesume",
+    },
+  },
+  {
+    projectImages: [
+      imageIcons.blueprintIconOne,
+      imageIcons.blueprintIconTwo,
+      imageIcons.blueprintIconThree,
+      imageIcons.blueprintIconFour,
+    ],
+    projectTitle: "Blueprint",
+    projectDescription:
+      "Blueprint is a full-stack project management application that helps teams visualize workflows, track tasks, and hit milestones. Built with Next.js, Node.js, and AWS (Amplify, EC2, RDS, Cognito, S3), it features a responsive UI with Material UI + Tailwind, Redux Toolkit for state management, and Prisma ORM for type-safe database queries—all designed to turn complex projects into clear, collaborative blueprints.",
+    techStackIcons: [
+      {
+        icon: imageIcons.nextIcon,
+        name: "NextJs",
+      },
+      {
+        icon: imageIcons.typeIcon,
+        name: "TypeScript",
+      },
+      {
+        icon: imageIcons.tailwindIcon,
+        name: "Tailwind",
+      },
+      {
+        icon: imageIcons.nodeJsIcon,
+        name: "NodeJs",
+      },
+      {
+        icon: imageIcons.reduxIcon,
+        name: "Redux",
+      },
+      {
+        icon: imageIcons.expressIcon,
+        name: "ExpressJs",
+      },
+      {
+        icon: imageIcons.muiIcon,
+        name: "Material UI",
+      },
+      {
+        icon: imageIcons.prismaIcon,
+        name: "Prisma",
+      },
+      {
+        icon: imageIcons.postgreIcon,
+        name: "PostgreSQL",
+      },
+      {
+        icon: imageIcons.awsIcon,
+        name: "AWS",
+      },
+    ],
+    projectLinks: {
+      live: "https://main.d1zew6conjh9dq.amplifyapp.com/",
+      github: "https://github.com/shaun-j-barreto/blueprint",
     },
   },
 ];
@@ -455,6 +533,18 @@ export const skillsData: SkillsData = {
       highlights: ["File-based Routing", "SSR/SSG", "API Routes"],
       moreInfoLink: "https://nextjs.org/",
     },
+    {
+      title: "Redux",
+      icon: imageIcons.reduxIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 60,
+      },
+      description:
+        "Redux is a state management library for JavaScript applications, often used with React. It centralizes application state and enables predictable state updates through actions and reducers.",
+      highlights: ["Actions", "Reducers", "Store"],
+      moreInfoLink: "https://redux.js.org/",
+    }
   ],
 
   backEndData: [
@@ -532,6 +622,18 @@ export const skillsData: SkillsData = {
       highlights: ["PostgreSQL", "Auth", "Realtime DB"],
       moreInfoLink: "https://supabase.com/",
     },
+    {
+      title: "PostgreSQL",
+      icon: imageIcons.postgreIcon,
+      proficiency: {
+        level: "Intermediate",
+        percentage: 70,
+      },
+      description:
+        "PostgreSQL is a powerful, open-source relational database system known for its robustness, extensibility, and standards compliance. It supports advanced data types and performance optimization features.",
+      highlights: ["SQL Queries", "Data Modeling", "Indexing"],
+      moreInfoLink: "https://www.postgresql.org/",
+    },
   ],
   otherToolsData: [
     {
@@ -595,5 +697,17 @@ export const skillsData: SkillsData = {
       highlights: ["UI Design", "Prototyping", "Team Collaboration"],
       moreInfoLink: "https://figma.com/",
     },
+    {
+      title: "AWS",
+      icon: imageIcons.awsIcon,
+      proficiency: {
+        level: "Beginner",
+        percentage: 50,
+      },
+      description:
+        "Amazon Web Services (AWS) is a comprehensive cloud computing platform offering a wide range of services for computing, storage, databases, and more.",
+      highlights: ["EC2", "S3", "RDS", "Amplify"],
+      moreInfoLink: "https://aws.amazon.com/",
+    }
   ],
 };

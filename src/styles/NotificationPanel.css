@@ -14,6 +14,24 @@
     font-size: var(--font-size-medium);
     letter-spacing: var(--letter-spacing-small);
     font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .titlelogo:hover {
+    color: var(--color-brand-500);
+  }
+
+  .logo-prefix {
+    margin-right: 4px;
+    opacity: 0.6;
+  }
+
+  .logo-cursor {
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
   }
 
   .right-container {
@@ -23,7 +41,17 @@
     justify-content: end;
     align-items: center;
     gap: 10px;
+  }
+}
 
-  
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
   }
 }

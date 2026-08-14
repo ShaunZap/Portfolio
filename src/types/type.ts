@@ -18,7 +18,7 @@ export type SkillsData = {
 };
 
 export type ProjectData = {
-  projectImage: string;
+  projectImages: string[];
   projectTitle: string;
   projectDescription: string;
   techStackIcons: {

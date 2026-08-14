@@ -35,34 +35,26 @@
     transition: transform 0.1s ease-out;
 }
 
+/* --- NEW BUILDING STYLES --- */
 .pipe {
     position: absolute;
     z-index: 5;
+    background-color: var(--color-brand-500);
+    background-image:
+        linear-gradient(var(--color-brand-1200) 4px, transparent 4px),
+        linear-gradient(90deg, var(--color-brand-1200) 4px, transparent 4px);
+    background-size: 10px 16px;
+    border-left: 2px solid var(--color-brand-1400);
+    border-right: 2px solid var(--color-brand-1400);
+    box-shadow: inset 0px 0px 0px 4px var(--color-brand-1200);
 }
 
-.building-container {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid var(--color-brand-1200);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: var(--color-brand-1200);
+.pipe.top {
+    border-bottom: 6px solid var(--color-brand-1400);
 }
 
-.building-container.top {
-    flex-direction: column-reverse;
-    border-bottom: 4px solid var(--color-brand-700);
-}
-
-.building-container.bottom {
-    border-top: 4px solid var(--color-brand-700);
-}
-
-.building-block {
-    width: 100%;
-    box-sizing: border-box;
-    /* Made the gradient slightly stronger for thin blocks so they pop */
-    background-image: linear-gradient(to right, transparent 10%, rgba(255, 255, 255, 0.1) 50%, transparent 90%);
+.pipe.bottom {
+    border-top: 6px solid var(--color-brand-1400);
 }
 
 /* --- UI Styles --- */
@@ -142,12 +134,6 @@
     .start-btn {
         padding: 12px 30px;
         font-size: var(--font-size-xsmall);
-    }
-
-    /* Optional: Ensure building blocks don't get too faint on small screens */
-    .building-block {
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
 
     .Flappy-title {

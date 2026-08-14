@@ -3,14 +3,10 @@ import { Helicopter } from "lucide-react";
 import "../../styles/FlappyBird.css";
 
 const BIRD_SIZE = 36;
-// PHYSICS TWEAKS
 const GRAVITY = 0.18;
 const JUMP_STRENGTH = -4.5;
 const PIPE_WIDTH = 44;
 const PIPE_SPEED = 2.0;
-
-// --- CHANGED: Made blocks thinner (20px instead of 40px) ---
-const BLOCK_HEIGHT = 20;
 
 const FlappyBird = () => {
     const [birdY, setBirdY] = useState(200);
@@ -87,17 +83,12 @@ const FlappyBird = () => {
                 }
             });
 
-            // Spawning Logic
             const spawnDistance = dimensions.width < 400 ? 180 : 300;
 
             if (newPipes.length === 0 || newPipes[newPipes.length - 1].x < dimensions.width - spawnDistance) {
-
-                // --- CHANGED: MOBILE GAP LOGIC ---
                 const isMobile = dimensions.width < 600;
                 const minPipeHeight = 50;
 
-                // On mobile: Gap is 40% of screen, max 220px. 
-                // On Desktop: Gap is 35% of screen, max 170px.
                 const gapRatio = isMobile ? 0.40 : 0.35;
                 const maxGapSize = isMobile ? 220 : 170;
 
@@ -136,25 +127,6 @@ const FlappyBird = () => {
         return () => { if (requestRef.current) cancelAnimationFrame(requestRef.current); };
     }, [update]);
 
-    const renderBuildingBlocks = (totalHeight: number) => {
-        if (totalHeight <= 0) return null;
-        const numBlocks = Math.ceil(totalHeight / BLOCK_HEIGHT);
-        const blocks = [];
-        for (let i = 0; i < numBlocks; i++) {
-            const height = (i === numBlocks - 1)
-                ? totalHeight - (i * BLOCK_HEIGHT)
-                : BLOCK_HEIGHT;
-
-            blocks.push(
-                <div key={i} className="building-block" style={{
-                    height: `${height}px`,
-                    backgroundColor: i % 2 === 0 ? 'var(--color-brand-1000)' : 'var(--color-brand-1300)'
-                }} />
-            );
-        }
-        return blocks;
-    };
-
     return (
         <div
             className="flappy-container"
@@ -180,17 +152,19 @@ const FlappyBird = () => {
                 const bottomHeight = Math.max(0, dimensions.height - (pipe.height + pipe.gap));
                 return (
                     <div key={`pipe-${i}`}>
-                        <div className="pipe building-container top" style={{ left: pipe.x, height: pipe.height, width: PIPE_WIDTH }}>
-                            {renderBuildingBlocks(pipe.height)}
-                        </div>
-                        <div className="pipe building-container bottom" style={{
-                            left: pipe.x,
-                            top: pipe.height + pipe.gap,
-                            width: PIPE_WIDTH,
-                            height: bottomHeight
-                        }}>
-                            {renderBuildingBlocks(bottomHeight)}
-                        </div>
+                        <div
+                            className="pipe top"
+                            style={{ left: pipe.x, height: pipe.height, width: PIPE_WIDTH }}
+                        />
+                        <div
+                            className="pipe bottom"
+                            style={{
+                                left: pipe.x,
+                                top: pipe.height + pipe.gap,
+                                width: PIPE_WIDTH,
+                                height: bottomHeight
+                            }}
+                        />
                     </div>
                 )
             })}

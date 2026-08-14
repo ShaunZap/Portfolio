@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "../styles/Projects.css";
 import { div as MDiv } from "motion/react-client";
 import ReusableTitle from "./sub-components/ReusableTitle";
@@ -5,7 +6,38 @@ import { projectData } from "../Data/Data";
 import { defaultSpring, fadeIn } from "../animations/animation";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import { Github, LinkIcon } from "lucide-react";
+import { Github, LinkIcon, ChevronLeft, ChevronRight } from "lucide-react";
+
+const ImageCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  // Fallback if images array is missing or empty
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="project-image">
+      {images.length > 1 && (
+        <button className="carousel-btn left" onClick={prevImage} aria-label="Previous image">
+          <ChevronLeft size={20} />
+        </button>
+      )}
+      <img src={images[currentIndex]} alt="Project preview" />
+      {images.length > 1 && (
+        <button className="carousel-btn right" onClick={nextImage} aria-label="Next image">
+          <ChevronRight size={20} />
+        </button>
+      )}
+    </div>
+  );
+};
 
 const ProjectsComp = () => (
   <div>
@@ -19,9 +51,8 @@ const ProjectsComp = () => (
           className="project-card"
           key={key}
         >
-          <div className="project-image">
-            <img src={project.projectImage} alt="" />
-          </div>
+          <ImageCarousel images={project.projectImages} />
+
           <div className="project-title">
             <hr />
             <h2>{project.projectTitle}</h2>
