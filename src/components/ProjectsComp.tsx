@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/Projects.css";
 import { div as MDiv } from "motion/react-client";
 import ReusableTitle from "./sub-components/ReusableTitle";
