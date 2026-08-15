@@ -313,7 +313,7 @@ export const projectData: ProjectData[] = [
       imageIcons.portfolioIconFour,
       imageIcons.portfolioIconFive,
     ],
-    projectTitle: "Potfolio",
+    projectTitle: "Portfolio",
     projectDescription:
       "A sleek, mobile-first portfolio site featuring a homepage with quotes and news, and sections like About, Projects, Experience, Education, and Skills as app-like pages. Includes a bottom navigation bar for easy access to Info, Home, and Resume. Designed for smooth, app-style user experience",
     techStackIcons: [
