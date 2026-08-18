@@ -47,9 +47,13 @@ import sooperIconThree from "../assets/images/projectIcons/sooper-gallary.png";
 import sooperIconFour from "../assets/images/projectIcons/sooper-menu.png";
 
 // animeRealm project images
-import animeRealmIconOne from "../assets/images/projectIcons/animeRealm-2.png";
-import animeRealmIconTwo from "../assets/images/projectIcons/animeRealm-3.png";
-import animeRealmIconThree from "../assets/images/projectIcons/animeRealm-4.png";
+import animeRealmIconOne from "../assets/images/projectIcons/animeRealm1.png";
+import animeRealmIconTwo from "../assets/images/projectIcons/animeRealm2.png";
+import animeRealmIconThree from "../assets/images/projectIcons/animeRealm3.png";
+import animeRealmIconFour from "../assets/images/projectIcons/animeRealm4.png";
+import animeRealmIconFive from "../assets/images/projectIcons/animeRealm5.png";
+import animeRealmIconSix from "../assets/images/projectIcons/animeRealm6.png";
+
 
 // Portfolio project images
 import portfolioIconOne from "../assets/images/projectIcons/portfolio.png";
@@ -123,6 +127,9 @@ export const imageIcons = {
   animeRealmIconOne,
   animeRealmIconTwo,
   animeRealmIconThree,
+  animeRealmIconFour,
+  animeRealmIconFive,
+  animeRealmIconSix,
   portfolioIconOne,
   portfolioIconTwo,
   portfolioIconThree,

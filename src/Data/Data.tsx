@@ -266,6 +266,9 @@ export const projectData: ProjectData[] = [
       imageIcons.animeRealmIconOne,
       imageIcons.animeRealmIconTwo,
       imageIcons.animeRealmIconThree,
+      imageIcons.animeRealmIconFour,
+      imageIcons.animeRealmIconFive,
+      imageIcons.animeRealmIconSix,
     ],
     projectTitle: "AnimeRealm",
     projectDescription:
