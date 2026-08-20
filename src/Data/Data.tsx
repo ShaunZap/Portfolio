@@ -257,7 +257,7 @@ export const projectData: ProjectData[] = [
       },
     ],
     projectLinks: {
-      live: "https://shaun-j-barreto.github.io/Sooper-Restaurant/index.html",
+      live: "https://sooper-restaurant.vercel.app/",
       github: "https://github.com/shaun-j-barreto/Sooper-Restaurant",
     },
   },
