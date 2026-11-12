@@ -73,7 +73,7 @@ const Footer = () => {
           </MDiv>
         </Link>
 
-        <a href="/ShaunBarretoCV2.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/Shaun_J_Barreto_Resume.pdf" target="_blank" rel="noopener noreferrer">
           <MDiv whileHover={{ scale: 1.1 }}>
             <FileUser
               size={30}
